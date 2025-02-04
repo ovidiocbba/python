@@ -13,6 +13,13 @@
       - [2. Sequence](#2-sequence)
       - [3. Set](#3-set)
       - [4. Dictionary](#4-dictionary)
+    - [Type Conversion in Python](#type-conversion-in-python)
+      - [1. Implicit Type Conversion (Automatic)](#1-implicit-type-conversion-automatic)
+      - [2. Explicit Type Conversion (Type Casting)](#2-explicit-type-conversion-type-casting)
+      - [3. Special Cases in Type Conversion](#3-special-cases-in-type-conversion)
+      - [4.Summary](#4summary)
+
+
 
 ## Section 1: Introduction to Python
 ### How a Python Program Runs?
@@ -371,6 +378,127 @@ print(type(my_dict))
 ```python
 <class 'dict'>
 ```
+
+<div align="right">
+  <strong>
+    <a href="#table-of-contents" style="text-decoration: none;">↥ Back to top</a>
+  </strong>
+</div>
+
+### Type Conversion in Python
+
+#### 1. Implicit Type Conversion (Automatic)
+Python **automatically** converts one data type into another without user intervention.
+
+**✅ Example of Implicit Type Conversion**
+```python
+num_int = 10     # Integer
+num_float = 2.5  # Float
+
+result = num_int + num_float  # int + float → float
+
+print(result)      # Output: 12.5
+print(type(result))  # Output: <class 'float'>
+```
+🔹 Python converts `int` to `float` because `float` has a higher precision than `int`.
+
+**Rules for Implicit Conversion**
+- `int` → `float`
+- `int` → `complex`
+- `int` → `bool`
+- `float` → `complex`
+
+```python
+num = 5  # int
+comp = num + 2j  # int → complex
+print(type(comp))  # Output: <class 'complex'>
+```
+<div align="right">
+  <strong>
+    <a href="#table-of-contents" style="text-decoration: none;">↥ Back to top</a>
+  </strong>
+</div>
+
+---
+
+#### 2. Explicit Type Conversion (Type Casting)
+Explicit conversion is when we **manually** convert one data type into another using built-in functions.
+
+**Common Type Casting Functions**
+| Function | Converts to |
+|----------|------------|
+| `int(x)` | Integer |
+| `float(x)` | Floating point number |
+| `str(x)` | String |
+| `list(x)` | List |
+| `tuple(x)` | Tuple |
+| `set(x)` | Set |
+| `dict(x)` | Dictionary |
+| `bool(x)` | Boolean |
+
+**✅ Examples of Explicit Conversion**
+```python
+# Convert string to integer
+num_str = "100"
+num_int = int(num_str)
+print(num_int, type(num_int))  # Output: 100 <class 'int'>
+
+# Convert float to integer
+num_float = 9.7
+num_int = int(num_float)  # Removes decimal part (not rounding!)
+print(num_int)  # Output: 9
+
+# Convert list to tuple
+my_list = [1, 2, 3]
+my_tuple = tuple(my_list)
+print(my_tuple)  # Output: (1, 2, 3)
+
+# Convert integer to string
+num = 50
+num_str = str(num)
+print(num_str, type(num_str))  # Output: "50" <class 'str'>
+```
+
+<div align="right">
+  <strong>
+    <a href="#table-of-contents" style="text-decoration: none;">↥ Back to top</a>
+  </strong>
+</div>
+
+---
+
+#### 3. Special Cases in Type Conversion
+**Converting String to Integer or Float**
+```python
+num = "123a"
+print(int(num))  # ❌ ERROR: ValueError
+```
+🔹 Only strings containing **numeric values** can be converted to `int` or `float`.
+
+**⚠️ Boolean Conversion**
+- **Any non-zero number or non-empty object → `True`**
+- **Zero or empty object → `False`**
+
+```python
+print(bool(0))       # False
+print(bool(5))       # True
+print(bool(""))      # False
+print(bool("Hello")) # True
+```
+<div align="right">
+  <strong>
+    <a href="#table-of-contents" style="text-decoration: none;">↥ Back to top</a>
+  </strong>
+</div>
+
+---
+
+#### 4. Summary
+| Type Conversion | Description |
+|----------------|-------------|
+| **Implicit** | Automatic conversion (e.g., `int` to `float`) |
+| **Explicit** | Manual conversion using functions like `int()`, `float()`, `str()`, etc. |
+| **Boolean Rules** | Non-empty values → `True`, empty values → `False` |
 
 <div align="right">
   <strong>
