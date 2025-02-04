@@ -151,3 +151,92 @@ Here, Python raises an error because it tries to add an integer (10) to a string
     <a href="#table-of-contents" style="text-decoration: none;">↥ Back to top</a>
   </strong>
 </div>
+
+### Rules for Declaring Variable Names in Python  
+
+**1. Name can contain alpha-numeric characters and underscores** (`A-Z, a-z, 0-9, _`)  
+
+✔ **Valid examples:**  
+```python
+name = "Alice"       # Only letters
+age_23 = 23          # Letters + numbers
+user_name = "John"   # Letters + underscore
+```
+
+✖ **Invalid examples:**  
+```python
+user-name = "John"   # Hyphen (-) is not allowed
+2nd_place = "Silver" # Cannot start with a number
+```
+
+---
+
+**2. Name should start with a letter or an underscore**(`A-Z, a-z, _`)  
+
+✔ **Valid examples:**  
+```python
+_name = "Hidden"   # Starts with underscore
+a123 = "Valid"     # Starts with a letter
+```
+
+✖ **Invalid examples:**  
+```python
+123name = "Error"  # Cannot start with a number
+!var = 10          # Special characters not allowed
+```
+
+---
+
+**3. Keywords should not be used as variable names**
+
+Python has **reserved words (keywords)** that cannot be used as variable names.  
+
+✖ **Invalid examples:**  
+```python
+if = 10          # 'if' is a keyword
+class = "Test"   # 'class' is a keyword
+return = 5       # 'return' is a keyword
+```
+
+✔ **Corrected versions:**  
+```python
+if_value = 10    
+class_name = "Test"  
+return_value = 5   
+```
+
+---
+
+**4. Variables are case-sensitive (`name` ≠ `Name` ≠ `NAME`)**  
+
+Python distinguishes between uppercase and lowercase letters in variable names.  
+
+✔ **Valid examples:**  
+```python
+name = "Alice"
+Name = "Bob"
+NAME = "Charlie"
+
+print(name)  # Output: Alice
+print(Name)  # Output: Bob
+print(NAME)  # Output: Charlie
+```
+
+Each **variable** holds **a different value** because **Python treats them as separate variables**.
+
+---
+
+**Summary**
+
+| Rule | ✔ Valid Example | ✖ Invalid Example |
+|------|----------------|-------------------|
+| **Alpha-numeric & underscore** | `user_1`, `myVar` | `user-name`, `my var` |
+| **Start with letter or underscore** | `_hidden`, `a123` | `123name`, `!var` |
+| **No keywords** | `my_class`, `return_value` | `if`, `class`, `return` |
+| **Case-sensitive** | `name`, `Name`, `NAME` | - |
+
+<div align="right">
+  <strong>
+    <a href="#table-of-contents" style="text-decoration: none;">↥ Back to top</a>
+  </strong>
+</div>
