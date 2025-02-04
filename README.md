@@ -591,9 +591,7 @@ print(-10 % 3)  # Output: 2 (because -10 = (-4 * 3) + 2)
 **1. Triangle Area** 
 
 ```math
-\begin{aligned}
 A = \frac{1}{2} \times \text{base} \times \text{height}
-\end{aligned}
 ```
 
 **Example:**  
@@ -629,12 +627,6 @@ Area is 25.0
 **2. Rhombus Area (Using Trapezoidal Formula)**  
 The area of a rhombus can also be calculated using the formula:  
 
-```math
-\begin{aligned}
-A = \frac{1}{2} \times (a + b) \times \text{height}
-\end{aligned}
-``` 
-**TEST**
 ```math
 A = \frac{1}{2} \times (a + b) \times \text{height}
 ``` 
@@ -678,11 +670,9 @@ Area is 25.0
 The displacement (**d**) is given by the equation:  
 
 ```math
-\begin{aligned}
 d = \frac{v^2 - u^2}{2a}
-\end{aligned}
-``` 
- 
+```
+
 Where:  
 - **u** is the **initial velocity**.  
 - **v** is the **final velocity**.  
