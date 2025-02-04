@@ -570,7 +570,7 @@ print(10 / 0)  # ❌ ERROR: ZeroDivisionError
 ```
 **Solution:** Always check if the divisor is zero before performing division.
 
-**Floor Division with Negative Numbers**
+**Floor Division with Negative Numbers(integer result)**
 ```python
 print(-7 // 2)  # Output: -4 (rounds down, not towards zero)
 ```
