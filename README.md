@@ -590,21 +590,21 @@ print(-10 % 3)  # Output: 2 (because -10 = (-4 * 3) + 2)
 **Challenge : Area of triangle**  
 **1. Triangle Area** 
 
-$$
+```math
 \begin{aligned}
 A = \frac{1}{2} \times \text{base} \times \text{height}
 \end{aligned}
-$$
+```
 
 **Example:**  
 If the **base** is **10 cm** and the **height** is **5 cm**, then:  
 
-$$
+```math
 \begin{aligned}
 A = \frac{1}{2} \times \text{base} \times \text{height} \\
 A = \frac{1}{2} \times 10 \times 5 = 25 \text{ cm}^2
 \end{aligned}
-$$ 
+```
 
 **Code**
 ```python
@@ -629,25 +629,15 @@ Area is 25.0
 **2. Rhombus Area (Using Trapezoidal Formula)**
 The area of a rhombus can also be calculated using the formula:  
 
-$$
+```math
 \begin{aligned}
 A = \frac{1}{2} \times (a + b) \times \text{height}
 \end{aligned}
-$$ 
+``` 
 
 **Example:**  
 If (**a** = 6) cm, ( **b** = 4 ) cm, and **height** = 5 cm, then:  
 
-$$
-\begin{aligned}
-A = \frac{1}{2} \times (a + b) \times \text{height} \\
-A = \frac{1}{2} \times (6 + 4) \times 5 \\
-A = \frac{1}{2} \times 10 \times 5 \\
-A = 25 \text{ cm}^2
-\end{aligned}
-$$ 
-
-**Math**
 ```math
 \begin{aligned}
 A = \frac{1}{2} \times (a + b) \times \text{height} \\
@@ -683,11 +673,11 @@ Area is 25.0
 
 The displacement (**d**) is given by the equation:  
 
-$$
+```math
 \begin{aligned}
 d = \frac{v^2 - u^2}{2a}
 \end{aligned}
-$$  
+``` 
  
 Where:  
 - **u** is the **initial velocity**.  
@@ -698,14 +688,14 @@ Where:
 ### Example Calculation  
 If (**u** = 5) m/s, (**v** = 15) m/s, and (**a** = 2) m/s², then:  
 
-$$
+```math
 \begin{aligned}
 d = \frac{v^2 - u^2}{2a} \\
 d = \frac{15^2 - 5^2}{2 \times 2} \\
 d = \frac{225 - 25}{4} \\
 d = \frac{200}{4} = 50
 \end{aligned}
-$$
+```
 
 **Code** 
 ```python
