@@ -588,7 +588,8 @@ print(-10 % 3)  # Output: 2 (because -10 = (-4 * 3) + 2)
 
 ---
 **Challenge : Area of triangle**  
-**1. Triangle Area**  
+**1. Triangle Area** 
+ 
 $$
 \begin{aligned}
 A = \frac{1}{2} \times \text{base} \times \text{height}
