@@ -599,7 +599,7 @@ If the **base** is **10 cm** and the **height** is **5 cm**, then:
 
 ```math
 \begin{aligned}
-A = \frac{1}{2} \times \text{base} \times \text{height} \\
+A = \frac{1}{2} \times \text{base} \times \text{height} \newline
 A = \frac{1}{2} \times 10 \times 5 = 25 \text{ cm}^2
 \end{aligned}
 ```
@@ -636,9 +636,9 @@ If (**a** = 6) cm, ( **b** = 4 ) cm, and **height** = 5 cm, then:
 
 ```math
 \begin{aligned}
-A = \frac{1}{2} \times (a + b) \times \text{height} \\
-A = \frac{1}{2} \times (6 + 4) \times 5 \\
-A = \frac{1}{2} \times 10 \times 5 \\
+A = \frac{1}{2} \times (a + b) \times \text{height} \newline
+A = \frac{1}{2} \times (6 + 4) \times 5 \newline
+A = \frac{1}{2} \times 10 \times 5 \newline
 A = 25 \text{ cm}^2
 \end{aligned}
 ```
@@ -689,13 +689,6 @@ d = \frac{15^2 - 5^2}{2 \times 2} \newline
 d = \frac{225 - 25}{4} \newline
 d = \frac{200}{4} = 50
 \end{aligned}
-```
-**Test3**
-```math
-d = \frac{v^2 - u^2}{2a} \newline
-d = \frac{15^2 - 5^2}{2 \times 2} \newline
-d = \frac{225 - 25}{4} \newline
-d = \frac{200}{4} = 50
 ```
 
 **Code** 
