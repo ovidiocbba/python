@@ -685,21 +685,20 @@ If (**u** = 5) m/s, (**v** = 15) m/s, and (**a** = 2) m/s², then:
   <img src="https://quicklatex.com/cache3/5f/ql_d51e29147b1ad107f39f4d5cba418a5f_l3.png">
 </p>
 <details>
-  <summary style="text-align: center; font-size: 14px; color: #6c757d;">Click to view LaTeX formula</summary>
-To generate the LaTeX image, you can use: 
+  <summary>Click to view LaTeX formula</summary>
+To generate the LaTeX image, you can use:
   <a href="https://www.quicklatex.com/" target="_blank">QuickLaTeX</a>.
 
 ```latex
-\vspace{10pt} 
+\begin{aligned}
 d = \frac{v^2 - u^2}{2a} \\
-\vspace{10pt} 
 d = \frac{15^2 - 5^2}{2 \times 2} \\
-\vspace{10pt} 
 d = \frac{225 - 25}{4} \\
-\vspace{10pt} 
-d = \frac{200}{4} = 50 \text{ m}
+d = \frac{200}{4} = 50
+\end{aligned}
 ```
 </details>
+ 
 
 **Code** 
 ```python
