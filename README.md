@@ -268,6 +268,20 @@ These data types represent numerical values.
 - `bool` → Boolean values (`True` or `False`)
 - `complex` → Complex numbers (**example**: `3+4j`)
 
+## **Example**
+```python
+# Numeric
+a = 10         # int
+b = 3.14       # float
+c = True       # bool
+d = 3 + 4j     # complex
+
+print(type(a), type(b), type(c), type(d))
+```
+**Output:**
+```python
+<class 'int'> <class 'float'> <class 'bool'> <class 'complex'>
+```
 ## **2. Sequence**
 These data types store multiple values in order.
 
@@ -277,25 +291,8 @@ These data types store multiple values in order.
 - `bytes` → Immutable sequence of bytes (**example**: `b'hello'`)
 - `bytearray` → Mutable sequence of bytes (**example**: `bytearray(b'hello')`)
 
-## **3. Set**
-They represent collections of unique elements.
-
-- `set` → Mutable set (**example**: `{1, 2, 3}`)
-- `frozenset` → Immutable set (**example**: `frozenset({1, 2, 3})`)
-
-## **4. Dictionary**
-They store data in key-value pairs.
-
-- `dict` → Mutable dictionary (**example**: `{"name": "Alice", "age": 25}`)
-
-## **Example Usage**
+## **Example**
 ```python
-# Numeric
-a = 10         # int
-b = 3.14       # float
-c = True       # bool
-d = 3 + 4j     # complex
-
 # Sequence
 my_list = [1, 2, 3]
 my_tuple = (1, 2, 3)
@@ -303,23 +300,46 @@ my_str = "Hello, Python"
 my_bytes = b"hello"
 my_bytearray = bytearray(b"hello")
 
+print(type(my_list), type(my_tuple), type(my_str), type(my_bytes), type(my_bytearray))
+```
+**Output:**
+```python
+<class 'list'> <class 'tuple'> <class 'str'> <class 'bytes'> <class 'bytearray'>
+```
+
+## **3. Set**
+They represent collections of unique elements.
+
+- `set` → Mutable set (**example**: `{1, 2, 3}`)
+- `frozenset` → Immutable set (**example**: `frozenset({1, 2, 3})`)
+
+## **Example**
+```python
 # Set
 my_set = {1, 2, 3}
 my_frozenset = frozenset({1, 2, 3})
 
+print(type(my_set), type(my_frozenset))
+```
+**Output:**
+```python
+<class 'set'> <class 'frozenset'>
+```
+
+## **4. Dictionary**
+They store data in key-value pairs.
+
+- `dict` → Mutable dictionary (**example**: `{"name": "Alice", "age": 25}`)
+
+## **Example**
+```python
 # Dictionary
 my_dict = {"name": "Alice", "age": 25}
 
-print(type(a), type(b), type(c), type(d))
-print(type(my_list), type(my_tuple), type(my_str), type(my_bytes), type(my_bytearray))
-print(type(my_set), type(my_frozenset))
 print(type(my_dict))
 ```
 **Output:**
 ```python
-<class 'int'> <class 'float'> <class 'bool'> <class 'complex'>
-<class 'list'> <class 'tuple'> <class 'str'> <class 'bytes'> <class 'bytearray'>
-<class 'set'> <class 'frozenset'>
 <class 'dict'>
 ```
 
