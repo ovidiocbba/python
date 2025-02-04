@@ -589,17 +589,11 @@ print(-10 % 3)  # Output: 2 (because -10 = (-4 * 3) + 2)
 ---
 **Challenge : Area of triangle**  
 **1. Triangle Area**  
-![Triangle Area](images/triangle_area.png)
-
-<details>
-  <summary>Click to view LaTeX formula</summary>
-To generate the LaTeX image, you can use:
-  <a href="https://www.quicklatex.com/" target="_blank">QuickLaTeX</a>.
-
-```latex
+$$
+\begin{aligned}
 A = \frac{1}{2} \times \text{base} \times \text{height}
-```
-</details>
+\end{aligned}
+$$
 
 **Example:**  
 If the **base** is **10 cm** and the **height** is **5 cm**, then:  
@@ -636,6 +630,7 @@ $$
 **Example:**  
 If (**a** = 6) cm, ( **b** = 4 ) cm, and **height** = 5 cm, then:  
 $$
+
 A = \frac{1}{2} \times (6 + 4) \times 5
 $$
 $$
