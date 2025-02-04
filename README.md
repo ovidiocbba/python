@@ -18,8 +18,8 @@
       - [2. Explicit Type Conversion (Type Casting)](#2-explicit-type-conversion-type-casting)
       - [3. Special Cases in Type Conversion](#3-special-cases-in-type-conversion)
       - [4. Summary](#4-summary)
-
-
+    - [Section 4: Operators and Expression](#section-4-operators-and-expression)
+      - [Arithmetic Operators](#arithmetic-operators)
 
 ## Section 1: Introduction to Python
 ### How a Python Program Runs?
@@ -388,7 +388,7 @@ print(type(my_dict))
 ### Type Conversion in Python
 
 #### 1. Implicit Type Conversion (Automatic)
-Python **automatically** converts one data type into another without user intervention.
+Python **automatically** converts one data type into another **without user intervention**.
 
 **✅ Example of Implicit Type Conversion**
 ```python
@@ -422,7 +422,7 @@ print(type(comp))  # Output: <class 'complex'>
 ---
 
 #### 2. Explicit Type Conversion (Type Casting)
-Explicit conversion is when we **manually** convert one data type into another using built-in functions.
+Explicit conversion is when we **manually** convert one data type into another **using built-in functions**.
 
 **Common Type Casting Functions**
 | Function | Converts to |
@@ -510,3 +510,79 @@ print(bool("0"))        # True (it's a non-empty string, not the number 0)
     <a href="#table-of-contents" style="text-decoration: none;">↥ Back to top</a>
   </strong>
 </div>
+
+### Section 4: Operators and Expression
+#### Arithmetic Operators
+
+Python provides several **arithmetic operators** to perform mathematical calculations.
+
+**1. List of Arithmetic Operators**
+| Operator | Symbol | Description | Example |
+|----------|--------|-------------|---------|
+| Addition | `+` | **Adds** two numbers | `5 + 3 = 8` |
+| Subtraction | `-` | **Subtracts** one number from another | `10 - 4 = 6` |
+| Multiplication | `*` | **Multiplies** two numbers | `6 * 2 = 12` |
+| Division | `/` | **Divides** one number by another **(float result)** | `9 / 2 = 4.5` |
+| Floor Division | `//` | **Divides** and rounds down to the nearest whole number **(integer result)** | `9 // 2 = 4` |
+| Modulus | `%` | Returns the **remainder of division** | `9 % 2 = 1` |
+| Exponentiation | `**` | Raises a number to the power of another | `2 ** 3 = 8` |
+
+---
+
+**2. Examples of Arithmetic Operators**
+```python
+# Addition
+x = 10 + 5
+print(x)  # Output: 15
+
+# Subtraction
+y = 20 - 3
+print(y)  # Output: 17
+
+# Multiplication
+z = 4 * 6
+print(z)  # Output: 24
+
+# Division (float result)
+a = 9 / 2
+print(a)  # Output: 4.50
+
+# Floor Division (integer result)
+b = 9 // 2
+print(b)  # Output: 4
+
+# Modulus (remainder)
+c = 9 % 2
+print(c)  # Output: 1
+
+# Exponentiation
+d = 2 ** 3
+print(d)  # Output: 8
+```
+
+---
+
+**3. Special Cases**  
+**Division by Zero**
+```python
+print(10 / 0)  # ❌ ERROR: ZeroDivisionError
+```
+**Solution:** Always check if the divisor is zero before performing division.
+
+**Floor Division with Negative Numbers**
+```python
+print(-7 // 2)  # Output: -4 (rounds down, not towards zero)
+```
+
+**Modulus with Negative Numbers**
+```python
+print(-10 % 3)  # Output: 2 (because -10 = (-4 * 3) + 2)
+```
+
+<div align="right">
+  <strong>
+    <a href="#table-of-contents" style="text-decoration: none;">↥ Back to top</a>
+  </strong>
+</div>
+
+---
