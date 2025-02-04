@@ -649,10 +649,12 @@ $$
 
 **Math**
 ```math
+\begin{aligned}
 A = \frac{1}{2} \times (a + b) \times \text{height} \\
 A = \frac{1}{2} \times (6 + 4) \times 5 \\
 A = \frac{1}{2} \times 10 \times 5 \\
 A = 25 \text{ cm}^2
+\end{aligned}
 ```
 
 **Code**  
