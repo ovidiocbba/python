@@ -690,6 +690,13 @@ d = \frac{225 - 25}{4} \newline
 d = \frac{200}{4} = 50
 \end{aligned}
 ```
+**Test3**
+```math
+d = \frac{v^2 - u^2}{2a} \newline
+d = \frac{15^2 - 5^2}{2 \times 2} \newline
+d = \frac{225 - 25}{4} \newline
+d = \frac{200}{4} = 50
+```
 
 **Code** 
 ```python
