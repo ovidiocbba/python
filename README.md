@@ -17,7 +17,7 @@
       - [1. Implicit Type Conversion (Automatic)](#1-implicit-type-conversion-automatic)
       - [2. Explicit Type Conversion (Type Casting)](#2-explicit-type-conversion-type-casting)
       - [3. Special Cases in Type Conversion](#3-special-cases-in-type-conversion)
-      - [4.Summary](#4summary)
+      - [4. Summary](#4-summary)
 
 
 
@@ -438,22 +438,22 @@ Explicit conversion is when we **manually** convert one data type into another u
 
 **✅ Examples of Explicit Conversion**
 ```python
-# Convert string to integer
+# Convert string to 'integer'
 num_str = "100"
 num_int = int(num_str)
 print(num_int, type(num_int))  # Output: 100 <class 'int'>
 
-# Convert float to integer
+# Convert float to 'integer'
 num_float = 9.7
 num_int = int(num_float)  # Removes decimal part (not rounding!)
 print(num_int)  # Output: 9
 
-# Convert list to tuple
+# Convert list to 'tuple'
 my_list = [1, 2, 3]
 my_tuple = tuple(my_list)
 print(my_tuple)  # Output: (1, 2, 3)
 
-# Convert integer to string
+# Convert integer to 'string'
 num = 50
 num_str = str(num)
 print(num_str, type(num_str))  # Output: "50" <class 'str'>
@@ -476,14 +476,19 @@ print(int(num))  # ❌ ERROR: ValueError
 🔹 Only strings containing **numeric values** can be converted to `int` or `float`.
 
 **⚠️ Boolean Conversion**
-- **Any non-zero number or non-empty object → `True`**
-- **Zero or empty object → `False`**
+- **Zero or an empty object → `False`**
+- **Any number that is not zero or any object that is not empty → `True`**
 
 ```python
-print(bool(0))       # False
-print(bool(5))       # True
-print(bool(""))      # False
-print(bool("Hello")) # True
+print(bool(0))   # False (zero is always False)
+print(bool(5))   # True (any non-zero number is True)
+print(bool(-3))  # True (negative numbers are also True)
+
+# Boolean Conversion for Strings
+print(bool(""))         # False (empty string)
+print(bool("Hello"))    # True (non-empty string)
+print(bool(" "))        # True (even a space is a character)
+print(bool("0"))        # True (it's a non-empty string, not the number 0)
 ```
 <div align="right">
   <strong>
