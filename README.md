@@ -129,3 +129,25 @@ Follow these steps:
     <a href="#table-of-contents" style="text-decoration: none;">↥ Back to top</a>
   </strong>
 </div>
+
+### Python Dynamically Typed
+Python is **a dynamically typed language**, which means that **you don’t need to declare** the **data type** of a variable explicitly. Instead, **Python automatically determines the type** based on the value assigned to the variable at runtime.
+```python
+x = 10      # 'x' is an integer (int)
+x = "Hello" # Now 'x' is a string (str)
+x = 3.14    # Now 'x' is a float (float)
+```
+![Python Dynamically Typed](images/python_dynamically_typed.png)
+
+#### Example of a Type Error Due to Dynamic Typing
+```python
+num = 10     # Integer
+num = num + "5"  # TypeError: unsupported operand type(s) for +: 'int' and 'str'
+```
+Here, Python raises an error because it tries to add an integer (10) to a string ("5"), which is not allowed.
+
+<div align="right">
+  <strong>
+    <a href="#table-of-contents" style="text-decoration: none;">↥ Back to top</a>
+  </strong>
+</div>
