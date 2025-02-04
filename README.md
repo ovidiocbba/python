@@ -670,16 +670,12 @@ Area is 25.0
 **3. Displacement (Using Kinematic Equation)**
 
 The displacement (**d**) is given by the equation:  
+
 $$
+\begin{aligned}
 d = \frac{v^2 - u^2}{2a}
+\end{aligned}
 $$  
-
-<details>
-  <summary>Show Equation</summary>
-  d = \frac{v^2 - u^2}{2a}
-</details>
-
-![Equation](https://quicklatex.com/cache3/3f/ql_a3624360ef233bf18b11e2c73fc09f3f_l3.png)
  
 Where:  
 - **u** is the **initial velocity**.  
