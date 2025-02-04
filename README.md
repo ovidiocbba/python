@@ -1,10 +1,10 @@
 # Table of contents
-- [Table of contents](#table-of-contents)
   - [Section 1: Introduction to Python](#section-1-introduction-to-python)
     - [How a Python Program Runs?](#how-a-python-program-runs)
   - [Section 2: Python Installation and Setup](#section-2-python-installation-and-setup)
     - [Installing Python](#installing-python)
     - [Installing Pycharm](#installing-pycharm)
+  - [Section 3: Python Datatypes](#section-3-python-datatypes)
     - [Python Dynamically Typed](#python-dynamically-typed)
       - [Example of a Type Error Due to Dynamic Typing](#example-of-a-type-error-due-to-dynamic-typing)
     - [Rules for Declaring Variable Names in Python](#rules-for-declaring-variable-names-in-python)
@@ -139,6 +139,7 @@ Follow these steps:
   </strong>
 </div>
 
+## Section 3: Python Datatypes
 ### Python Dynamically Typed
 Python is **a dynamically typed language**, which means that **you don’t need to declare** the **data type** of a variable explicitly. Instead, **Python automatically determines the type** based on the value assigned to the variable at runtime.
 ```python
