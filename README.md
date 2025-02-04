@@ -20,6 +20,10 @@
       - [4. Summary](#4-summary)
   - [Section 4: Operators and Expression](#section-4-operators-and-expression)
     - [Arithmetic Operators](#arithmetic-operators)
+    - [Challenge : Area of triangle](#challenge--area-of-triangle)
+      - [1. Triangle Area](#1-triangle-area)
+      - [2. Rhombus Area (Using Trapezoidal Formula)](#2-rhombus-area-using-trapezoidal-formula)
+      - [3. Displacement (Using Kinematic Equation)](#3-displacement-using-kinematic-equation)
 
 
 ## Section 1: Introduction to Python
@@ -587,8 +591,8 @@ print(-10 % 3)  # Output: 2 (because -10 = (-4 * 3) + 2)
 </div>
 
 ---
-**Challenge : Area of triangle**  
-**1. Triangle Area** 
+### Challenge : Area of triangle 
+#### 1. Triangle Area
 
 ```math
 A = \frac{1}{2} \times \text{base} \times \text{height}
@@ -624,7 +628,7 @@ Area is 25.0
 </div>
 
 ---
-**2. Rhombus Area (Using Trapezoidal Formula)**  
+#### 2. Rhombus Area (Using Trapezoidal Formula)
 The area of a rhombus can also be calculated using the formula:  
 
 ```math
@@ -665,7 +669,7 @@ Area is 25.0
   </strong>
 </div>
 
-**3. Displacement (Using Kinematic Equation)**
+#### 3. Displacement (Using Kinematic Equation)
 
 The displacement (**d**) is given by the equation:  
 
@@ -679,7 +683,7 @@ Where:
 - **a** is the **acceleration**.  
 - **d** is the **displacement**.  
 
-### Example Calculation  
+**Example Calculation**  
 If (**u** = 5) m/s, (**v** = 15) m/s, and (**a** = 2) m/s², then:  
 
 ```math
@@ -712,3 +716,20 @@ Displacement is 50.0
     <a href="#table-of-contents" style="text-decoration: none;">↥ Back to top</a>
   </strong>
 </div>
+
+### Challenge : Kms to Miles
+#### 1. Converting km to miles
+
+```math
+\text{miles} = \text{km} \times 0.621371
+```
+
+**Example**  
+If the **km** is 10, then:
+
+```math
+\begin{aligned}
+\text{miles} = \text{km} \times 0.621371 \newline
+\text{miles} = 10 \times 0.621371 = 6.21371
+\end{aligned}
+```
