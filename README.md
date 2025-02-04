@@ -664,6 +664,14 @@ The displacement (**d**) is given by the equation:
 $$
 d = \frac{v^2 - u^2}{2a}
 $$  
+
+<details>
+  <summary>Show Equation</summary>
+  d = \frac{v^2 - u^2}{2a}
+</details>
+
+![Equation](https://quicklatex.com/cache3/3f/ql_a3624360ef233bf18b11e2c73fc09f3f_l3.png)
+ 
 Where:  
 - **u** is the **initial velocity**.  
 - **v** is the **final velocity**.  
@@ -672,18 +680,26 @@ Where:
 
 ### Example Calculation  
 If (**u** = 5) m/s, (**v** = 15) m/s, and (**a** = 2) m/s², then:  
-$$
-d = \frac{v^2 - u^2}{2a}
-$$
-$$
-d = \frac{15^2 - 5^2}{2 \times 2}
-$$
-$$
-d = \frac{225 - 25}{4}
-$$
-$$
+
+<p style="text-align: center;">
+  <img src="https://quicklatex.com/cache3/5f/ql_d51e29147b1ad107f39f4d5cba418a5f_l3.png">
+</p>
+<details>
+  <summary style="text-align: center; font-size: 14px; color: #6c757d;">Click to view LaTeX formula</summary>
+To generate the LaTeX image, you can use: 
+  <a href="https://www.quicklatex.com/" target="_blank">QuickLaTeX</a>.
+
+```latex
+\vspace{10pt} 
+d = \frac{v^2 - u^2}{2a} \\
+\vspace{10pt} 
+d = \frac{15^2 - 5^2}{2 \times 2} \\
+\vspace{10pt} 
+d = \frac{225 - 25}{4} \\
+\vspace{10pt} 
 d = \frac{200}{4} = 50 \text{ m}
-$$  
+```
+</details>
 
 **Code** 
 ```python
