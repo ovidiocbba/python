@@ -1,9 +1,18 @@
 # Table of contents
+- [Table of contents](#table-of-contents)
   - [Section 1: Introduction to Python](#section-1-introduction-to-python)
     - [How a Python Program Runs?](#how-a-python-program-runs)
   - [Section 2: Python Installation and Setup](#section-2-python-installation-and-setup)
     - [Installing Python](#installing-python)
     - [Installing Pycharm](#installing-pycharm)
+    - [Python Dynamically Typed](#python-dynamically-typed)
+      - [Example of a Type Error Due to Dynamic Typing](#example-of-a-type-error-due-to-dynamic-typing)
+    - [Rules for Declaring Variable Names in Python](#rules-for-declaring-variable-names-in-python)
+    - [Python DataTypes](#python-datatypes)
+      - [1. Numeric](#1-numeric)
+      - [2. Sequence](#2-sequence)
+      - [3. Set](#3-set)
+      - [4. Dictionary](#4-dictionary)
 
 ## Section 1: Introduction to Python
 ### How a Python Program Runs?
@@ -241,7 +250,9 @@ Each **variable** holds **a different value** because **Python treats them as se
   </strong>
 </div>
 
-# Python DataTypes
+### Python DataTypes
+
+Python has several **built-in data types** that can be categorized into different **groups**:
 ```mermaid
 graph TD;
     A[Python DataTypes] --> B[Numeric]
@@ -258,9 +269,7 @@ graph TD;
     E --> E1[dict]
 ```
 
-Python has several built-in data types that can be categorized into different groups:
-
-## **1. Numeric**
+#### 1. Numeric
 These data types represent numerical values.
 
 - `int` → Integer numbers (**example**: `10`, `-5`)
@@ -268,7 +277,7 @@ These data types represent numerical values.
 - `bool` → Boolean values (`True` or `False`)
 - `complex` → Complex numbers (**example**: `3+4j`)
 
-## **Example**
+**Example**
 ```python
 # Numeric
 a = 10         # int
@@ -282,7 +291,14 @@ print(type(a), type(b), type(c), type(d))
 ```python
 <class 'int'> <class 'float'> <class 'bool'> <class 'complex'>
 ```
-## **2. Sequence**
+
+<div align="right">
+  <strong>
+    <a href="#table-of-contents" style="text-decoration: none;">↥ Back to top</a>
+  </strong>
+</div>
+
+#### 2. Sequence
 These data types store multiple values in order.
 
 - `list` → Mutable list (**example**: `[1, 2, 3]`)
@@ -291,7 +307,7 @@ These data types store multiple values in order.
 - `bytes` → Immutable sequence of bytes (**example**: `b'hello'`)
 - `bytearray` → Mutable sequence of bytes (**example**: `bytearray(b'hello')`)
 
-## **Example**
+**Example**
 ```python
 # Sequence
 my_list = [1, 2, 3]
@@ -307,13 +323,19 @@ print(type(my_list), type(my_tuple), type(my_str), type(my_bytes), type(my_bytea
 <class 'list'> <class 'tuple'> <class 'str'> <class 'bytes'> <class 'bytearray'>
 ```
 
-## **3. Set**
+<div align="right">
+  <strong>
+    <a href="#table-of-contents" style="text-decoration: none;">↥ Back to top</a>
+  </strong>
+</div>
+
+#### 3. Set
 They represent collections of unique elements.
 
 - `set` → Mutable set (**example**: `{1, 2, 3}`)
 - `frozenset` → Immutable set (**example**: `frozenset({1, 2, 3})`)
 
-## **Example**
+**Example**
 ```python
 # Set
 my_set = {1, 2, 3}
@@ -326,12 +348,18 @@ print(type(my_set), type(my_frozenset))
 <class 'set'> <class 'frozenset'>
 ```
 
-## **4. Dictionary**
+<div align="right">
+  <strong>
+    <a href="#table-of-contents" style="text-decoration: none;">↥ Back to top</a>
+  </strong>
+</div>
+
+#### 4. Dictionary
 They store data in key-value pairs.
 
 - `dict` → Mutable dictionary (**example**: `{"name": "Alice", "age": 25}`)
 
-## **Example**
+**Example**
 ```python
 # Dictionary
 my_dict = {"name": "Alice", "age": 25}
