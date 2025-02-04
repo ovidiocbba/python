@@ -729,7 +729,8 @@ If the **km** is 10, then:
 
 ```math
 \begin{aligned}
-\text{miles} = \text{km} \times 0.621371 \newline
-\text{miles} = 10 \times 0.621371 = 6.21371
+\text{miles} &= \text{km} \times 0.621371 \newline
+\text{miles} &= 10 \times 0.621371 = 6.21371
 \end{aligned}
 ```
+
