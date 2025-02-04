@@ -587,3 +587,122 @@ print(-10 % 3)  # Output: 2 (because -10 = (-4 * 3) + 2)
 </div>
 
 ---
+**Challenge : Area of triangle**  
+**1. Triangle Area**
+$$
+A = \frac{1}{2} \times \text{base} \times \text{height}
+$$  
+**Example:**  
+If the **base** is **10 cm** and the **height** is **5 cm**, then:  
+$$
+A = \frac{1}{2} \times 10 \times 5 = 25 \text{ cm}^2
+$$  
+
+**Code**
+```python
+base = int(input('Enter base: '))
+height = int(input('Enter height: '))
+area = 1/2 * base * height
+print('Area is ', area)
+```
+**Output**
+```python
+Enter base: 10
+Enter height: 5
+Area is 25.0
+```
+<div align="right">
+  <strong>
+    <a href="#table-of-contents" style="text-decoration: none;">↥ Back to top</a>
+  </strong>
+</div>
+
+---
+**2. Rhombus Area (Using Trapezoidal Formula)**
+The area of a rhombus can also be calculated using the formula:  
+$$
+A = \frac{1}{2} \times (a + b) \times \text{height}
+$$
+
+**Example:**  
+If (**a** = 6) cm, ( **b** = 4 ) cm, and **height** = 5 cm, then:  
+$$
+A = \frac{1}{2} \times (6 + 4) \times 5
+$$
+$$
+A = \frac{1}{2} \times 10 \times 5
+$$
+$$
+A = 25 \text{ cm}^2
+$$  
+
+**Code**  
+```python
+a = float(input('Enter side a: '))
+b = float(input('Enter side b: '))
+height = float(input('Enter height: '))
+area = 1/2 * (a + b) * height
+print('Area is', area)
+```
+**Output**
+```python
+Enter side a: 6
+Enter side b: 4
+Enter height: 5
+Area is 25.0
+```
+
+<div align="right">
+  <strong>
+    <a href="#table-of-contents" style="text-decoration: none;">↥ Back to top</a>
+  </strong>
+</div>
+
+**3. Displacement (Using Kinematic Equation)**
+
+The displacement (**d**) is given by the equation:  
+$$
+d = \frac{v^2 - u^2}{2a}
+$$  
+Where:  
+- **u** is the **initial velocity**.  
+- **v** is the **final velocity**.  
+- **a** is the **acceleration**.  
+- **d** is the **displacement**.  
+
+### Example Calculation  
+If (**u** = 5) m/s, (**v** = 15) m/s, and (**a** = 2) m/s², then:  
+$$
+d = \frac{v^2 - u^2}{2a}
+$$
+$$
+d = \frac{15^2 - 5^2}{2 \times 2}
+$$
+$$
+d = \frac{225 - 25}{4}
+$$
+$$
+d = \frac{200}{4} = 50 \text{ m}
+$$  
+
+**Code** 
+```python
+u = float(input('Enter initial velocity(u): '))
+v = float(input('Enter final velocity(v): '))
+a = float(input('Enter acceleration(a): '))
+d = (v**2 - u**2) / (2 * a)
+print("Displacement is", d)
+```
+**Output** 
+```python
+Enter initial velocity(u): 5
+Enter final velocity(v): 15
+Enter acceleration(a): 2
+Displacement is 50.0
+```
+
+<div align="right">
+  <strong>
+    <a href="#table-of-contents" style="text-decoration: none;">↥ Back to top</a>
+  </strong>
+</div>
