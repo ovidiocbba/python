@@ -588,10 +588,19 @@ print(-10 % 3)  # Output: 2 (because -10 = (-4 * 3) + 2)
 
 ---
 **Challenge : Area of triangle**  
-**1. Triangle Area**
-$$
+**1. Triangle Area**  
+![Triangle Area](images/triangle_area.png)
+
+<details>
+  <summary>Click to view LaTeX formula</summary>
+To generate the LaTeX image, you can use:
+  <a href="https://www.quicklatex.com/" target="_blank">QuickLaTeX</a>.
+
+```latex
 A = \frac{1}{2} \times \text{base} \times \text{height}
-$$  
+```
+</details>
+
 **Example:**  
 If the **base** is **10 cm** and the **height** is **5 cm**, then:  
 $$
@@ -680,10 +689,8 @@ Where:
 
 ### Example Calculation  
 If (**u** = 5) m/s, (**v** = 15) m/s, and (**a** = 2) m/s², then:  
+![Image](https://quicklatex.com/cache3/5f/ql_d51e29147b1ad107f39f4d5cba418a5f_l3.png)
 
-<p style="text-align: center;">
-  <img src="https://quicklatex.com/cache3/5f/ql_d51e29147b1ad107f39f4d5cba418a5f_l3.png">
-</p>
 <details>
   <summary>Click to view LaTeX formula</summary>
 To generate the LaTeX image, you can use:
@@ -698,7 +705,7 @@ d = \frac{200}{4} = 50
 \end{aligned}
 ```
 </details>
- 
+
 
 **Code** 
 ```python
