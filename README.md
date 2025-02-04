@@ -626,13 +626,17 @@ Area is 25.0
 </div>
 
 ---
-**2. Rhombus Area (Using Trapezoidal Formula)**
+**2. Rhombus Area (Using Trapezoidal Formula)**  
 The area of a rhombus can also be calculated using the formula:  
 
 ```math
 \begin{aligned}
 A = \frac{1}{2} \times (a + b) \times \text{height}
 \end{aligned}
+``` 
+**TEST**
+```math
+A = \frac{1}{2} \times (a + b) \times \text{height}
 ``` 
 
 **Example:**  
