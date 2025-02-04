@@ -18,8 +18,9 @@
       - [2. Explicit Type Conversion (Type Casting)](#2-explicit-type-conversion-type-casting)
       - [3. Special Cases in Type Conversion](#3-special-cases-in-type-conversion)
       - [4. Summary](#4-summary)
-    - [Section 4: Operators and Expression](#section-4-operators-and-expression)
-      - [Arithmetic Operators](#arithmetic-operators)
+  - [Section 4: Operators and Expression](#section-4-operators-and-expression)
+    - [Arithmetic Operators](#arithmetic-operators)
+
 
 ## Section 1: Introduction to Python
 ### How a Python Program Runs?
@@ -511,8 +512,8 @@ print(bool("0"))        # True (it's a non-empty string, not the number 0)
   </strong>
 </div>
 
-### Section 4: Operators and Expression
-#### Arithmetic Operators
+## Section 4: Operators and Expression
+### Arithmetic Operators
 
 Python provides several **arithmetic operators** to perform mathematical calculations.
 
