@@ -240,3 +240,83 @@ Each **variable** holds **a different value** because **Python treats them as se
     <a href="#table-of-contents" style="text-decoration: none;">↥ Back to top</a>
   </strong>
 </div>
+
+# Python DataTypes
+```mermaid
+graph TD;
+    A[Python DataTypes] --> B[Numeric]
+    A --> C[Sequence]
+    A --> D[Set]
+    A --> E[Dictionary]
+
+    B --> B1[int] --> B2[float] --> B3[bool] --> B4[complex]
+
+    C --> C1[list] --> C2[tuple]--> C3[string] --> C4[bytes] --> C5[bytearray]
+
+    D --> D1[set] --> D2[frozenset]
+
+    E --> E1[dict]
+```
+
+Python has several built-in data types that can be categorized into different groups:
+
+## **1. Numeric**
+These data types represent numerical values.
+
+- `int` → Integer numbers (example: `10`, `-5`)
+- `float` → Floating-point numbers (example: `3.14`, `-2.5`)
+- `bool` → Boolean values (`True` or `False`)
+- `complex` → Complex numbers (example: `3+4j`)
+
+## **2. Sequence**
+These data types store multiple values in order.
+
+- `list` → Mutable list (example: `[1, 2, 3]`)
+- `tuple` → Immutable tuple (example: `(1, 2, 3)`)
+- `str` → String of text (example: `"Hello, World!"`)
+- `bytes` → Immutable sequence of bytes (example: `b'hello'`)
+- `bytearray` → Mutable sequence of bytes (example: `bytearray(b'hello')`)
+
+## **3. Set**
+They represent collections of unique elements.
+
+- `set` → Mutable set (example: `{1, 2, 3}`)
+- `frozenset` → Immutable set (example: `frozenset({1, 2, 3})`)
+
+## **4. Dictionary**
+They store data in key-value pairs.
+
+- `dict` → Mutable dictionary (example: `{"name": "Alice", "age": 25}`)
+
+## **Example Usage**
+```python
+# Numeric
+a = 10         # int
+b = 3.14       # float
+c = True       # bool
+d = 3 + 4j     # complex
+
+# Sequence
+my_list = [1, 2, 3]
+my_tuple = (1, 2, 3)
+my_str = "Hello, Python"
+my_bytes = b"hello"
+my_bytearray = bytearray(b"hello")
+
+# Set
+my_set = {1, 2, 3}
+my_frozenset = frozenset({1, 2, 3})
+
+# Dictionary
+my_dict = {"name": "Alice", "age": 25}
+
+print(type(a), type(b), type(c), type(d))
+print(type(my_list), type(my_tuple), type(my_str), type(my_bytes), type(my_bytearray))
+print(type(my_set), type(my_frozenset))
+print(type(my_dict))
+
+<div align="right">
+  <strong>
+    <a href="#table-of-contents" style="text-decoration: none;">↥ Back to top</a>
+  </strong>
+</div>
