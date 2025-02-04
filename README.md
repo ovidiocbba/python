@@ -689,39 +689,6 @@ Where:
 
 ### Example Calculation  
 If (**u** = 5) m/s, (**v** = 15) m/s, and (**a** = 2) m/s², then:  
-![Image](https://quicklatex.com/cache3/5f/ql_d51e29147b1ad107f39f4d5cba418a5f_l3.png)
-
-<details>
-  <summary>Click to view LaTeX formula</summary>
-To generate the LaTeX image:
-
-1. You can use Visual Studio Code:  
-   Wrap the LaTeX formula with `$$` at the **beginning** and the **end** to preview it.   
-   Then, **take a screenshot** of the rendered formula. 
-
-Example:
-   ```latex
-   $$
-   \begin{aligned}
-   d = \frac{v^2 - u^2}{2a} \\
-   d = \frac{15^2 - 5^2}{2 \times 2} \\
-   d = \frac{225 - 25}{4} \\
-   d = \frac{200}{4} = 50
-   \end{aligned}
-   $$
-   ```
-2. Alternatively, you can use:
-   <a href="https://www.quicklatex.com/" target="_blank">QuickLaTeX</a>.
-
-```latex
-\begin{aligned}
-d = \frac{v^2 - u^2}{2a} \\
-d = \frac{15^2 - 5^2}{2 \times 2} \\
-d = \frac{225 - 25}{4} \\
-d = \frac{200}{4} = 50
-\end{aligned}
-```
-</details>
 
 $$
 \begin{aligned}
