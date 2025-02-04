@@ -24,7 +24,9 @@
       - [1. Triangle Area](#1-triangle-area)
       - [2. Rhombus Area (Using Trapezoidal Formula)](#2-rhombus-area-using-trapezoidal-formula)
       - [3. Displacement (Using Kinematic Equation)](#3-displacement-using-kinematic-equation)
-
+    - [Challenge : Kms to Miles](#challenge--kms-to-miles)
+      - [1. Converting km to miles](#1-converting-km-to-miles)
+      - [2. Area of a Circle](#2-area-of-a-circle)
 
 ## Section 1: Introduction to Python
 ### How a Python Program Runs?
@@ -725,12 +727,65 @@ Displacement is 50.0
 ```
 
 **Example**  
-If the **km** is 10, then:
-
+In this example, if the input is **10** kilometers, the output will be approximately **6.21371** miles.
 ```math
 \begin{aligned}
 \text{miles} &= \text{km} \times 0.621371 \newline
 \text{miles} &= 10 \times 0.621371 = 6.21371
 \end{aligned}
 ```
+**Code**
+```python
+km = float(input('Enter Km: '))
+miles = km * 0.621371
+print('Miles =', miles)
+```
+**Output**
+```python
+Enter Km: 10
+Miles = 6.21371
+```
 
+<div align="right">
+  <strong>
+    <a href="#table-of-contents" style="text-decoration: none;">↥ Back to top</a>
+  </strong>
+</div>
+
+#### 2. Area of a Circle
+The formula for the area of a circle is:
+```math
+\text{Area} = \pi \times r^2
+```
+ 
+This calculates the **area** of a circle based on its **radius** ($r$). 
+
+**Example**   
+In this example, if the input is a radius of **5** units, the output will be approximately **78.5398**.
+
+```math
+\begin{aligned}
+\text{Area} &= \pi \times r^2 \newline
+\text{Area} &= \pi \times 5^2 \newline
+\text{Area} &= 3.1416 \times 25 \newline
+\text{Area} &= 78.53981633974483
+\end{aligned}
+```
+**Code**
+```python
+import math
+radius = float(input('Enter Radius: '))
+area = math.pi * radius ** 2
+print('Area is:', area)
+```
+**Output**
+```python
+Enter Radius: 5
+Area is: 78.53981633974483
+```
+
+<div align="right">
+  <strong>
+    <a href="#table-of-contents" style="text-decoration: none;">↥ Back to top</a>
+  </strong>
+</div>
