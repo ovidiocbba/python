@@ -263,30 +263,30 @@ Python has several built-in data types that can be categorized into different gr
 ## **1. Numeric**
 These data types represent numerical values.
 
-- `int` → Integer numbers (example: `10`, `-5`)
-- `float` → Floating-point numbers (example: `3.14`, `-2.5`)
+- `int` → Integer numbers (**example**: `10`, `-5`)
+- `float` → Floating-point numbers (**example**: `3.14`, `-2.5`)
 - `bool` → Boolean values (`True` or `False`)
-- `complex` → Complex numbers (example: `3+4j`)
+- `complex` → Complex numbers (**example**: `3+4j`)
 
 ## **2. Sequence**
 These data types store multiple values in order.
 
-- `list` → Mutable list (example: `[1, 2, 3]`)
-- `tuple` → Immutable tuple (example: `(1, 2, 3)`)
-- `str` → String of text (example: `"Hello, World!"`)
-- `bytes` → Immutable sequence of bytes (example: `b'hello'`)
-- `bytearray` → Mutable sequence of bytes (example: `bytearray(b'hello')`)
+- `list` → Mutable list (**example**: `[1, 2, 3]`)
+- `tuple` → Immutable tuple (**example**: `(1, 2, 3)`)
+- `str` → String of text (**example**: `"Hello, World!"`)
+- `bytes` → Immutable sequence of bytes (**example**: `b'hello'`)
+- `bytearray` → Mutable sequence of bytes (**example**: `bytearray(b'hello')`)
 
 ## **3. Set**
 They represent collections of unique elements.
 
-- `set` → Mutable set (example: `{1, 2, 3}`)
-- `frozenset` → Immutable set (example: `frozenset({1, 2, 3})`)
+- `set` → Mutable set (**example**: `{1, 2, 3}`)
+- `frozenset` → Immutable set (**example**: `frozenset({1, 2, 3})`)
 
 ## **4. Dictionary**
 They store data in key-value pairs.
 
-- `dict` → Mutable dictionary (example: `{"name": "Alice", "age": 25}`)
+- `dict` → Mutable dictionary (**example**: `{"name": "Alice", "age": 25}`)
 
 ## **Example Usage**
 ```python
@@ -314,6 +314,14 @@ print(type(a), type(b), type(c), type(d))
 print(type(my_list), type(my_tuple), type(my_str), type(my_bytes), type(my_bytearray))
 print(type(my_set), type(my_frozenset))
 print(type(my_dict))
+```
+**Output:**
+```python
+<class 'int'> <class 'float'> <class 'bool'> <class 'complex'>
+<class 'list'> <class 'tuple'> <class 'str'> <class 'bytes'> <class 'bytearray'>
+<class 'set'> <class 'frozenset'>
+<class 'dict'>
+```
 
 <div align="right">
   <strong>
