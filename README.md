@@ -835,3 +835,81 @@ Total Surface Area is: 248.0
     <a href="#table-of-contents" style="text-decoration: none;">↥ Back to top</a>
   </strong>
 </div>
+
+### Challenge : Quadratic Equations
+**Finding Roots of Quadratic Equations**  
+The general quadratic equation is:
+
+```math
+ax^2 + bx + c = 0
+```
+The roots of the equation are given by:
+
+```math
+\begin{aligned}
+r_1 = \frac{-b + \sqrt{b^2 - 4ac}}{2a} \newline
+r_2 = \frac{-b - \sqrt{b^2 - 4ac}}{2a}
+\end{aligned}
+```
+**Example**  
+Let's solve the quadratic equation:
+
+```math
+2x^2 + 5x - 3 = 0
+```
+
+Using the quadratic formula:
+```math
+a = 2, \quad b = 5, \quad c = -3
+```
+```math
+\begin{aligned}
+r_1 &= \frac{-b + \sqrt{b^2 - 4ac}}{2a} \newline
+&= \frac{-5 + \sqrt{(5)^2 - 4(2)(-3)}}{2(2)} \newline
+&= \frac{-5 + \sqrt{25 + 24}}{4} \newline
+&= \frac{-5 + \sqrt{49}}{4} \newline
+&= \frac{-5 + 7}{4} = \frac{2}{4} = 0.5
+\end{aligned}
+```
+For $r_2$:
+```math
+a = 2, \quad b = 5, \quad c = -3
+```
+```math
+\begin{aligned}
+r_2 &= \frac{-b - \sqrt{b^2 - 4ac}}{2a} \newline
+&= \frac{-5 - \sqrt{(5)^2 - 4(2)(-3)}}{2(2)} \newline
+&= \frac{-5 - \sqrt{25 + 24}}{4} \newline
+&= \frac{-5 - \sqrt{49}}{4} \newline
+&= \frac{-5 - 7}{4} = \frac{-12}{4} = -3
+\end{aligned}
+```
+Final Answer:
+The roots of the equation are:
+```math
+r_1 = 0.5, \quad r_2 = -3
+```
+**Code**
+```python
+import math
+
+a = int(input('Enter a value: '))
+b = int(input('Enter b value: '))
+c = int(input('Enter c value: '))
+root1 = (-b + math.sqrt(b**2 - 4 * a * c))/(2 * a)
+root2 = (-b - math.sqrt(b**2 - 4 * a * c))/(2 * a)
+print('Roots are ', root1, root2)
+```
+
+**Output**
+```python
+Enter a value: 2
+Enter b value: 5
+Enter c value: -3
+Roots are  0.5 -3.0
+```
+<div align="right">
+  <strong>
+    <a href="#table-of-contents" style="text-decoration: none;">↥ Back to top</a>
+  </strong>
+</div>
