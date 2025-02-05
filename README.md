@@ -955,3 +955,142 @@ print("Final value of a:", a)
     <a href="#table-of-contents" style="text-decoration: none;">↥ Back to top</a>
   </strong>
 </div>
+
+## Section 5: Conditional Statements
+### Conditional Statements- if ...else
+Conditional statements allow executing different code blocks based on conditions.
+
+**`if` Statement**
+```python
+x = 10
+if x > 5:
+    print("x is greater than 5")
+```
+Executes the block if the condition is `True`.
+
+**`if...else` Statement**
+```python
+x = 3
+if x > 5:
+    print("x is greater than 5")
+else:
+    print("x is not greater than 5")
+```
+Runs the `else` block if the condition is `False`.
+
+**`if...elif...else` Structure**
+```python
+x = 5
+if x > 5:
+    print("x is greater than 5")
+elif x == 5:
+    print("x is equal to 5")
+else:
+    print("x is less than 5")
+```
+Allows multiple conditions.
+
+**Ternary Operator**
+```python
+x = 10
+message = "Greater than 5" if x > 5 else "5 or less"
+print(message)
+```
+A compact way to write simple conditional expressions.
+
+---
+
+<div align="right">
+  <strong>
+    <a href="#table-of-contents" style="text-decoration: none;">↥ Back to top</a>
+  </strong>
+</div>
+
+### Logical Operator
+Logical operators are used to combine conditional statements.
+
+**`and` Operator**
+```python
+x = 7
+y = 10
+if x > 5 and y > 8:
+    print("Both conditions are true")
+```
+Returns `True` if both conditions are true.
+
+**`or` Operator**
+```python
+x = 3
+y = 10
+if x > 5 or y > 8:
+    print("At least one condition is true")
+```
+Returns `True` if **at least one condition** is true.
+
+**`not` Operator**
+```python
+x = False
+if not x:
+    print("x is False")
+```
+**Reverses the boolean value** of the condition.
+
+<div align="right">
+  <strong>
+    <a href="#table-of-contents" style="text-decoration: none;">↥ Back to top</a>
+  </strong>
+</div>
+
+### Challenge : Eligibility for Casting a Vote
+**1. Find Difference between 2 numbers**
+**Code**
+```python
+no1 = int(input('Enter first number: '))
+no2 = int(input('Enter second number: '))
+if no1 - no2 >= 0:
+    print(no1 - no2)
+else:
+    print(no2 - no1)
+```
+**Output**
+```python
+Enter first number: 8
+Enter second number: 5
+3
+```
+
+**2. Check if a number is Odd or Even**
+**Code**
+```python
+number = int(input("Enter a number: "))
+if number % 2 == 0:
+    print("Even")
+else:
+    print("Odd")
+```
+**Output**
+```python
+Enter a number: 10
+Even
+```
+**3. Check for Age Eligibility for casting a Vote** 
+**Code**
+```python
+age = int(input("Enter your age: "))
+
+if age >= 18:
+    print("Eligible")
+else:
+    print("Not Eligible")
+```
+**Output**
+```python
+Enter your age: 19
+Eligible
+```
+
+<div align="right">
+  <strong>
+    <a href="#table-of-contents" style="text-decoration: none;">↥ Back to top</a>
+  </strong>
+</div>
