@@ -1403,6 +1403,42 @@ print(False and check())  # Output: 'False' (check() is never executed)
 print(True or check())    # Output: 'True' (check() is never executed)
 ```
 
+**📌 Common Use Cases**
+
+**1. Assign Default Values (`or`)**  
+If a value is empty or `None`, `or` assigns an alternative value.
+```python
+name = input("Enter your name: ") or "Guest"
+print(name)  # If empty, prints "Guest"
+```
+
+**2. Conditional Execution (`and`)**  
+`and` executes an action only if **all conditions are true.**
+```python
+age = 20
+age >= 18 and print("You can vote")
+```
+
+**3. Avoid `None` Errors (`or`)**  
+Instead of checking `None` with `if`, use `or`.
+
+```python
+data = None
+result = data or "No data available"
+print(result)  # Prints "No data available"
+```
+
+**4. Optimization with Short-Circuiting (`and`, `or`)**  
+Python **stops evaluation** if the result is already determined.
+```python
+def operation():
+    print("Executing...")
+    return True
+
+False and operation()  # Does NOT execute the function
+True or operation()    # Does NOT execute the function
+```
+
 <div align="right">
   <strong>
     <a href="#table-of-contents" style="text-decoration: none;">↥ Back to top</a>
