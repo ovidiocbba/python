@@ -789,3 +789,49 @@ Area is: 78.53981633974483
     <a href="#table-of-contents" style="text-decoration: none;">↥ Back to top</a>
   </strong>
 </div>
+
+### Challenge : Surface area of Cuboid
+A cuboid is a three-dimensional geometric shape with **six rectangular faces**. The **total surface area** (TSA) of a cuboid is the sum of the areas of all its six faces. It is calculated using the formula:
+```math
+\text{TSA} = 2(lh + lb + bh)
+```
+where:
+- $l$ is the length,
+- $b$ is the breadth (width),
+- $h$ is the height.
+
+**Example**  
+Let's consider a cuboid with:
+- $l\;= 10\;cm$
+- $b\;= 6\;cm$
+- $h\;= 4\;cm$
+
+```math
+\begin{aligned}
+\text{TSA} &= 2(lh + lb + bh) \newline
+\ &= 2(10 \times 4 + 10 \times 6 + 6 \times 4) \newline
+\ &= 2(40 + 60 + 24) \newline
+\ &= 2(124) \newline
+\ &= 248 cm^2
+\end{aligned}
+```
+**Code**
+```python
+length = float(input('Enter Length(l): '))
+breadth = float(input('Enter Breadth(b): '))
+height = float(input('Enter Height(h): '))
+area = 2 * (length * breadth + length * height + breadth * height)
+print('Total Surface Area is:', area)
+```
+**Output**
+```python
+Enter Length(l): 10
+Enter Breadth(b): 6
+Enter Height(h): 4
+Total Surface Area is: 248.0
+```
+<div align="right">
+  <strong>
+    <a href="#table-of-contents" style="text-decoration: none;">↥ Back to top</a>
+  </strong>
+</div>
