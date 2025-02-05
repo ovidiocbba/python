@@ -609,8 +609,8 @@ If the **base** is **10 cm** and the **height** is **5 cm**, then:
 
 ```math
 \begin{aligned}
-A = \frac{1}{2} \times \text{base} \times \text{height} \newline
-A = \frac{1}{2} \times 10 \times 5 = 25 \text{ cm}^2
+A &= \frac{1}{2} \times \text{base} \times \text{height} \newline
+ &= \frac{1}{2} \times 10 \times 5 = 25 \text{ cm}^2
 \end{aligned}
 ```
 
@@ -646,10 +646,10 @@ If (**a** = 6) cm, ( **b** = 4 ) cm, and **height** = 5 cm, then:
 
 ```math
 \begin{aligned}
-A = \frac{1}{2} \times (a + b) \times \text{height} \newline
-A = \frac{1}{2} \times (6 + 4) \times 5 \newline
-A = \frac{1}{2} \times 10 \times 5 \newline
-A = 25 \text{ cm}^2
+A &= \frac{1}{2} \times (a + b) \times \text{height} \newline
+ &= \frac{1}{2} \times (6 + 4) \times 5 \newline
+ &= \frac{1}{2} \times 10 \times 5 \newline
+ &= 25 \text{ cm}^2
 \end{aligned}
 ```
 
@@ -690,14 +690,15 @@ Where:
 - **d** is the **displacement**.  
 
 **Example Calculation**  
-If (**u** = 5) m/s, (**v** = 15) m/s, and (**a** = 2) m/s², then:  
+If ($u$ = **5**) m/s, ($v$ = **15**) m/s, and ($a$ = **2**) m/s², then:  
 
 ```math
 \begin{aligned}
-d = \frac{v^2 - u^2}{2a} \newline
-d = \frac{15^2 - 5^2}{2 \times 2} \newline
-d = \frac{225 - 25}{4} \newline
-d = \frac{200}{4} = 50
+d &= \frac{v^2 - u^2}{2a} \newline
+ &= \frac{15^2 - 5^2}{2 \times 2} \newline
+ &= \frac{225 - 25}{4} \newline
+ &= \frac{200}{4} \newline
+ &= 50
 \end{aligned}
 ```
 
@@ -735,7 +736,8 @@ In this example, if the input is **10** kilometers, the output will be approxima
 ```math
 \begin{aligned}
 \text{miles} &= \text{km} \times 0.621371 \newline
-\text{miles} &= 10 \times 0.621371 = 6.21371
+\ &= 10 \times 0.621371 \newline
+\ &= 6.21371
 \end{aligned}
 ```
 **Code**
@@ -770,9 +772,9 @@ In this example, if the input is a radius of **5** units, the output will be app
 ```math
 \begin{aligned}
 \text{Area} &= \pi \times r^2 \newline
-\text{Area} &= \pi \times 5^2 \newline
-\text{Area} &= 3.1416 \times 25 \newline
-\text{Area} &= 78.53981633974483
+\ &= \pi \times 5^2 \newline
+\ &= 3.1416 \times 25 \newline
+\ &= 78.53981633974483
 \end{aligned}
 ```
 **Code**
