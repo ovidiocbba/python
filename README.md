@@ -320,11 +320,11 @@ print(type(a), type(b), type(c), type(d))
 #### 2. Sequence
 These data types store multiple values in order.
 
-- `list` → Mutable list (**example**: `[1, 2, 3]`)
-- `tuple` → Immutable tuple (**example**: `(1, 2, 3)`)
+- `list` → **Mutable** list (**example**: `[1, 2, 3]`)
+- `tuple` → **Immutable** tuple (**example**: `(1, 2, 3)`)
 - `str` → String of text (**example**: `"Hello, World!"`)
-- `bytes` → Immutable sequence of bytes (**example**: `b'hello'`)
-- `bytearray` → Mutable sequence of bytes (**example**: `bytearray(b'hello')`)
+- `bytes` → **Immutable** sequence of bytes (**example**: `b'hello'`)
+- `bytearray` → **Mutable** sequence of bytes (**example**: `bytearray(b'hello')`)
 
 **Example**
 ```python
