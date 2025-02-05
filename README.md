@@ -40,6 +40,7 @@
   - [Nested `if` and `elif` Statements](#nested-if-and-elif-statements)
   - [Challenge : Discount Amount](#challenge--discount-amount)
   - [Challenge : Displaying Name of a Day](#challenge--displaying-name-of-a-day)
+  - [Challenge : Leap Year or Not](#challenge--leap-year-or-not)
 
 ## Section 1: Introduction to Python
 ### How a Python Program Runs?
@@ -1313,6 +1314,35 @@ else:
 Enter Day Number: 5
 Thursday
 ```
+
+<div align="right">
+  <strong>
+    <a href="#table-of-contents" style="text-decoration: none;">↥ Back to top</a>
+  </strong>
+</div>
+
+### Challenge : Leap Year or Not
+Check whether a year is a leap year or not.
+**Code**
+```python
+year = int(input('Enter year: '))
+
+if year % 100 == 0:
+    if year % 400 == 0:
+        print('Leap Year')
+    else:
+        print('Not a Leap Year')
+elif year % 4 == 0:
+    print('Leap Year')
+else:
+    print('Not a Leap Year')
+```
+**Output**
+```python
+Enter year: 2024
+Leap Year
+```
+
 <div align="right">
   <strong>
     <a href="#table-of-contents" style="text-decoration: none;">↥ Back to top</a>
