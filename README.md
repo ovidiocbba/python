@@ -30,7 +30,11 @@
     - [Challenge : Surface area of Cuboid](#challenge--surface-area-of-cuboid)
     - [Challenge : Quadratic Equations](#challenge--quadratic-equations)
     - [Arithmetic Assignment Operators](#arithmetic-assignment-operators)
-
+  - [Section 5: Conditional Statements](#section-5-conditional-statements)
+    - [Conditional Statements- if ...else](#conditional-statements--if-else)
+    - [Logical Operator](#logical-operator)
+    - [Challenge : Eligibility for Casting a Vote](#challenge--eligibility-for-casting-a-vote)
+    - [Challenge : Marks within Range](#challenge--marks-within-range)
 
 ## Section 1: Introduction to Python
 ### How a Python Program Runs?
@@ -1087,6 +1091,58 @@ else:
 ```python
 Enter your age: 19
 Eligible
+```
+
+<div align="right">
+  <strong>
+    <a href="#table-of-contents" style="text-decoration: none;">↥ Back to top</a>
+  </strong>
+</div>
+
+### Challenge : Marks within Range
+**1. Check if marks of a subject are within range 0-100**
+**Code**
+```python
+mark = float(input("Enter the mark: " ))
+if mark >= 0 and mark <= 100:
+    print("Valid")
+else:
+    print("Invalid")
+```
+**Output**
+```python
+Enter the mark: 99
+Valid
+```
+
+**2. Check if a person is ‘Male’ or ‘Female’** 
+**Code**
+```python
+gender = input("Enter the gender: ")
+if gender == 'M' or gender == 'm':
+    print("Male")
+else:
+    print("Female")
+```
+**Output**
+```
+Enter the gender: m
+Male
+```
+
+**3. Check if a person is eligible to work**  
+**Code**
+```python
+age = int(input("Enter your age: "))
+if age >= 18 and age <= 60:
+    print("Eligible")
+else:
+    print("Not Eligible")
+```
+**Output**
+```
+Enter your age: 17
+Not Eligible
 ```
 
 <div align="right">
