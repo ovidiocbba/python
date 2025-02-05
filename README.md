@@ -1322,7 +1322,7 @@ Thursday
 </div>
 
 ### Challenge : Leap Year or Not
-Check whether a year is a leap year or not.
+Check whether a year is a leap year or not.  
 **Code**
 ```python
 year = int(input('Enter year: '))
