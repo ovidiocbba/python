@@ -605,7 +605,7 @@ A = \frac{1}{2} \times \text{base} \times \text{height}
 ```
 
 **Example:**  
-If the **base** is **10 cm** and the **height** is **5 cm**, then:  
+If the $base$ is **10 cm** and the $height$ is **5 cm**, then:  
 
 ```math
 \begin{aligned}
@@ -642,7 +642,7 @@ A = \frac{1}{2} \times (a + b) \times \text{height}
 ``` 
 
 **Example:**  
-If (**a** = 6) cm, ( **b** = 4 ) cm, and **height** = 5 cm, then:  
+If ($a$ = **6**) cm, ( $b$ = **4** ) cm, and $height$ = **5** cm, then:  
 
 ```math
 \begin{aligned}
