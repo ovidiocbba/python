@@ -39,7 +39,7 @@
   - [Challenge : Admin Access](#challenge--admin-access)
   - [Nested `if` and `elif` Statements](#nested-if-and-elif-statements)
   - [Challenge : Discount Amount](#challenge--discount-amount)
-- [Challenge : Displaying Name of a Day](#challenge--displaying-name-of-a-day)
+  - [Challenge : Displaying Name of a Day](#challenge--displaying-name-of-a-day)
 
 ## Section 1: Introduction to Python
 ### How a Python Program Runs?
@@ -1285,7 +1285,7 @@ Pay 1600.0
   </strong>
 </div>
 
-## Challenge : Displaying Name of a Day
+### Challenge : Displaying Name of a Day
 Take a day number and display day name
 **Code**
 ```python
