@@ -41,6 +41,7 @@
   - [Challenge : Discount Amount](#challenge--discount-amount)
   - [Challenge : Displaying Name of a Day](#challenge--displaying-name-of-a-day)
   - [Challenge : Leap Year or Not](#challenge--leap-year-or-not)
+  - [Detail Logical Operator](#detail-logical-operator)
 
 ## Section 1: Introduction to Python
 ### How a Python Program Runs?
@@ -1341,6 +1342,65 @@ else:
 ```python
 Enter year: 2024
 Leap Year
+```
+
+<div align="right">
+  <strong>
+    <a href="#table-of-contents" style="text-decoration: none;">↥ Back to top</a>
+  </strong>
+</div>
+
+### Detail Logical Operator
+**1. Non-Boolean Types**  
+Python allows logical operators (`and`, `or`, `not`) to work with **non-boolean types** by evaluating their **truthy** or **falsy** nature.  
+
+**Truthy and Falsy Values**
+- **`Falsy` values**: `0`, `None`, `''`, `[]`, `{}`, `False`
+- **`Truthy` values**: Any **`non-falsy`** value
+
+**Behavior of Logical Operators**
+```python
+print(5 and 10)   # Output: '10' (returns the 'last truthy' value)
+print(0 or "Hi") # Output: 'Hi' (returns the 'first truthy' value)
+print(not [])     # Output: 'True' ([] is falsy)
+```
+**And**
+- `and` returns the **first falsy** value it encounters.
+-  If **all values are truthy**, it returns the **last truthy** value.value
+
+**Or**
+- `or` returns the **first truthy** value it encounters.
+- If **all values are falsy**, it returns the **last falsy** value.
+
+**Not**
+- `not` **negates** the **truthy or falsy** nature of a value.
+- **Truthy** values **become False**, and **falsy** values **become True**.
+
+**2. Short Circuiting**  
+Short-circuiting means Python **stops evaluating expressions** as soon as the final result is determined.
+
+**`and` Operator (`Stops` at First `Falsy` Value)**
+- If it finds a **falsy** value, it **stops** and **returns it immediately**.
+```python
+print(False and 5)  # Output: 'False' (Stops at False, 5 is not evaluated)
+print(0 and 10)     # Output: '0' (Stops at 0, since it's falsy)
+```
+
+**`or` Operator (`Stops` at First `Truthy` Value)**
+- or **stops** as soon as it **finds** a **truthy** value and **returns it**.
+```python
+print(True or 5)  # Output: 'True' (Stops at True, 5 is not evaluated)
+print(0 or "Hi")  # Output: 'Hi' (0 is falsy, so evaluates and returns "Hi")
+```
+
+**Example with Functions**
+```python
+def check():
+    print("Function executed")
+    return True
+
+print(False and check())  # Output: 'False' (check() is never executed)
+print(True or check())    # Output: 'True' (check() is never executed)
 ```
 
 <div align="right">
