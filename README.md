@@ -1150,3 +1150,58 @@ Not Eligible
     <a href="#table-of-contents" style="text-decoration: none;">↥ Back to top</a>
   </strong>
 </div>
+
+### Challenge : Admin Access
+**1. Check if a student has passed or failed, by taking marks in 3 subjects**
+**Code**
+```python
+math = float(input("Enter Maths Marks: "))
+phy = float(input("Enter Physics Marks: "))
+chem = float(input("Enter Chemistry Marks: "))
+if math >= 45 and phy >= 45 and chem >= 45:
+    print('Passed')
+else:
+    print('Failed')
+```
+**Output**
+```python
+Enter Maths Marks: 75
+Enter Physics Marks: 46
+Enter Chemistry Marks: 78
+Passed
+```
+**2.Check if a person is authorized for admin access**
+**Code**
+```python
+username = input('Enter Username: ')
+
+if username == 'john' or username == 'smith':
+  print('Authorized')
+else:
+  print('Not Authorized')
+```
+**Output**
+```python
+Enter Username: john
+Authorized
+```
+**3. Check if a given lower case character is a vowel or consonant**
+**Code**
+```python
+ch = input('Enter a lower case letter: ')
+
+if ch == 'a' or ch == 'e' or ch == 'i' or ch == 'o'or ch == 'u' or ch == 'A':
+  print('Vowel')
+else:
+  print('Consonant')
+```
+**Output**
+```python
+Enter a lower case letter: a
+Vowel
+```
+<div align="right">
+  <strong>
+    <a href="#table-of-contents" style="text-decoration: none;">↥ Back to top</a>
+  </strong>
+</div>
