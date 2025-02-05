@@ -1,40 +1,43 @@
-# Table of contents
-  - [Section 1: Introduction to Python](#section-1-introduction-to-python)
-    - [How a Python Program Runs?](#how-a-python-program-runs)
-  - [Section 2: Python Installation and Setup](#section-2-python-installation-and-setup)
-    - [Installing Python](#installing-python)
-    - [Installing Pycharm](#installing-pycharm)
-  - [Section 3: Python Datatypes](#section-3-python-datatypes)
-    - [Python Dynamically Typed](#python-dynamically-typed)
-      - [Example of a Type Error Due to Dynamic Typing](#example-of-a-type-error-due-to-dynamic-typing)
-    - [Rules for Declaring Variable Names in Python](#rules-for-declaring-variable-names-in-python)
-    - [Python DataTypes](#python-datatypes)
-      - [1. Numeric](#1-numeric)
-      - [2. Sequence](#2-sequence)
-      - [3. Set](#3-set)
-      - [4. Dictionary](#4-dictionary)
-    - [Type Conversion in Python](#type-conversion-in-python)
-      - [1. Implicit Type Conversion (Automatic)](#1-implicit-type-conversion-automatic)
-      - [2. Explicit Type Conversion (Type Casting)](#2-explicit-type-conversion-type-casting)
-      - [3. Special Cases in Type Conversion](#3-special-cases-in-type-conversion)
-      - [4. Summary](#4-summary)
-  - [Section 4: Operators and Expression](#section-4-operators-and-expression)
-    - [Arithmetic Operators](#arithmetic-operators)
-    - [Challenge : Area of triangle](#challenge--area-of-triangle)
-      - [1. Triangle Area](#1-triangle-area)
-      - [2. Rhombus Area (Using Trapezoidal Formula)](#2-rhombus-area-using-trapezoidal-formula)
-      - [3. Displacement (Using Kinematic Equation)](#3-displacement-using-kinematic-equation)
-    - [Challenge : Kms to Miles](#challenge--kms-to-miles)
-      - [1. Converting km to miles](#1-converting-km-to-miles)
-      - [2. Area of a Circle](#2-area-of-a-circle)
-    - [Challenge : Surface area of Cuboid](#challenge--surface-area-of-cuboid)
-    - [Challenge : Quadratic Equations](#challenge--quadratic-equations)
-    - [Arithmetic Assignment Operators](#arithmetic-assignment-operators)
-  - [Section 5: Conditional Statements](#section-5-conditional-statements)
-    - [Conditional Statements- if ...else](#conditional-statements--if-else)
-    - [Logical Operator](#logical-operator)
-    - [Challenge : Eligibility for Casting a Vote](#challenge--eligibility-for-casting-a-vote)
-    - [Challenge : Marks within Range](#challenge--marks-within-range)
+<h1>Table of contents</h1>
+
+- [Section 1: Introduction to Python](#section-1-introduction-to-python)
+  - [How a Python Program Runs?](#how-a-python-program-runs)
+- [Section 2: Python Installation and Setup](#section-2-python-installation-and-setup)
+  - [Installing Python](#installing-python)
+  - [Installing Pycharm](#installing-pycharm)
+- [Section 3: Python Datatypes](#section-3-python-datatypes)
+  - [Python Dynamically Typed](#python-dynamically-typed)
+    - [Example of a Type Error Due to Dynamic Typing](#example-of-a-type-error-due-to-dynamic-typing)
+  - [Rules for Declaring Variable Names in Python](#rules-for-declaring-variable-names-in-python)
+  - [Python DataTypes](#python-datatypes)
+    - [1. Numeric](#1-numeric)
+    - [2. Sequence](#2-sequence)
+    - [3. Set](#3-set)
+    - [4. Dictionary](#4-dictionary)
+  - [Type Conversion in Python](#type-conversion-in-python)
+    - [1. Implicit Type Conversion (Automatic)](#1-implicit-type-conversion-automatic)
+    - [2. Explicit Type Conversion (Type Casting)](#2-explicit-type-conversion-type-casting)
+    - [3. Special Cases in Type Conversion](#3-special-cases-in-type-conversion)
+    - [4. Summary](#4-summary)
+- [Section 4: Operators and Expression](#section-4-operators-and-expression)
+  - [Arithmetic Operators](#arithmetic-operators)
+  - [Challenge : Area of triangle](#challenge--area-of-triangle)
+    - [1. Triangle Area](#1-triangle-area)
+    - [2. Rhombus Area (Using Trapezoidal Formula)](#2-rhombus-area-using-trapezoidal-formula)
+    - [3. Displacement (Using Kinematic Equation)](#3-displacement-using-kinematic-equation)
+  - [Challenge : Kms to Miles](#challenge--kms-to-miles)
+    - [1. Converting km to miles](#1-converting-km-to-miles)
+    - [2. Area of a Circle](#2-area-of-a-circle)
+  - [Challenge : Surface area of Cuboid](#challenge--surface-area-of-cuboid)
+  - [Challenge : Quadratic Equations](#challenge--quadratic-equations)
+  - [Arithmetic Assignment Operators](#arithmetic-assignment-operators)
+- [Section 5: Conditional Statements](#section-5-conditional-statements)
+  - [Conditional Statements- if ...else](#conditional-statements--if-else)
+  - [Logical Operator](#logical-operator)
+  - [Challenge : Eligibility for Casting a Vote](#challenge--eligibility-for-casting-a-vote)
+  - [Challenge : Marks within Range](#challenge--marks-within-range)
+  - [Challenge : Admin Access](#challenge--admin-access)
+  - [Nested `if` and `elif` Statements](#nested-if-and-elif-statements)
 
 ## Section 1: Introduction to Python
 ### How a Python Program Runs?
@@ -1200,6 +1203,43 @@ else:
 Enter a lower case letter: a
 Vowel
 ```
+<div align="right">
+  <strong>
+    <a href="#table-of-contents" style="text-decoration: none;">↥ Back to top</a>
+  </strong>
+</div>
+
+### Nested `if` and `elif` Statements
+
+Nested `if` and `elif` statements allow multiple levels of condition checking.
+
+**Nested `if` Statement**
+```python
+x = 10
+y = 20
+if x > 5:
+    if y > 15:
+        print("x is greater than 5 and y is greater than 15")
+```
+An `if` statement inside another `if` statement for more granular conditions.
+
+**Nested `if...elif` Structure**
+```python
+x = 10
+y = 5
+if x > 5:
+    if y > 10:
+        print("x is greater than 5 and y is greater than 10")
+    elif y > 2:
+        print("x is greater than 5 and y is greater than 2 but not greater than 10")
+    else:
+        print("x is greater than 5 but y is 2 or less")
+```
+This structure allows multiple conditions to be checked within a nested block.
+
+---
+Nested `if` and `elif` statements are **useful** for **handling complex decision-making** scenarios.
+
 <div align="right">
   <strong>
     <a href="#table-of-contents" style="text-decoration: none;">↥ Back to top</a>
