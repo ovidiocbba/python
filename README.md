@@ -919,8 +919,6 @@ Roots are  0.5 -3.0
 </div>
 
 ### Arithmetic Assignment Operators
-**List of Arithmetic Assignment Operators**
-
 | Operator | Example | Equivalent To | Description |
 |----------|---------|--------------|-------------|
 | `+=` | `a += b` | `a = a + b` | Adds `b` to `a` and assigns the result to `a`. |
@@ -938,13 +936,14 @@ Roots are  0.5 -3.0
 a = 10
 
 # Using arithmetic assignment operators
-a += 5  # Equivalent to a = a + 5
-a -= 2  # Equivalent to a = a - 2
-a *= 3  # Equivalent to a = a * 3
-a /= 4  # Equivalent to a = a / 4
-a //= 2 # Equivalent to a = a // 2
-a %= 3  # Equivalent to a = a % 3
-a **= 2 # Equivalent to a = a ** 2
+# Equivalent to
+a += 5  # a = a + 5
+a -= 2  # a = a - 2
+a *= 3  # a = a * 3
+a /= 4  # a = a / 4
+a //= 2 # a = a // 2
+a %= 3  # a = a % 3
+a **= 2 # a = a ** 2
 
 # Print final result
 print("Final value of a:", a)
