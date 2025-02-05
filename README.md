@@ -27,6 +27,10 @@
     - [Challenge : Kms to Miles](#challenge--kms-to-miles)
       - [1. Converting km to miles](#1-converting-km-to-miles)
       - [2. Area of a Circle](#2-area-of-a-circle)
+    - [Challenge : Surface area of Cuboid](#challenge--surface-area-of-cuboid)
+    - [Challenge : Quadratic Equations](#challenge--quadratic-equations)
+    - [Arithmetic Assignment Operators](#arithmetic-assignment-operators)
+
 
 ## Section 1: Introduction to Python
 ### How a Python Program Runs?
@@ -907,6 +911,43 @@ Enter a value: 2
 Enter b value: 5
 Enter c value: -3
 Roots are  0.5 -3.0
+```
+<div align="right">
+  <strong>
+    <a href="#table-of-contents" style="text-decoration: none;">↥ Back to top</a>
+  </strong>
+</div>
+
+### Arithmetic Assignment Operators
+**List of Arithmetic Assignment Operators**
+
+| Operator | Example | Equivalent To | Description |
+|----------|---------|--------------|-------------|
+| `+=` | `a += b` | `a = a + b` | Adds `b` to `a` and assigns the result to `a`. |
+| `-=` | `a -= b` | `a = a - b` | Subtracts `b` from `a` and assigns the result to `a`. |
+| `*=` | `a *= b` | `a = a * b` | Multiplies `a` by `b` and assigns the result to `a`. |
+| `/=` | `a /= b` | `a = a / b` | Divides `a` by `b` and assigns the result to `a`. |
+| `//=` | `a //= b` | `a = a // b` | Performs floor division on `a` by `b` and assigns the result to `a`. |
+| `%=` | `a %= b` | `a = a % b` | Computes the remainder of `a` divided by `b` and assigns the result to `a`. |
+| `**=` | `a **= b` | `a = a ** b` | Raises `a` to the power of `b` and assigns the result to `a`. |
+
+**Example**  
+
+```python
+# Initialize a variable
+a = 10
+
+# Using arithmetic assignment operators
+a += 5  # Equivalent to a = a + 5
+a -= 2  # Equivalent to a = a - 2
+a *= 3  # Equivalent to a = a * 3
+a /= 4  # Equivalent to a = a / 4
+a //= 2 # Equivalent to a = a // 2
+a %= 3  # Equivalent to a = a % 3
+a **= 2 # Equivalent to a = a ** 2
+
+# Print final result
+print("Final value of a:", a)
 ```
 <div align="right">
   <strong>
