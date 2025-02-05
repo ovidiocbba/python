@@ -802,9 +802,9 @@ where:
 
 **Example**  
 Let's consider a cuboid with:
-- $l\;= 10\;cm$
-- $b\;= 6\;cm$
-- $h\;= 4\;cm$
+- $l\quad= 10 \ cm$
+- $b \ = 6 \ cm$
+- $h \ = 4 \ cm$
 
 ```math
 \begin{aligned}
