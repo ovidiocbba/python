@@ -39,6 +39,7 @@
   - [Challenge : Admin Access](#challenge--admin-access)
   - [Nested `if` and `elif` Statements](#nested-if-and-elif-statements)
   - [Challenge : Discount Amount](#challenge--discount-amount)
+- [Challenge : Displaying Name of a Day](#challenge--displaying-name-of-a-day)
 
 ## Section 1: Introduction to Python
 ### How a Python Program Runs?
@@ -1277,6 +1278,40 @@ print('Pay', disc_amount)
 ```python
 Enter Bill Amount: 2000
 Pay 1600.0
+```
+<div align="right">
+  <strong>
+    <a href="#table-of-contents" style="text-decoration: none;">↥ Back to top</a>
+  </strong>
+</div>
+
+## Challenge : Displaying Name of a Day
+Take a day number and display day name
+**Code**
+```python
+day = int(input('Enter Day Number: '))
+
+if day == 1:
+    print('Sunday')
+elif day == 2:
+    print('Monday')
+elif day == 3:
+    print('Tuesday')
+elif day == 4:
+    print('Wednesday')
+elif day == 5:
+    print('Thursday')
+elif day == 6:
+    print('Friday')
+elif day == 7:
+    print('Saturday')
+else:
+    print('Invalid Day Number')
+```
+**Output**
+```python
+Enter Day Number: 5
+Thursday
 ```
 <div align="right">
   <strong>
