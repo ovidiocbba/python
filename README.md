@@ -38,6 +38,7 @@
   - [Challenge : Marks within Range](#challenge--marks-within-range)
   - [Challenge : Admin Access](#challenge--admin-access)
   - [Nested `if` and `elif` Statements](#nested-if-and-elif-statements)
+  - [Challenge : Discount Amount](#challenge--discount-amount)
 
 ## Section 1: Introduction to Python
 ### How a Python Program Runs?
@@ -1240,6 +1241,43 @@ This structure allows multiple conditions to be checked within a nested block.
 ---
 Nested `if` and `elif` statements are **useful** for **handling complex decision-making** scenarios.
 
+<div align="right">
+  <strong>
+    <a href="#table-of-contents" style="text-decoration: none;">↥ Back to top</a>
+  </strong>
+</div>
+
+### Challenge : Discount Amount
+The discount percentage is determined based on the amount:
+```math
+\begin{aligned}
+\text{amount} \leq 1000 & \quad 10\% \newline
+1000 < \text{amount} \leq 5000 & \quad  20\% \newline
+5000 < \text{amount} \leq 10000 & \quad 30\% \newline
+10000 < \text{amount} & \quad 50\%
+\end{aligned}
+```
+**Code**
+```python
+amount = float(input('Enter Bill Amount: '))
+
+if amount <= 1000:
+  discount = amount * 10 / 100
+elif amount > 1000 and amount <= 5000:
+  discount = amount * 20 / 100
+elif amount > 5000 and amount <= 10000:
+  discount = amount * 30 / 100
+else:
+  discount = amount * 50 / 100
+disc_amount = amount - discount
+
+print('Pay', disc_amount)
+```
+**Output**
+```python
+Enter Bill Amount: 2000
+Pay 1600.0
+```
 <div align="right">
   <strong>
     <a href="#table-of-contents" style="text-decoration: none;">↥ Back to top</a>
