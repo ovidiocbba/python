@@ -890,7 +890,7 @@ r_2 &= \frac{-b - \sqrt{b^2 - 4ac}}{2a} \newline
 &= \frac{-5 - 7}{4} = \frac{-12}{4} = -3
 \end{aligned}
 ```
-Final Answer:
+**Final Answer:**  
 The roots of the equation are:
 ```math
 r_1 = 0.5, \quad r_2 = -3
