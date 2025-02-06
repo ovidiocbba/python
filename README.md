@@ -1577,6 +1577,7 @@ In the binary system, we add **bit** by **bit** from **right to left**, just lik
 ```
 
 ```math
+\begin{aligned}
 \begin{array}{cccccccc}
 \text{Carry} & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 1 \\
 \text{Number A} & 1 & 1 & 1 & 1 & 1 & 0 & 1 & 0 \\
@@ -1584,6 +1585,7 @@ In the binary system, we add **bit** by **bit** from **right to left**, just lik
 \hline
 \text{Result} & 1 & 1 & 1 & 1 & 1 & 0 & 1 & 1 \\
 \end{array}
+\end{aligned}
 ```
 
 ```math
