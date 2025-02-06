@@ -49,6 +49,8 @@
     - [NOT Operator (~)](#not-operator-)
     - [Left Shift Operator (\<\<)](#left-shift-operator-)
     - [Right Shift Operator (\>\>)](#right-shift-operator-)
+- [Section 5: Conditional Statements](#section-5-conditional-statements-1)
+  - [Conditional Statements- if ...else](#conditional-statements--if-else-1)
 
 ## Section 1: Introduction to Python
 ### How a Python Program Runs?
@@ -304,6 +306,7 @@ graph TD;
     D --> D1[set] --> D2[frozenset]
 
     E --> E1[dict]
+    
 ```
 
 #### 1. Numeric
@@ -1693,6 +1696,28 @@ a >> 5 &= 5 \newline
 \textbf{00000}101 &= 5 \newline
 \end{aligned}
 ```
+<div align="right">
+  <strong>
+    <a href="#table-of-contents" style="text-decoration: none;">↥ Back to top</a>
+  </strong>
+</div>
+
+## Section 5: Conditional Statements
+### Conditional Statements- if ...else
+**Code**
+```python
+a = int(input('Enter a number: '))
+if a < 0:
+  print('Negative')
+else:
+  print('Positive')
+```
+**Output**
+```python
+Enter a number: 5
+Positive
+```
+
 <div align="right">
   <strong>
     <a href="#table-of-contents" style="text-decoration: none;">↥ Back to top</a>
