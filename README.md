@@ -61,6 +61,7 @@
     - [2. Find sum of positive and negative numbers](#2-find-sum-of-positive-and-negative-numbers)
     - [3. Find maximum numbers from the given numbers](#3-find-maximum-numbers-from-the-given-numbers)
     - [4. Convert a Decimal number to a Binary number](#4-convert-a-decimal-number-to-a-binary-number)
+    - [Challenge: Guess a number between 1 - 10](#challenge-guess-a-number-between-1---10)
 
 ## Section 1: Introduction to Python
 ### How a Python Program Runs?
@@ -1993,6 +1994,39 @@ print(binary)
 ```python
 Enter a number: 10
 1010
+```
+
+<div align="right">
+  <strong>
+    <a href="#table-of-contents" style="text-decoration: none;">↥ Back to top</a>
+  </strong>
+</div>
+
+---
+#### Challenge: Guess a number between 1 - 10
+**Code**
+```python
+import random
+
+number = random.randint(1,10)
+guess = 0
+while guess != number:
+    guess = int(input("Enter a number: "))
+    if guess < number:
+        print("It is smaller.")
+    elif guess > number:
+        print("It is larger.")
+    else:
+        print('Correct Guess')
+```
+**Output**
+```python
+Enter a number: 5
+It is larger.
+Enter a number: 3
+It is larger.
+Enter a number: 2
+Correct Guess
 ```
 
 <div align="right">
