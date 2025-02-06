@@ -62,6 +62,7 @@
     - [3. Find maximum numbers from the given numbers](#3-find-maximum-numbers-from-the-given-numbers)
     - [4. Convert a Decimal number to a Binary number](#4-convert-a-decimal-number-to-a-binary-number)
     - [Challenge: Guess a number between 1 - 10](#challenge-guess-a-number-between-1---10)
+  - [Infinite Loop - break - continue - pass](#infinite-loop---break---continue---pass)
 
 ## Section 1: Introduction to Python
 ### How a Python Program Runs?
@@ -2036,3 +2037,52 @@ Correct Guess
 </div>
 
 ---
+### Infinite Loop - break - continue - pass
+
+**1. Infinite Loop (`while True`)**  
+Runs **forever** unless manually stopped or interrupted.  
+```python
+while True:
+    print("Hello!")  # Runs indefinitely (Ctrl + C to stop)
+```
+
+**2. `break` - Exit Loop**  
+Stops the loop immediately.  
+```python
+while True:
+    num = int(input("Enter a number: "))
+    if num == 0:
+        break  # Exit loop when 0 is entered
+```
+
+**3. `continue` - Skip Iteration**  
+Skips the rest of the current iteration and moves to the next one.  
+```python
+for num in range(1, 6):
+    if num == 3:
+        continue  # Skip 3
+    print(num)
+```
+**Output:**  
+```
+1  
+2  
+4  
+5  
+```
+
+**4. `pass` - Do Nothing**  
+A placeholder for future code.  
+```python
+for i in range(5):
+    pass  # Placeholder, avoids syntax error
+```
+
+<div align="right">
+  <strong>
+    <a href="#table-of-contents" style="text-decoration: none;">↥ Back to top</a>
+  </strong>
+</div>
+
+---
+
