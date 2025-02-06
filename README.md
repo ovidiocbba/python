@@ -61,9 +61,11 @@
     - [2. Find sum of positive and negative numbers](#2-find-sum-of-positive-and-negative-numbers)
     - [3. Find maximum numbers from the given numbers](#3-find-maximum-numbers-from-the-given-numbers)
     - [4. Convert a Decimal number to a Binary number](#4-convert-a-decimal-number-to-a-binary-number)
-    - [Challenge: Guess a number between 1 - 10](#challenge-guess-a-number-between-1---10)
+  - [Challenge: Guess a number between 1 - 10](#challenge-guess-a-number-between-1---10)
   - [Infinite Loop - break - continue - pass](#infinite-loop---break---continue---pass)
   - [else suite : else with while loop](#else-suite--else-with-while-loop)
+  - [What is for Loop ?](#what-is-for-loop-)
+  - [Challenge : Factorial of Given Number](#challenge--factorial-of-given-number)
 
 ## Section 1: Introduction to Python
 ### How a Python Program Runs?
@@ -2005,7 +2007,7 @@ Enter a number: 10
 </div>
 
 ---
-#### Challenge: Guess a number between 1 - 10
+### Challenge: Guess a number between 1 - 10
 **Code**
 ```python
 import random
@@ -2113,6 +2115,60 @@ Enter a number: 1
 Enter a number: 2
 Enter a number: 3
 Loop completed without break
+```
+<div align="right">
+  <strong>
+    <a href="#table-of-contents" style="text-decoration: none;">↥ Back to top</a>
+  </strong>
+</div>
+
+### What is for Loop ?
+
+**1. `for` Loop**  
+The `for` loop is used to **iterate over a sequence** (such as a list, tuple, or string).
+
+**Syntax:**
+```python
+for item in iterable:
+    # Loop body
+```
+
+**Example:**
+```python
+for num in range(1, 6):
+    print(num)
+```
+**Output:**
+```
+1
+2
+3
+4
+5
+```
+
+<div align="right">
+  <strong>
+    <a href="#table-of-contents" style="text-decoration: none;">↥ Back to top</a>
+  </strong>
+</div>
+
+### Challenge : Factorial of Given Number
+
+**Code**
+```python
+number = int(input('Enter a Number: '))
+fact = 1
+
+for x in range(1, number + 1):
+    fact = fact * x
+
+print('Factorial of', number, 'is', fact)
+```
+**Output**
+```python
+Enter a Number: 4
+Factorial of 4 is 24
 ```
 <div align="right">
   <strong>
