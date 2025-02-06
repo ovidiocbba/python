@@ -1809,6 +1809,8 @@ print('Sum of digits is', sum)
 ```
 **Output**
 ```python
+Enter a number: 589
+Sum of digits is 22
 ```
 <div align="right">
   <strong>
