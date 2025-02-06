@@ -63,6 +63,8 @@
     - [4. Convert a Decimal number to a Binary number](#4-convert-a-decimal-number-to-a-binary-number)
     - [Challenge: Guess a number between 1 - 10](#challenge-guess-a-number-between-1---10)
   - [Infinite Loop - break - continue - pass](#infinite-loop---break---continue---pass)
+  - [else suite : else with while loop](#else-suite--else-with-while-loop)
+- [**Syntax:**](#syntax)
 
 ## Section 1: Introduction to Python
 ### How a Python Program Runs?
@@ -2086,3 +2088,35 @@ for i in range(5):
 
 ---
 
+### else suite : else with while loop
+The `else` block executes **only if the loop completes normally (without `break`)**.  
+## **Syntax:**
+```python
+while condition:
+    # Loop body
+else:
+    # Executes if the loop ends normally
+```
+**Code**
+```python
+count = 0
+while count < 3:
+    num = int(input("Enter a number: "))
+    if num == 0:
+        break  # Exit loop early
+    count += 1
+else:
+    print("Loop completed without break")
+```
+**Output**
+```python
+Enter a number: 1
+Enter a number: 2
+Enter a number: 3
+Loop completed without break
+```
+<div align="right">
+  <strong>
+    <a href="#table-of-contents" style="text-decoration: none;">↥ Back to top</a>
+  </strong>
+</div>
