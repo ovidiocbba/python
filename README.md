@@ -51,6 +51,7 @@
     - [Right Shift Operator (\>\>)](#right-shift-operator-)
 - [Section 6: Loops - Control Flow](#section-6-loops---control-flow)
   - [Introduction to Loops](#introduction-to-loops)
+  - [Challenge : Multiplication Table](#challenge--multiplication-table)
 
 ## Section 1: Introduction to Python
 ### How a Python Program Runs?
@@ -1720,6 +1721,38 @@ Enter a number: 1000
 0
 0
 1
+```
+
+<div align="right">
+  <strong>
+    <a href="#table-of-contents" style="text-decoration: none;">↥ Back to top</a>
+  </strong>
+</div>
+
+### Challenge : Multiplication Table
+**Display Multiplication table for a given number.**
+**Code**
+```python
+n = int(input('Enter a number for Multiplication table: '))
+
+count = 1
+while count <= 10:
+  print(n, 'X', count, '=' , n * count)
+  count+=1
+```
+**Output**
+```python
+Enter a number for Multiplication table: 5
+5 X 1 = 5
+5 X 2 = 10
+5 X 3 = 15
+5 X 4 = 20
+5 X 5 = 25
+5 X 6 = 30
+5 X 7 = 35
+5 X 8 = 40
+5 X 9 = 45
+5 X 10 = 50
 ```
 
 <div align="right">
