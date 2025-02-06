@@ -64,7 +64,6 @@
     - [Challenge: Guess a number between 1 - 10](#challenge-guess-a-number-between-1---10)
   - [Infinite Loop - break - continue - pass](#infinite-loop---break---continue---pass)
   - [else suite : else with while loop](#else-suite--else-with-while-loop)
-- [**Syntax:**](#syntax)
 
 ## Section 1: Introduction to Python
 ### How a Python Program Runs?
@@ -2090,7 +2089,7 @@ for i in range(5):
 
 ### else suite : else with while loop
 The `else` block executes **only if the loop completes normally (without `break`)**.  
-## **Syntax:**
+**Syntax:**
 ```python
 while condition:
     # Loop body
