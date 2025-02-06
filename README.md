@@ -1535,18 +1535,66 @@ a \wedge b &= 0\textbf{1}\textbf{0}1 \newline
 ---
 
 #### NOT Operator (~)
+The NOT (~) operator **inverts the bits** and **changes the sign** of the number.
 ```math 
 \sim a = - (a + 1)
 ```
-The NOT (~) operator inverts the bits and changes the sign of the number.
+**Understanding Two’s Complement**  
+Two’s complement is a method for representing signed integers in binary. The steps to compute the two’s complement of a number are:
+
+1. Write **the number** in **binary**.
+2. **Invert all bits** (change `0` to `1` and `1` to `0`).
+3. **Add 1** to the result.  
+
+Given:
 ```math
-a = 5
+a = 5 = 0101
+```
+**Binary** representation (**8-bit** format):
+```math
+a = 0000\ 0101 = 5
 ```
 **Applying the NOT (~) operator:**
+
+```math
+a = 5 = 0000\ 0101
+```
+1. Invert all bits:
+
+```math
+\sim a = 1111\ 1010 \quad (\text{Two's complement})
+```
+2. Add `1`:  
+In the binary system, we add **bit** by **bit** from **right to left**, just like in the decimal system, applying these rules:
+
 ```math
 \begin{aligned}
-a &= 5 = 0000\ 0101_2 \\
-\sim a &= 1111\ 1010_2 \quad (\text{Two's complement}) \\
+0 + 0 &= 0 \\
+0 + 1 &= 1 \\
+1 + 0 &= 1 \\
+1 + 1 &= 10 \quad \text{(0 and carry 1)}
+\end{aligned}
+```
+
+```math
+\begin{array}{cccccccc}
+\text{Carry} & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 1 \\
+\text{Number A} & 1 & 1 & 1 & 1 & 1 & 0 & 1 & 0 \\
+\text{Number B} & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 1 \\
+\hline
+\text{Result} & 1 & 1 & 1 & 1 & 1 & 0 & 1 & 1 \\
+\end{array}
+```
+
+```math
+1111\ 1010 + 1 = 1111\ 1011
+```
+
+This is the two’s complement representation of `-6` in binary.
+```math
+\begin{aligned}
+\sim a &= -(a + 1) \newline
+       &= -(5+1) \newline
        &= -6
 \end{aligned}
 ```
