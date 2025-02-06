@@ -56,6 +56,11 @@
   - [Challenge : Find sum of digits in a number](#challenge--find-sum-of-digits-in-a-number)
   - [Challenge : Reversing a number](#challenge--reversing-a-number)
   - [Challenge : Check if a number is a Palindrome](#challenge--check-if-a-number-is-a-palindrome)
+  - [Challenges](#challenges)
+    - [1. Find sum of given numbers as input](#1-find-sum-of-given-numbers-as-input)
+    - [2. Find sum of positive and negative numbers](#2-find-sum-of-positive-and-negative-numbers)
+    - [3. Find maximum numbers from the given numbers](#3-find-maximum-numbers-from-the-given-numbers)
+    - [4. Convert a Decimal number to a Binary number](#4-convert-a-decimal-number-to-a-binary-number)
 
 ## Section 1: Introduction to Python
 ### How a Python Program Runs?
@@ -1865,6 +1870,129 @@ else:
 ```python
 Enter a number: 14741
 Number is a Palindrome
+```
+
+<div align="right">
+  <strong>
+    <a href="#table-of-contents" style="text-decoration: none;">↥ Back to top</a>
+  </strong>
+</div>
+
+---
+### Challenges
+#### 1. Find sum of given numbers as input
+**Code**
+```python
+n = int(input("Enter the number of number: "))
+count= 0
+total = 0
+while count < n:
+    number = int(input("Enter a number: "))
+    total += number
+    count += 1
+
+print(total)
+```
+**Output**
+```python
+Enter the number of number: 5
+Enter a number: 3
+Enter a number: 4
+Enter a number: 6
+Enter a number: 2
+Enter a number: 5
+20
+```
+
+<div align="right">
+  <strong>
+    <a href="#table-of-contents" style="text-decoration: none;">↥ Back to top</a>
+  </strong>
+</div>
+
+---
+#### 2. Find sum of positive and negative numbers
+**Code**
+```python
+n = int(input("Enter the number of numbers:  "))
+count= 0
+sum_negative_number = 0
+sum_positive_number = 0
+while count < n:
+    number = int(input("Enter a number: "))
+    if number >= 0:
+        sum_positive_number += number
+    else:
+        sum_negative_number += number
+    count += 1
+
+print(sum_positive_number)
+print(sum_negative_number)
+
+```
+**Output**
+```python
+Enter the number of numbers:  5
+Enter a number: -15
+Enter a number: 5
+Enter a number: 9
+Enter a number: -3
+Enter a number: -2
+14
+-20
+```
+
+<div align="right">
+  <strong>
+    <a href="#table-of-contents" style="text-decoration: none;">↥ Back to top</a>
+  </strong>
+</div>
+
+---
+#### 3. Find maximum numbers from the given numbers
+**Code**
+```python
+n = int(input("Enter the number of numbers:  "))
+count = 0
+aux = 0
+while count < n:
+    number = int(input("Enter a number: "))
+    if number > aux:
+        aux = number
+    count += 1
+
+print("The maximum number is:", aux)
+```
+**Output**
+```python
+Enter the number of numbers:  5
+Enter a number: 155
+Enter a number: 145
+Enter a number: 189
+Enter a number: 200
+Enter a number: 1
+The maximum number is: 200
+```
+
+<div align="right">
+  <strong>
+    <a href="#table-of-contents" style="text-decoration: none;">↥ Back to top</a>
+  </strong>
+</div>
+
+---
+#### 4. Convert a Decimal number to a Binary number
+**Code**
+```python
+number = int(input('Enter a number: '))
+# Convert the number to binary and remove the '0b' prefix
+binary = bin(number)[2:]
+print(binary)
+```
+**Output**
+```python
+Enter a number: 10
+1010
 ```
 
 <div align="right">
