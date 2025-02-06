@@ -52,6 +52,10 @@
 - [Section 6: Loops - Control Flow](#section-6-loops---control-flow)
   - [Introduction to Loops](#introduction-to-loops)
   - [Challenge : Multiplication Table](#challenge--multiplication-table)
+  - [Challenge : Counting the number of digits in a number](#challenge--counting-the-number-of-digits-in-a-number)
+  - [Challenge : Find sum of digits in a number](#challenge--find-sum-of-digits-in-a-number)
+  - [Challenge : Reversing a number](#challenge--reversing-a-number)
+  - [Challenge : Check if a number is a Palindrome](#challenge--check-if-a-number-is-a-palindrome)
 
 ## Section 1: Introduction to Python
 ### How a Python Program Runs?
@@ -1760,3 +1764,111 @@ Enter a number for Multiplication table: 5
     <a href="#table-of-contents" style="text-decoration: none;">↥ Back to top</a>
   </strong>
 </div>
+
+---
+
+### Challenge : Counting the number of digits in a number
+**Code**
+```python
+number = int(input("Enter a number: "))
+
+count = 0
+while number > 0:
+    number = number // 10
+    count += 1
+
+print('Number of Digits are', count)
+
+```
+**Output**
+```python
+Enter a number: 9856
+Number of Digits are 4
+```
+
+<div align="right">
+  <strong>
+    <a href="#table-of-contents" style="text-decoration: none;">↥ Back to top</a>
+  </strong>
+</div>
+
+---
+
+### Challenge : Find sum of digits in a number
+**Code**
+```python
+number = int(input("Enter a number: "))
+
+sum = 0
+while number > 0:
+    r = number % 10
+    number = number // 10
+    sum += r
+
+print('Sum of digits is', sum)
+```
+**Output**
+```python
+```
+<div align="right">
+  <strong>
+    <a href="#table-of-contents" style="text-decoration: none;">↥ Back to top</a>
+  </strong>
+</div>
+
+---
+### Challenge : Reversing a number
+**Code**
+```python
+number = int(input("Enter a number: "))
+rev = 0
+
+while number > 0:
+    r = number % 10
+    number = number // 10
+    rev = rev * 10 + r
+
+print('Reverse number is', rev)
+```
+**Output**
+```python
+Enter a number: 189
+Reverse number is 981
+```
+
+<div align="right">
+  <strong>
+    <a href="#table-of-contents" style="text-decoration: none;">↥ Back to top</a>
+  </strong>
+</div>
+
+---
+### Challenge : Check if a number is a Palindrome
+**Code**
+```python
+number = int(input("Enter a number: "))
+rev = 0
+aux = number
+while number > 0:
+    r = number % 10
+    number = number // 10
+    rev = rev * 10 + r
+
+if aux == rev:
+    print('Number is a Palindrome')
+else:
+    print("Number is not a palindrome")
+```
+**Output**
+```python
+Enter a number: 14741
+Number is a Palindrome
+```
+
+<div align="right">
+  <strong>
+    <a href="#table-of-contents" style="text-decoration: none;">↥ Back to top</a>
+  </strong>
+</div>
+
+---
