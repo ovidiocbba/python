@@ -42,6 +42,7 @@
   - [Challenge : Displaying Name of a Day](#challenge--displaying-name-of-a-day)
   - [Challenge : Leap Year or Not](#challenge--leap-year-or-not)
   - [Detail Logical Operator](#detail-logical-operator)
+  - [Bitwise Operators](#bitwise-operators)
 
 ## Section 1: Introduction to Python
 ### How a Python Program Runs?
@@ -1438,6 +1439,68 @@ def operation():
 False and operation()  # Does NOT execute the function
 True or operation()    # Does NOT execute the function
 ```
+
+<div align="right">
+  <strong>
+    <a href="#table-of-contents" style="text-decoration: none;">↥ Back to top</a>
+  </strong>
+</div>
+
+### Bitwise Operators
+
+Bitwise operators perform operations on the **binary representation** of numbers. They manipulate **bits directly**, making them useful **in low-level programming**, encryption, and performance optimizations.
+
+---
+
+**Bitwise Operators and Their Functions**
+
+| Operator | Symbol | Description | Example |
+|----------|--------|-------------|---------|
+| **AND** | `&` | Sets bits to `1` only if both corresponding bits are `1`. | `5 & 3  # 0101 & 0011 = 0001 (1)` |
+| **OR** | `\|` | Sets bits to `1` if at least one of the corresponding bits is `1`. | `5 | 3  # 0101 | 0011 = 0111 (7)` |
+| **XOR** | `^` | Sets bits to `1` if the corresponding bits are different. | `5 ^ 3  # 0101 ^ 0011 = 0110 (6)` |
+| **NOT** | `~` | Inverts all bits (two's complement). | `~5  # ~0101 = -(5+1) = -6` |
+| **Left Shift** | `<<` | Shifts bits to the left, filling with zeros. | `5 << 1  # 0101 << 1 = 1010 (10)` |
+| **Right Shift** | `>>` | Shifts bits to the right, discarding shifted bits. | `5 >> 1  # 0101 >> 1 = 0010 (2)` |
+
+---
+
+**Bitwise Operations in Action**
+
+```python
+a = 5  # 0101 in binary
+b = 3  # 0011 in binary
+
+# Bitwise AND: Both bits must be 1
+# 0101 & 0011 = 0001 (1)
+print(a & b)  # Output: 1
+
+# Bitwise OR: At least one bit must be 1
+# 0101 | 0011 = 0111 (7)
+# 0 | 0 = 0
+# 1 | 0 = 1
+# 0 | 1 = 1
+# 1 | 1 = 1
+print(a | b)  # Output: 7
+
+# Bitwise XOR: Bits must be different
+# 0101 ^ 0011 = 0110 (6)
+# 0 ^ 0 = 0
+# 1 ^ 0 = 1
+# 0 ^ 1 = 1
+# 1 ^ 1 = 0
+print(a ^ b)  # Output: 6
+
+# Bitwise NOT: Inverts all bits (Two's complement representation)
+print(~a)     # Output: -6 (-(5+1) in two's complement)
+
+# Left Shift: Shifts bits left, adding a 0 at the end (equivalent to multiplying by 2)
+print(a << 1) # Output: 10 (1010)
+
+# Right Shift: Shifts bits right, removing the rightmost bit (equivalent to dividing by 2)
+print(a >> 1) # Output: 2 (0010)
+```
+---
 
 <div align="right">
   <strong>
