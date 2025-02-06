@@ -1474,6 +1474,14 @@ a \& b &= 010\textbf{1} \newline
        &= 000\textbf{1} = 1
 \end{aligned}
 ```
+<div align="right">
+  <strong>
+    <a href="#table-of-contents" style="text-decoration: none;">↥ Back to top</a>
+  </strong>
+</div>
+
+---
+
 #### OR Operator (|)
 Given:
 ```math
@@ -1491,6 +1499,13 @@ a | b &= 0\textbf{1}0\textbf{1} \newline
        &= 0\textbf{111} = 7
 \end{aligned}
 ```
+<div align="right">
+  <strong>
+    <a href="#table-of-contents" style="text-decoration: none;">↥ Back to top</a>
+  </strong>
+</div>
+
+---
 
 #### XOR Operator (^)
 
@@ -1510,6 +1525,15 @@ a \wedge b &= 0\textbf{1}\textbf{0}1 \newline
            &= 0\textbf{11}0 = 6
 \end{aligned}
 ```
+
+<div align="right">
+  <strong>
+    <a href="#table-of-contents" style="text-decoration: none;">↥ Back to top</a>
+  </strong>
+</div>
+
+---
+
 #### NOT Operator (~)
 ```math 
 \sim a = - (a + 1)
@@ -1526,6 +1550,14 @@ a &= 5 = 0000\ 0101_2 \\
        &= -6
 \end{aligned}
 ```
+<div align="right">
+  <strong>
+    <a href="#table-of-contents" style="text-decoration: none;">↥ Back to top</a>
+  </strong>
+</div>
+
+---
+
 #### Left Shift Operator (<<)
 **General Rule:**
 
@@ -1569,7 +1601,14 @@ a << 5 &= 320\newline
 1010\textbf{00000} &= 320 \newline
 \end{aligned}
 ```
+<div align="right">
+  <strong>
+    <a href="#table-of-contents" style="text-decoration: none;">↥ Back to top</a>
+  </strong>
+</div>
+
 ---
+
 #### Right Shift Operator (>>)
 
 General Rule:
