@@ -43,6 +43,12 @@
   - [Challenge : Leap Year or Not](#challenge--leap-year-or-not)
   - [Detail Logical Operator](#detail-logical-operator)
   - [Bitwise Operators](#bitwise-operators)
+    - [AND Operator (\&)](#and-operator-)
+    - [OR Operator (|)](#or-operator-)
+    - [XOR Operator (^)](#xor-operator-)
+    - [NOT Operator (~)](#not-operator-)
+    - [Left Shift Operator (\<\<)](#left-shift-operator-)
+    - [Right Shift Operator (\>\>)](#right-shift-operator-)
 
 ## Section 1: Introduction to Python
 ### How a Python Program Runs?
@@ -1450,58 +1456,160 @@ True or operation()    # Does NOT execute the function
 
 Bitwise operators perform operations on the **binary representation** of numbers. They manipulate **bits directly**, making them useful **in low-level programming**, encryption, and performance optimizations.
 
----
+#### AND Operator (&) 
+Given
+```math
+a = 5, \quad b = 3
+```
+Applying the AND (`&`) operator:
 
-**Bitwise Operators and Their Functions**
+Sets `bits` to `1` only if `both` corresponding bits are `1`
+```math
+\begin{aligned}
+a &= 5 = 0101 \newline
+b &= 3 = 0011 \newline
+a \& b &= 0101\&0011 \newline \newline
+a \& b &= 010\textbf{1} \newline
+       &= 001\textbf{1} \newline
+       &= 000\textbf{1} = 1
+\end{aligned}
+```
+#### OR Operator (|)
+Given:
+```math
+a = 5, \quad b = 3
+```
+**Applying the OR ($|$) operator:**  
+Sets bits to `1` if at **least one** of the corresponding bits is `1`.
+```math
+\begin{aligned}
+a &= 5 = 0101 \newline
+b &= 3 = 0011 \newline
+a | b &= 0101 | 0011 \newline \newline
+a | b &= 0\textbf{1}0\textbf{1} \newline
+       &= 00\textbf{1}1 \newline
+       &= 0\textbf{111} = 7
+\end{aligned}
+```
 
-| Operator | Symbol | Description | Example |
-|----------|--------|-------------|---------|
-| **AND** | `&` | Sets bits to `1` only if both corresponding bits are `1`. | `5 & 3  # 0101 & 0011 = 0001 (1)` |
-| **OR** | `\|` | Sets bits to `1` if at least one of the corresponding bits is `1`. | `5 | 3  # 0101 | 0011 = 0111 (7)` |
-| **XOR** | `^` | Sets bits to `1` if the corresponding bits are different. | `5 ^ 3  # 0101 ^ 0011 = 0110 (6)` |
-| **NOT** | `~` | Inverts all bits (two's complement). | `~5  # ~0101 = -(5+1) = -6` |
-| **Left Shift** | `<<` | Shifts bits to the left, filling with zeros. | `5 << 1  # 0101 << 1 = 1010 (10)` |
-| **Right Shift** | `>>` | Shifts bits to the right, discarding shifted bits. | `5 >> 1  # 0101 >> 1 = 0010 (2)` |
+#### XOR Operator (^)
 
----
+```math
+a = 5, \quad b = 3
+```
+**Applying the XOR (^) operator:**  
+Sets bits to `1` if the corresponding **bits are different**, otherwise it is `0`.
+```math
+\begin{aligned}
+a &= 5 = 0101 \newline
+b &= 3 = 0011 \newline
+a \wedge b &= 0101 \wedge 0011 \newline \newline
 
-**Bitwise Operations in Action**
+a \wedge b &= 0\textbf{1}\textbf{0}1 \newline
+           &= 0\textbf{0}\textbf{1}1 \newline
+           &= 0\textbf{11}0 = 6
+\end{aligned}
+```
+#### NOT Operator (~)
+```math 
+\sim a = - (a + 1)
+```
+The NOT (~) operator inverts the bits and changes the sign of the number.
+```math
+a = 5
+```
+**Applying the NOT (~) operator:**
+```math
+\begin{aligned}
+a &= 5 = 0000\ 0101_2 \\
+\sim a &= 1111\ 1010_2 \quad (\text{Two's complement}) \\
+       &= -6
+\end{aligned}
+```
+#### Left Shift Operator (<<)
+**General Rule:**
 
-```python
-a = 5  # 0101 in binary
-b = 3  # 0011 in binary
+```math
+a << n = 2^n \times a
+```
+where `n` is the number of bit shifts to the left.
 
-# Bitwise AND: Both bits must be 1
-# 0101 & 0011 = 0001 (1)
-print(a & b)  # Output: 1
+Given an integer:
 
-# Bitwise OR: At least one bit must be 1
-# 0101 | 0011 = 0111 (7)
-# 0 | 0 = 0
-# 1 | 0 = 1
-# 0 | 1 = 1
-# 1 | 1 = 1
-print(a | b)  # Output: 7
+```math
+a = 10
+```
 
-# Bitwise XOR: Bits must be different
-# 0101 ^ 0011 = 0110 (6)
-# 0 ^ 0 = 0
-# 1 ^ 0 = 1
-# 0 ^ 1 = 1
-# 1 ^ 1 = 0
-print(a ^ b)  # Output: 6
+Applying the left shift (`<<`) operator:
 
-# Bitwise NOT: Inverts all bits (Two's complement representation)
-print(~a)     # Output: -6 (-(5+1) in two's complement)
+```math
+\begin{aligned}
+a << n &= 2^n \times a \newline
+a << 1 &= 2^1 \times a = 2 \times 10 = 20 \newline
+a << 2 &= 2^2 \times a = 4 \times 10 = 40 \newline
+a << 5 &= 2^5 \times a = 32 \times 10 = 320
+\end{aligned}
+```
+**Left Shift Representation <<**
 
-# Left Shift: Shifts bits left, adding a 0 at the end (equivalent to multiplying by 2)
-print(a << 1) # Output: 10 (1010)
+Binary representation and left shift operation:
 
-# Right Shift: Shifts bits right, removing the rightmost bit (equivalent to dividing by 2)
-print(a >> 1) # Output: 2 (0010)
+```math
+\begin{aligned}
+a &= 10 \quad (Decimal) \newline 
+a &= 1010 \quad (Binary) \newline \newline
+a << n &= \newline
+a << 1 &= 20\newline
+1010\textbf{0} &= 20 \newline \newline
+
+a << 2 &= 40\newline
+1010\textbf{00} &= 40 \newline \newline
+
+a << 5 &= 320\newline
+1010\textbf{00000} &= 320 \newline
+\end{aligned}
 ```
 ---
+#### Right Shift Operator (>>)
 
+General Rule:
+```math
+a >> n = \frac{a}{2^n}
+```
+
+where `n` is the number of bit shifts to the right.
+
+Given an integer:
+```math
+a = 160
+```
+Applying the right shift (`>>`) operator:
+```math
+\begin{aligned}
+a >> n &= \frac{a}{2^n} \newline
+a >> 1 &= \frac{160}{2^1} = \frac{160}{2} = 80 \newline
+a >> 2 &= \frac{160}{2^2} = \frac{160}{4} = 40 \newline
+a >> 5 &= \frac{160}{2^5} = \frac{160}{32} = 5
+\end{aligned}
+```
+**Right Shift Representation (>>)**
+Binary representation and right shift operation:
+
+```math
+\begin{aligned}
+a &= 160 \quad (Decimal) \newline
+a &= 10100000 \quad (Binary) \newline \newline
+a >> n &= \newline
+a >> 1 &= 80 \newline
+\textbf{0}1010000 &= 80 \newline \newline
+
+a >> 2 &= 40 \newline
+\textbf{00}101000 &= 40 \newline \newline
+
+a >> 5 &= 5 \newline
+\textbf{00000}101 &= 5 \newline
+\end{aligned}
+```
 <div align="right">
   <strong>
     <a href="#table-of-contents" style="text-decoration: none;">↥ Back to top</a>
