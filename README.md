@@ -1575,19 +1575,13 @@ In the binary system, we add **bit** by **bit** from **right to left**, just lik
 1 + 1 &= 10 \quad \text{(0 and carry 1)}
 \end{aligned}
 ```
+| Carry       | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 1 |
+|------------|---|---|---|---|---|---|---|---|
+| Number A   | 1 | 1 | 1 | 1 | 1 | 0 | 1 | 0 |
+| Number B   | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 1 |
+| **Result** | 1 | 1 | 1 | 1 | 1 | 0 | 1 | 1 |
 
-```math
-\begin{aligned}
-\begin{array}{cccccccc}
-\text{Carry} & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 1 \\
-\text{Number A} & 1 & 1 & 1 & 1 & 1 & 0 & 1 & 0 \\
-\text{Number B} & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 1 \\
-\hline
-\text{Result} & 1 & 1 & 1 & 1 & 1 & 0 & 1 & 1 \\
-\end{array}
-\end{aligned}
-```
-
+Bitwise sum from right to left
 ```math
 1111\ 1010 + 1 = 1111\ 1011
 ```
