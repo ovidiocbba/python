@@ -49,8 +49,8 @@
     - [NOT Operator (~)](#not-operator-)
     - [Left Shift Operator (\<\<)](#left-shift-operator-)
     - [Right Shift Operator (\>\>)](#right-shift-operator-)
-- [Section 5: Conditional Statements](#section-5-conditional-statements-1)
-  - [Conditional Statements- if ...else](#conditional-statements--if-else-1)
+- [Section 6: Loops - Control Flow](#section-6-loops---control-flow)
+  - [Introduction to Loops](#introduction-to-loops)
 
 ## Section 1: Introduction to Python
 ### How a Python Program Runs?
@@ -1702,20 +1702,24 @@ a >> 5 &= 5 \newline
   </strong>
 </div>
 
-## Section 5: Conditional Statements
-### Conditional Statements- if ...else
+## Section 6: Loops - Control Flow
+### Introduction to Loops
 **Code**
 ```python
-a = int(input('Enter a number: '))
-if a < 0:
-  print('Negative')
-else:
-  print('Positive')
+n = int(input('Enter a number: '))
+
+while n > 0:
+ r = n % 10
+ n = n // 10
+ print(r)
 ```
 **Output**
 ```python
-Enter a number: 5
-Positive
+Enter a number: 1000
+0
+0
+0
+1
 ```
 
 <div align="right">
