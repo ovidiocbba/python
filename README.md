@@ -86,6 +86,7 @@
   - [Challenge : Domain Name from Email](#challenge--domain-name-from-email)
   - [Challenge : Converting String to Palindrome](#challenge--converting-string-to-palindrome)
   - [Challenge : Day, Month , Year](#challenge--day-month--year)
+  - [Challenge : Anagram String](#challenge--anagram-string)
 
 ## Section 1: Introduction to Python
 ### How a Python Program Runs?
@@ -2957,6 +2958,39 @@ l = mydate.split('/')
 print('Day:',l[0])
 print('Month:',l[1])
 print('Year:',l[2])
+```
+**Output**
+```python
+Enter Date in dd/mm/yyyy format:02/01/1991
+Day: 02
+Month: 01
+Year: 1991
+```
+
+<div align="right">
+  <strong>
+    <a href="#table-of-contents" style="text-decoration: none;">↥ Back to top</a>
+  </strong>
+</div>
+
+### Challenge : Anagram String
+**Checking if two strings are Anagram**
+
+**Code**
+```python
+s1 = input('Enter a String: ')
+s2 = input('Enter second String: ')
+
+if len(s1) != len(s2):
+    print('Not Anagram')
+else:
+
+    for x in s1:
+        if x not in s2:
+            print('Not Anagarm')
+            break
+    else:
+        print('Anagram')
 ```
 **Output**
 ```python
