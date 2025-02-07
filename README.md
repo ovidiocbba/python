@@ -80,6 +80,7 @@
   - [String Methods : Starts with and Ends with](#string-methods--starts-with-and-ends-with)
   - [String Methods : Joining and Splitting](#string-methods--joining-and-splitting)
   - [Challenge : Sorting Letters of a String](#challenge--sorting-letters-of-a-string)
+  - [Challenge : Displaying Data](#challenge--displaying-data)
 
 ## Section 1: Introduction to Python
 ### How a Python Program Runs?
@@ -2796,6 +2797,33 @@ print(new_string)
 ```python
 ['a', 'b', 'd', 'f', 'g', 'h', 'k', 'l', 'm', 'n', 'p']
 abdfghklmnp
+```
+<div align="right">
+  <strong>
+    <a href="#table-of-contents" style="text-decoration: none;">↥ Back to top</a>
+  </strong>
+</div>
+
+### Challenge : Displaying Data
+Display Data in given format (25 letters)
+```python
+item = input('Enter The Item: ')
+price = input('Enter price: ')
+
+total_len = len(item) + len(price)
+
+print(total_len)
+
+dots = '.' * (25 - total_len)
+
+print(item+dots+price)
+```
+**Output**
+```python
+Enter The Item: Chicken pizza
+Enter price: 25
+15
+Chicken pizza..........25
 ```
 <div align="right">
   <strong>
