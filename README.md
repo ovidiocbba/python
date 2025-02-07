@@ -84,6 +84,7 @@
   - [Challenge : Confirming Password](#challenge--confirming-password)
   - [Challenge : Credit Card Details](#challenge--credit-card-details)
   - [Challenge : Domain Name from Email](#challenge--domain-name-from-email)
+  - [Challenge : Converting String to Palindrome](#challenge--converting-string-to-palindrome)
 
 ## Section 1: Introduction to Python
 ### How a Python Program Runs?
@@ -2915,6 +2916,29 @@ hotmail.com
 ✅ **Less memory usage** – Since it only **finds** the **@ index** and uses slicing, it avoids extra list storage.  
 ✅ Better error handling – It allows checking **if @ exists** before processing, preventing potential errors.
 
+<div align="right">
+  <strong>
+    <a href="#table-of-contents" style="text-decoration: none;">↥ Back to top</a>
+  </strong>
+</div>
+
+### Challenge : Converting String to Palindrome
+**1. Checking a string is a palindrome**  
+**Code**
+```python
+is_palindrome = input("Enter a word: ")
+
+reverse = ''.join(is_palindrome[::-1])
+if is_palindrome == reverse:
+    print("The word is a palindrome.")
+else:
+    print("The word isn't a palindrome.")
+```
+**Output**
+```python
+Enter a word: oso
+The word is a palindrome.
+```
 <div align="right">
   <strong>
     <a href="#table-of-contents" style="text-decoration: none;">↥ Back to top</a>
