@@ -2331,9 +2331,29 @@ Slicing can also include a step value, which defines the stride while extracting
 ```python
 S = "abcdefghij"
 print(S[1:7:2])   # Output: bdf (starts at index 1, ends at 6, step of 2)
+```
+
+**1. Reversing a String (S[::-1])**
+S = "abcdefghij"
 print(S[::-1])    # Output: jihgfedcba (reverses the string)
+
+- The syntax **S[start:end:step]** uses **-1** as the step, meaning the string will be traversed in **reverse order**.
+- Since **start** and end are not specified, the default values are used:
+  - `start`: begins from the end of the string.
+  - `end`: goes up to the beginning of the string.
+  - `step`: -1, which means the traversal is from right to left.
+
+**2. Selecting Every 3rd Character (S[::3])**
+```python
+S = "abcdefghij"
 print(S[::3])     # Output: adgj (every 3rd character)
 ```
+
+- The syntax **S[start:end:step]** uses **step=3**, meaning one character is selected **every three positions**.
+- Since **start** and **end** are **not specified**, the default values are used:
+  - `start`: begins from the first character (index 0).
+  - `end`: goes up to the end of the string.
+  - `step`: **3**, meaning a character is selected, then two are skipped before picking the next.
 
 **5. Membership (in)**
 
