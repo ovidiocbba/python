@@ -87,6 +87,7 @@
   - [Challenge : Converting String to Palindrome](#challenge--converting-string-to-palindrome)
   - [Challenge : Day, Month , Year](#challenge--day-month--year)
   - [Challenge : Anagram String](#challenge--anagram-string)
+  - [Challenge : Removing Punctuations](#challenge--removing-punctuations)
 
 ## Section 1: Introduction to Python
 ### How a Python Program Runs?
@@ -2998,6 +2999,30 @@ Enter Date in dd/mm/yyyy format:02/01/1991
 Day: 02
 Month: 01
 Year: 1991
+```
+
+<div align="right">
+  <strong>
+    <a href="#table-of-contents" style="text-decoration: none;">↥ Back to top</a>
+  </strong>
+</div>
+
+### Challenge : Removing Punctuations
+**Code**
+```python
+punct = '''!()-[];:'<>./?@#$%^&*~'''
+s1 = '[my_python@gmail.com]'
+s2 = ''
+
+for x in s1:
+ if x not in punct:
+   s2 = s2 + x
+
+print(s2)
+```
+**Output**
+```python
+my_pythongmailcom
 ```
 
 <div align="right">
