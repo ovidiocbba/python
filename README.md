@@ -74,6 +74,7 @@
 - [Section 7: String and its Methods](#section-7-string-and-its-methods)
   - [Operators on String](#operators-on-string)
   - [String Methods](#string-methods)
+  - [String Methods : Removing Spaces](#string-methods--removing-spaces)
 
 ## Section 1: Introduction to Python
 ### How a Python Program Runs?
@@ -2432,6 +2433,66 @@ The `count()` method returns the number of occurrences of a substring in the str
 text = "Hello, world! Hello again!"
 result = text.count("Hello")
 print(result)  # Output: 2
+```
+
+<div align="right">
+  <strong>
+    <a href="#table-of-contents" style="text-decoration: none;">↥ Back to top</a>
+  </strong>
+</div>
+
+### String Methods : Removing Spaces
+
+**Justification Methods**
+
+**`s.ljust(width, fillchar=' ')`**  
+Left justifies the string within the given width, filling with the specified character.
+
+```python
+s = "hello"
+print(s.ljust(10, '-'))  # Output: "hello-----"
+```
+
+**`s.rjust(width, fillchar=' ')`**  
+Right justifies the string within the given width, filling with the specified character.
+
+```python
+s = "hello"
+print(s.rjust(10, '-'))  # Output: "-----hello"
+```
+
+**`s.center(width, fillchar=' ')`**  
+Centers the string within the given width, filling with the specified character.
+
+```python
+s = "hello"
+print(s.center(10, '-'))  # Output: "--hello---"
+```
+
+**Trimming Methods**
+
+**`s.strip`**  
+Removes `leading` and `trailing` characters (default is whitespace).
+
+```python
+s = "  hello  "
+print(s.strip())  # Output: "hello"
+```
+
+**`s.lstrip`**  
+Removes **`leading`** characters (default is whitespace).
+
+```python
+s = "  hello  "
+print(s.lstrip())  # Output: "hello  "
+```
+
+**`s.rstrip`**  
+Removes **`trailing`** characters (default is whitespace).
+
+```python
+s = "  hello  "
+print(s.rstrip())  # Output: "  hello"
 ```
 
 <div align="right">
