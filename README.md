@@ -77,6 +77,7 @@
   - [String Methods : Removing Spaces](#string-methods--removing-spaces)
   - [String Methods : Changing Cases](#string-methods--changing-cases)
   - [String Methods : Inquiry Methods](#string-methods--inquiry-methods)
+  - [String Methods : Starts with and Ends with](#string-methods--starts-with-and-ends-with)
 
 ## Section 1: Introduction to Python
 ### How a Python Program Runs?
@@ -2669,3 +2670,61 @@ print(s.isnumeric())  # Output: True
     <a href="#table-of-contents" style="text-decoration: none;">↥ Back to top</a>
   </strong>
 </div>
+
+### String Methods : Starts with and Ends with
+
+**1. `s.startswith(prefix)`**
+- Returns `True` if the string starts with `prefix`, otherwise `False`.
+```python
+text = "Hello world"
+print(text.startswith("Hello"))  # True
+print(text.startswith("World"))  # False
+```
+
+**2. `s.endswith(suffix)`**
+- Returns `True` if the string ends with `suffix`, otherwise `False`.
+```python
+text = "document.txt"
+print(text.endswith(".txt"))  # True
+print(text.endswith(".csv"))  # False
+```
+
+**3. `s.removeprefix(prefix)`**
+- Removes `prefix` from the string if it starts with it; otherwise, returns the string unchanged.
+```python
+text = "Python_is_awesome"
+print(text.removeprefix("Python_"))  # "is_awesome"
+print(text.removeprefix("Java_"))  # "Python_is_awesome" (unchanged)
+```
+
+**4. `s.removesuffix(suffix)`**
+- Removes `suffix` from the string if it ends with it; otherwise, returns the string unchanged.
+```python
+text = "report_final.docx"
+print(text.removesuffix(".docx"))  # "report_final"
+print(text.removesuffix(".pdf"))  # "report_final.docx" (unchanged)
+```
+
+**5. `s.partition(sep)`**
+- **Splits the string** **`into a tuple`** of three elements: before `sep`, `sep`, and after `sep`.
+- If `sep` is not found, returns the original string and two empty strings.
+```python
+text = "key=value"
+print(text.partition("="))  # ('key', '=', 'value')
+print(text.partition(":"))  # ('key=value', '', '') (unchanged)
+```
+
+**6. `s.rpartition(sep)`**
+- Similar to `partition()`, but **searches for the last occurrence** of `sep`.
+```python
+text = "path/directory/file"
+print(text.rpartition("/"))  # ('path/directory', '/', 'file')
+print(text.rpartition(":"))  # ('', '', 'path/directory/file') (unchanged)
+```
+
+<div align="right">
+  <strong>
+    <a href="#table-of-contents" style="text-decoration: none;">↥ Back to top</a>
+  </strong>
+</div>
+
