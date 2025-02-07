@@ -71,6 +71,8 @@
     - [1. Find the Factors of a Number](#1-find-the-factors-of-a-number)
     - [2. Check if a number is prime or not](#2-check-if-a-number-is-prime-or-not)
   - [Match Case](#match-case)
+- [Section 7: String and its Methods](#section-7-string-and-its-methods)
+  - [Operators on String](#operators-on-string)
 
 ## Section 1: Introduction to Python
 ### How a Python Program Runs?
@@ -2275,6 +2277,83 @@ match value:
     case _:
         print("Other")
 ```
+<div align="right">
+  <strong>
+    <a href="#table-of-contents" style="text-decoration: none;">↥ Back to top</a>
+  </strong>
+</div>
+
+## Section 7: String and its Methods
+### Operators on String
+Python provides **several operators** to manipulate strings efficiently. Here are some commonly used string operators with examples:  
+
+**1. Concatenation (+)**
+```python
+str1 = "Hello"
+str2 = " World"
+result = str1 + str2
+print(result)  # Output: Hello World
+```
+**2. Repetition (*)**
+
+Repetition allows a string to be repeated multiple times.
+
+```python
+str1 = "Hello "
+result = str1 * 3
+print(result)  # Output: Hello Hello Hello 
+```
+**3. Indexing**
+
+Indexing helps in accessing a specific character from a string.
+```python
+str1 = "Python"
+print(str1[0])  # Output: P
+print(str1[-1]) # Output: n (last character)
+```
+
+**4. Slicing**
+
+Slicing extracts a portion of a string using a start and end index.
+
+```python
+str1 = "Hello World"
+print(str1[0:5])  # Output: Hello
+print(str1[:5])   # Output: Hello (implicit start at 0)
+print(str1[6:])   # Output: World (implicit end at last index)
+print(str1[::2])  # Output: HloWrd (step of 2)
+```
+
+**Slicing with Step**
+
+Slicing can also include a step value, which defines the stride while extracting characters.
+
+```python
+S = "abcdefghij"
+print(S[1:7:2])   # Output: bdf (starts at index 1, ends at 6, step of 2)
+print(S[::-1])    # Output: jihgfedcba (reverses the string)
+print(S[::3])     # Output: adgj (every 3rd character)
+```
+
+**5. Membership (in)**
+
+Checks if a substring is present in a string
+
+```python
+str1 = "Hello World"
+print("Hello" in str1)  # Output: True
+print("Python" in str1) # Output: False
+```
+
+**6. Non-Membership (not in)**
+Checks if a substring is not present in a string.
+
+```python
+str1 = "Hello World"
+print("Python" not in str1) # Output: True
+print("World" not in str1)  # Output: False
+```
+
 <div align="right">
   <strong>
     <a href="#table-of-contents" style="text-decoration: none;">↥ Back to top</a>
