@@ -70,6 +70,7 @@
   - [Challenges](#challenges-1)
     - [1. Find the Factors of a Number](#1-find-the-factors-of-a-number)
     - [2. Check if a number is prime or not](#2-check-if-a-number-is-prime-or-not)
+  - [Match Case](#match-case)
 
 ## Section 1: Introduction to Python
 ### How a Python Program Runs?
@@ -2255,6 +2256,24 @@ else:
 ```python
 Enter a Number: 5
 Its a Prime
+```
+<div align="right">
+  <strong>
+    <a href="#table-of-contents" style="text-decoration: none;">↥ Back to top</a>
+  </strong>
+</div>
+
+### Match Case
+
+**Code**
+```python
+match value:
+    case 1:
+        print("One")
+    case 2:
+        print("Two")
+    case _:
+        print("Other")
 ```
 <div align="right">
   <strong>
