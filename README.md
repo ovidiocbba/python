@@ -2788,13 +2788,14 @@ value = 'klmndgfhbpa'
 
 value_sorted = sorted(value)
 print(value_sorted)
+
+new_string = ''.join(value_sorted)
+print(new_string)
 ```
 **Output**
 ```python
-value = 'klmndgfhbpa'
-
-value_sorted = sorted(value)
-print(value_sorted)
+['a', 'b', 'd', 'f', 'g', 'h', 'k', 'l', 'm', 'n', 'p']
+abdfghklmnp
 ```
 <div align="right">
   <strong>
