@@ -2334,9 +2334,10 @@ print(S[1:7:2])   # Output: bdf (starts at index 1, ends at 6, step of 2)
 ```
 
 **1. Reversing a String (S[::-1])**
+```python
 S = "abcdefghij"
 print(S[::-1])    # Output: jihgfedcba (reverses the string)
-
+```
 - The syntax **S[start:end:step]** uses **-1** as the step, meaning the string will be traversed in **reverse order**.
 - Since **start** and end are not specified, the default values are used:
   - `start`: begins from the end of the string.
