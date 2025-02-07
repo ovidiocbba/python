@@ -73,6 +73,7 @@
   - [Match Case](#match-case)
 - [Section 7: String and its Methods](#section-7-string-and-its-methods)
   - [Operators on String](#operators-on-string)
+  - [String Methods](#string-methods)
 
 ## Section 1: Introduction to Python
 ### How a Python Program Runs?
@@ -2349,7 +2350,6 @@ print(S[::-1])    # Output: jihgfedcba (reverses the string)
 S = "abcdefghij"
 print(S[::3])     # Output: adgj (every 3rd character)
 ```
-
 - The syntax **S[start:end:step]** uses **step=3**, meaning one character is selected **every three positions**.
 - Since **start** and **end** are **not specified**, the default values are used:
   - `start`: begins from the first character (index 0).
@@ -2373,6 +2373,65 @@ Checks if a substring is not present in a string.
 str1 = "Hello World"
 print("Python" not in str1) # Output: True
 print("World" not in str1)  # Output: False
+```
+
+<div align="right">
+  <strong>
+    <a href="#table-of-contents" style="text-decoration: none;">↥ Back to top</a>
+  </strong>
+</div>
+
+### String Methods
+Python provides several built-in **string methods** for searching and counting substrings. Below are some commonly used string methods with examples.
+
+**1. `find()`**
+
+**Finds** the **first occurrence** of a substring and returns its index. If not found, returns **`-1`**.
+
+```python
+text = "Hello, world!"
+result = text.find("world")
+print(result)  # Output: 7
+```
+
+**2. `rfind()`**
+
+Finds the **last occurrence** of a substring and returns its index. If not found, returns **`-1`**.
+
+```python
+text = "Hello, world! Hello again!"
+result = text.rfind("Hello")
+print(result)  # Output: 13
+```
+
+**3. `index()`**
+
+The `index()` method works similar to `find()`, but raises a **`ValueError`** if the substring is not found.
+
+```python
+text = "Hello, world!"
+result = text.index("world")
+print(result)  # Output: 7
+```
+
+**4. `rindex()`**
+
+The `rindex()` method works similar to `rfind()`, but raises a **`ValueError`** if the substring **is not found.**
+
+```python
+text = "Hello, world! Hello again!"
+result = text.rindex("Hello")
+print(result)  # Output: 13
+```
+
+**5. `count()`**
+
+The `count()` method returns the number of occurrences of a substring in the string.
+
+```python
+text = "Hello, world! Hello again!"
+result = text.count("Hello")
+print(result)  # Output: 2
 ```
 
 <div align="right">
