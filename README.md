@@ -81,6 +81,7 @@
   - [String Methods : Joining and Splitting](#string-methods--joining-and-splitting)
   - [Challenge : Sorting Letters of a String](#challenge--sorting-letters-of-a-string)
   - [Challenge : Displaying Data](#challenge--displaying-data)
+  - [Challenge : Confirming Password](#challenge--confirming-password)
 
 ## Section 1: Introduction to Python
 ### How a Python Program Runs?
@@ -2824,6 +2825,32 @@ Enter The Item: Chicken pizza
 Enter price: 25
 15
 Chicken pizza..........25
+```
+<div align="right">
+  <strong>
+    <a href="#table-of-contents" style="text-decoration: none;">↥ Back to top</a>
+  </strong>
+</div>
+
+### Challenge : Confirming Password
+
+**Code**
+```python 
+password1 = input("Enter the password: ")
+password2 = input("Confirm password: ")
+
+if password1 == password2:
+    print("Yes, the passwords match.")
+elif password1.casefold() == password2.casefold():
+    print("Passwords match but have different cases.")
+else:
+    print("No, the passwords do not match. Try again.")
+```
+**Output**
+```python
+Enter the password: admin
+Confirm password: admin
+Yes, the passwords match.
 ```
 <div align="right">
   <strong>
