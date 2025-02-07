@@ -79,6 +79,7 @@
   - [String Methods : Inquiry Methods](#string-methods--inquiry-methods)
   - [String Methods : Starts with and Ends with](#string-methods--starts-with-and-ends-with)
   - [String Methods : Joining and Splitting](#string-methods--joining-and-splitting)
+  - [Challenge : Sorting Letters of a String](#challenge--sorting-letters-of-a-string)
 
 ## Section 1: Introduction to Python
 ### How a Python Program Runs?
@@ -2774,6 +2775,27 @@ print(text.splitlines())  # ['Hello', 'World', 'Python']
 print(text.splitlines(True))  # ['Hello\n', 'World\n', 'Python']
 ```
 
+<div align="right">
+  <strong>
+    <a href="#table-of-contents" style="text-decoration: none;">↥ Back to top</a>
+  </strong>
+</div>
+
+### Challenge : Sorting Letters of a String
+**Code**
+```python
+value = 'klmndgfhbpa'
+
+value_sorted = sorted(value)
+print(value_sorted)
+```
+**Output**
+```python
+value = 'klmndgfhbpa'
+
+value_sorted = sorted(value)
+print(value_sorted)
+```
 <div align="right">
   <strong>
     <a href="#table-of-contents" style="text-decoration: none;">↥ Back to top</a>
