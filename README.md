@@ -78,6 +78,7 @@
   - [String Methods : Changing Cases](#string-methods--changing-cases)
   - [String Methods : Inquiry Methods](#string-methods--inquiry-methods)
   - [String Methods : Starts with and Ends with](#string-methods--starts-with-and-ends-with)
+  - [String Methods : Joining and Splitting](#string-methods--joining-and-splitting)
 
 ## Section 1: Introduction to Python
 ### How a Python Program Runs?
@@ -2728,3 +2729,53 @@ print(text.rpartition(":"))  # ('', '', 'path/directory/file') (unchanged)
   </strong>
 </div>
 
+### String Methods : Joining and Splitting
+
+**1. `s.replace(old, new, count)`**
+- Returns a new string where occurrences of `old` are replaced with **`new`**.
+- The **optional `count`** specifies the maximum number of replacements.
+```python
+text = "Hello world"
+print(text.replace("world", "Python"))  # "Hello Python"
+print(text.replace("o", "0", 1))  # "Hell0 world"
+```
+
+**2. `s.join(iterable)`**
+- Joins elements of an iterable **into a string**, using **`s`** as the separator.
+```python
+words = ["Hello", "world"]
+print(" ".join(words))  # "Hello world"
+print("-".join(words))  # "Hello-world"
+```
+
+**3. `s.split(sep, maxsplit)`**
+- Splits the string at each occurrence of `sep` and returns a list.
+- If `maxsplit` is provided, at most `maxsplit` splits are performed.
+```python
+text = "apple,banana,grape"
+print(text.split(","))  # ['apple', 'banana', 'grape']
+print(text.split(",", 1))  # ['apple', 'banana,grape']
+```
+
+**4. `s.rsplit(sep, maxsplit)`**
+- Splits the string from the right at each occurrence of `sep` and returns a list.
+- If `maxsplit` is provided, at most `maxsplit` splits are performed.
+```python
+text = "apple,banana,grape"
+print(text.rsplit(",", 1))  # ['apple,banana', 'grape']
+```
+
+**5. `s.splitlines(keepends)`**
+- Splits the string **at line breaks** and returns a list of lines.
+- If `keepends` is `True`, line breaks are included in the result.
+```python
+text = "Hello\nWorld\nPython"
+print(text.splitlines())  # ['Hello', 'World', 'Python']
+print(text.splitlines(True))  # ['Hello\n', 'World\n', 'Python']
+```
+
+<div align="right">
+  <strong>
+    <a href="#table-of-contents" style="text-decoration: none;">↥ Back to top</a>
+  </strong>
+</div>
