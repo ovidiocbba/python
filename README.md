@@ -85,6 +85,7 @@
   - [Challenge : Credit Card Details](#challenge--credit-card-details)
   - [Challenge : Domain Name from Email](#challenge--domain-name-from-email)
   - [Challenge : Converting String to Palindrome](#challenge--converting-string-to-palindrome)
+  - [Challenge : Day, Month , Year](#challenge--day-month--year)
 
 ## Section 1: Introduction to Python
 ### How a Python Program Runs?
@@ -2939,6 +2940,32 @@ else:
 Enter a word: oso
 The word is a palindrome.
 ```
+<div align="right">
+  <strong>
+    <a href="#table-of-contents" style="text-decoration: none;">↥ Back to top</a>
+  </strong>
+</div>
+
+### Challenge : Day, Month , Year
+ 
+**Code**
+```python
+mydate = input('Enter Date in dd/mm/yyyy format:')
+
+l = mydate.split('/')
+
+print('Day:',l[0])
+print('Month:',l[1])
+print('Year:',l[2])
+```
+**Output**
+```python
+Enter Date in dd/mm/yyyy format:02/01/1991
+Day: 02
+Month: 01
+Year: 1991
+```
+
 <div align="right">
   <strong>
     <a href="#table-of-contents" style="text-decoration: none;">↥ Back to top</a>
