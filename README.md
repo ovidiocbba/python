@@ -69,7 +69,7 @@
   - [Challenge : Fibonacci Series](#challenge--fibonacci-series)
   - [Challenges](#challenges-1)
     - [1. Find the Factors of a Number](#1-find-the-factors-of-a-number)
-    - [2. Find the Factors of a Number](#2-find-the-factors-of-a-number)
+    - [2. Check if a number is prime or not](#2-check-if-a-number-is-prime-or-not)
 
 ## Section 1: Introduction to Python
 ### How a Python Program Runs?
@@ -2234,7 +2234,7 @@ Enter a Number: 8
   </strong>
 </div>
 
-#### 2. Find the Factors of a Number
+#### 2. Check if a number is prime or not
 
 **Code**
 ```python
