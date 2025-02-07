@@ -82,6 +82,7 @@
   - [Challenge : Sorting Letters of a String](#challenge--sorting-letters-of-a-string)
   - [Challenge : Displaying Data](#challenge--displaying-data)
   - [Challenge : Confirming Password](#challenge--confirming-password)
+  - [Challenge : Credit Card Details](#challenge--credit-card-details)
 
 ## Section 1: Introduction to Python
 ### How a Python Program Runs?
@@ -2852,6 +2853,30 @@ Enter the password: admin
 Confirm password: admin
 Yes, the passwords match.
 ```
+<div align="right">
+  <strong>
+    <a href="#table-of-contents" style="text-decoration: none;">↥ Back to top</a>
+  </strong>
+</div>
+
+### Challenge : Credit Card Details
+**Code**
+```python
+# Display credit card number
+# 4554 3663 2595 1142
+# **** **** **** 1142
+cardNo = input("Enter your credit card numer: ")
+lastDigits = cardNo[15:]
+four = '*' * 4 + ' '
+display = four * 3 + lastDigits
+print(display)
+```
+**Output**
+```python 
+Enter your credit card numer: 4554 3663 2595 1142
+**** **** **** 1142
+```
+
 <div align="right">
   <strong>
     <a href="#table-of-contents" style="text-decoration: none;">↥ Back to top</a>
