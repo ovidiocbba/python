@@ -2560,7 +2560,8 @@ print(s.casefold())  # Output: "hello world"
 </div>
 
 ### String Methods : Inquiry Methods
-**Case Check Methods**
+**Case Check Methods**  
+
 **`s.isupper()`**  
 Returns `True` if all characters in the string are uppercase.
 
@@ -2621,7 +2622,7 @@ print(s.isascii())  # Output: True
 
 **Identifier and Printable Check Methods**
 
-**`s.isidentifier()`**
+**`s.isidentifier()`**  
 Returns `True` if the string is a valid Python identifier.
 
 ```python
@@ -2629,7 +2630,7 @@ s = "variable_name"
 print(s.isidentifier())  # Output: True
 ```
 
-**`s.isprintable()`**
+**`s.isprintable()`**  
 Returns `True` if all characters in the string are printable.
 
 ```python
@@ -2639,7 +2640,7 @@ print(s.isprintable())  # Output: True
 
 **Numeric Check Methods**
 
-**`s.isdecimal()`**
+**`s.isdecimal()`**  
 Returns `True` if all characters in the string are decimal characters.
 
 ```python
@@ -2647,7 +2648,7 @@ s = "123"
 print(s.isdecimal())  # Output: True
 ```
 
-**`s.isdigit()`**
+**`s.isdigit()`**  
 Returns `True` if all characters in the string are digits.
 
 ```python
@@ -2655,7 +2656,7 @@ s = "123"
 print(s.isdigit())  # Output: True
 ```
 
-**`s.isnumeric()`**
+**`s.isnumeric()`**  
 Returns `True` if all characters in the string are numeric characters.
 
 ```python
