@@ -2334,7 +2334,7 @@ S = "abcdefghij"
 print(S[1:7:2])   # Output: bdf (starts at index 1, ends at 6, step of 2)
 ```
 
-**1. Reversing a String (S[::-1])**
+**4.1. Reversing a String (S[::-1])**
 ```python
 S = "abcdefghij"
 print(S[::-1])    # Output: jihgfedcba (reverses the string)
@@ -2345,7 +2345,7 @@ print(S[::-1])    # Output: jihgfedcba (reverses the string)
   - `end`: goes up to the beginning of the string.
   - `step`: -1, which means the traversal is from right to left.
 
-**2. Selecting Every 3rd Character (S[::3])**
+**4.2. Selecting Every 3rd Character (S[::3])**
 ```python
 S = "abcdefghij"
 print(S[::3])     # Output: adgj (every 3rd character)
