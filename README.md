@@ -76,6 +76,7 @@
   - [String Methods](#string-methods)
   - [String Methods : Removing Spaces](#string-methods--removing-spaces)
   - [String Methods : Changing Cases](#string-methods--changing-cases)
+  - [String Methods : Inquiry Methods](#string-methods--inquiry-methods)
 
 ## Section 1: Introduction to Python
 ### How a Python Program Runs?
@@ -2550,6 +2551,116 @@ Converts the string to **lowercase** in a way that is more aggressive for case-i
 ```python
 s = "HELLO WORLD"
 print(s.casefold())  # Output: "hello world"
+```
+
+<div align="right">
+  <strong>
+    <a href="#table-of-contents" style="text-decoration: none;">↥ Back to top</a>
+  </strong>
+</div>
+
+### String Methods : Inquiry Methods
+**Case Check Methods**
+**`s.isupper()`**  
+Returns `True` if all characters in the string are uppercase.
+
+```python
+s = "HELLO"
+print(s.isupper())  # Output: True
+```
+
+**`s.islower()`**  
+Returns `True` if all characters in the string are lowercase.
+
+```python
+s = "hello"
+print(s.islower())  # Output: True
+```
+
+**`s.istitle()`**  
+Returns `True` if the string follows title case (each word starts with an uppercase letter).
+
+```python
+s = "Hello World"
+print(s.istitle())  # Output: True
+```
+
+**Character Type Check Methods**
+
+**`s.isalnum()`**  
+Returns `True` if all characters in the string are alphanumeric (letters or digits).
+
+```python
+s = "Hello123"
+print(s.isalnum())  # Output: True
+```
+
+**`s.isalpha()`**  
+Returns `True` if all characters in the string are alphabetic.
+
+```python
+s = "Hello"
+print(s.isalpha())  # Output: True
+```
+
+**`s.isspace()`**  
+Returns `True` if all characters in the string are whitespace.
+
+```python
+s = "   "
+print(s.isspace())  # Output: True
+```
+
+**`s.isascii()`**  
+Returns `True` if all characters in the string are ASCII.
+
+```python
+s = "Hello"
+print(s.isascii())  # Output: True
+```
+
+**Identifier and Printable Check Methods**
+
+**`s.isidentifier()`**
+Returns `True` if the string is a valid Python identifier.
+
+```python
+s = "variable_name"
+print(s.isidentifier())  # Output: True
+```
+
+**`s.isprintable()`**
+Returns `True` if all characters in the string are printable.
+
+```python
+s = "Hello World!"
+print(s.isprintable())  # Output: True
+```
+
+**Numeric Check Methods**
+
+**`s.isdecimal()`**
+Returns `True` if all characters in the string are decimal characters.
+
+```python
+s = "123"
+print(s.isdecimal())  # Output: True
+```
+
+**`s.isdigit()`**
+Returns `True` if all characters in the string are digits.
+
+```python
+s = "123"
+print(s.isdigit())  # Output: True
+```
+
+**`s.isnumeric()`**
+Returns `True` if all characters in the string are numeric characters.
+
+```python
+s = "123"
+print(s.isnumeric())  # Output: True
 ```
 
 <div align="right">
