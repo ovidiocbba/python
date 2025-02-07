@@ -75,6 +75,7 @@
   - [Operators on String](#operators-on-string)
   - [String Methods](#string-methods)
   - [String Methods : Removing Spaces](#string-methods--removing-spaces)
+  - [String Methods : Changing Cases](#string-methods--changing-cases)
 
 ## Section 1: Introduction to Python
 ### How a Python Program Runs?
@@ -2493,6 +2494,62 @@ Removes **`trailing`** characters (default is whitespace).
 ```python
 s = "  hello  "
 print(s.rstrip())  # Output: "  hello"
+```
+
+<div align="right">
+  <strong>
+    <a href="#table-of-contents" style="text-decoration: none;">↥ Back to top</a>
+  </strong>
+</div>
+
+### String Methods : Changing Cases
+
+**`s.capitalize()`**  
+**Capitalizes** the `first letter` of the string and converts **the rest to lowercase**.
+
+```python
+s = "hello world"
+print(s.capitalize())  # Output: "Hello world"
+```
+
+**`s.lower()`**  
+Converts **all characters** in the string to **lowercase**.
+
+```python
+s = "HELLO WORLD"
+print(s.lower())  # Output: "hello world"
+```
+
+**`s.upper()`**  
+Converts **all characters** in the string to **uppercase**.
+
+```python
+s = "hello world"
+print(s.upper())  # Output: "HELLO WORLD"
+```
+
+**`s.title()`**  
+Converts **the first letter** of each word to uppercase.
+
+```python
+s = "hello world"
+print(s.title())  # Output: "Hello World"
+```
+
+**`s.swapcase()`**  
+**Swaps uppercase** letters to **lowercase** and `vice versa`.
+
+```python
+s = "Hello World"
+print(s.swapcase())  # Output: "hELLO wORLD"
+```
+
+**`s.casefold()`**  
+Converts the string to **lowercase** in a way that is more aggressive for case-insensitive comparisons.
+
+```python
+s = "HELLO WORLD"
+print(s.casefold())  # Output: "hello world"
 ```
 
 <div align="right">
