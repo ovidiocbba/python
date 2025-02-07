@@ -88,6 +88,8 @@
   - [Challenge : Day, Month , Year](#challenge--day-month--year)
   - [Challenge : Anagram String](#challenge--anagram-string)
   - [Challenge : Removing Punctuations](#challenge--removing-punctuations)
+- [Section 8: Formatted Printing](#section-8-formatted-printing)
+- [Section 9: Regular Expression](#section-9-regular-expression)
 
 ## Section 1: Introduction to Python
 ### How a Python Program Runs?
@@ -3025,6 +3027,170 @@ print(s2)
 my_pythongmailcom
 ```
 
+<div align="right">
+  <strong>
+    <a href="#table-of-contents" style="text-decoration: none;">↥ Back to top</a>
+  </strong>
+</div>
+
+## Section 8: Formatted Printing
+
+Formatted printing in Python allows you to control how values are displayed in the output. Here are various examples of how to use different formatting methods in Python.
+
+**1. Using `f-strings` (Introduced in Python 3.6)**
+This is the modern and preferred method to format strings in Python.
+
+```python
+name = "Juan"
+age = 25
+print(f"My name is {name} and I am {age} years old.")
+```
+
+**2. Using the `format()` method**
+This is the previous method for formatting strings, and it works well in versions of Python prior to 3.6.
+
+```python
+name = "Ana"
+age = 30
+print("My name is {} and I am {} years old.".format(name, age))
+```
+
+You can also use indexes or variable names within the braces:
+
+```python
+print("My name is {0} and I am {1} years old.".format(name, age))
+# Or using named placeholders
+print("My name is {name} and I am {age} years old.".format(name=name, age=age))
+```
+
+**3. Using the `%` operator (Old formatting method)**
+```python
+name = "Carlos"
+age = 40
+print("My name is %s and I am %d years old." % (name, age))
+```
+
+**4. Formatting numbers**
+You can control how numbers are printed with decimals, digits, etc.
+
+```python
+pi = 3.14159265358979
+# Using f-strings
+print(f"Pi value with 2 decimal places: {pi:.2f}")
+# Using format()
+print("Pi value with 3 decimal places: {:.3f}".format(pi))
+```
+
+**5. Text alignment and spacing**
+You can specify the width of fields and alignment.
+
+```python
+name = "Luis"
+salary = 5000
+
+# Left, centered, or right alignment
+print(f"{name:<10} | {salary:>10}")  # Name left-aligned, salary right-aligned
+print(f"{name:^10} | {salary:^10}")  # Both centered
+```
+
+<div align="right">
+  <strong>
+    <a href="#table-of-contents" style="text-decoration: none;">↥ Back to top</a>
+  </strong>
+</div>
+
+## Section 9: Regular Expression
+
+Regular expressions (regex) are powerful tools for pattern matching and string manipulation. Python provides the `re` module to work with regex.
+
+**Basic Syntax**
+- `.` : Matches any character except newline.
+- `^` : Matches the start of a string.
+- `$` : Matches the end of a string.
+- `*` : Matches 0 or more repetitions of the preceding character.
+- `+` : Matches 1 or more repetitions of the preceding character.
+- `?` : Matches 0 or 1 occurrence of the preceding character.
+- `{n}` : Matches exactly `n` occurrences.
+- `{n,}` : Matches `n` or more occurrences.
+- `{n,m}` : Matches between `n` and `m` occurrences.
+- `\d` : Matches any digit (equivalent to `[0-9]`).
+- `\D` : Matches any non-digit character.
+- `\s` : Matches any whitespace character.
+- `\S` : Matches any non-whitespace character.
+- `\w` : Matches any alphanumeric character (equivalent to `[a-zA-Z0-9_]`).
+- `\W` : Matches any non-alphanumeric character.
+
+**Using `re` Module**
+```python
+import re
+```
+**Compiling Patterns**  
+For efficiency, regex patterns can be compiled.
+```python
+compiled_pattern = re.compile(r"\b\d{3}-\d{3}-\d{4}\b")
+text = "Call me at 987-654-3210."
+print(compiled_pattern.findall(text))
+```
+**Output:**
+```
+['987-654-3210']
+```
+**`Search` Function**  
+Finds the **first occurrence** of a pattern in a string.
+```python
+pattern = r"\b\d{3}-\d{3}-\d{4}\b"
+text = "My phone number is 555-123-4567."
+search = re.search(pattern, text)
+if search:
+    print("Pattern found at position:", search.start())
+```
+**Output:**
+```
+Pattern found at position: 19
+```
+
+**`Match` Function**    
+Checks if a string starts with a pattern.
+```python
+import re
+pattern = r"\d{3}-\d{2}-\d{4}"
+text = "123-45-6789 is a valid SSN format"
+match = re.match(pattern, text)
+if match:
+    print("Match found!")
+else:
+    print("No match.")
+```
+**Output:**
+```
+Match found!
+```
+
+**`Findall` Function**  
+Finds **all occurrences** of a pattern in a string.
+```python
+pattern = r"\d+"
+text = "There are 3 cats, 4 dogs, and 5 birds."
+result = re.findall(pattern, text)
+print(result)
+```
+**Output:**
+```
+['3', '4', '5']
+```
+
+**`Sub` Function**  
+Replaces occurrences of a pattern with a given string.
+```python
+pattern = r"cats"
+text = "I love cats. Cats are great!"
+new_text = re.sub(pattern, "dogs", text, flags=re.IGNORECASE)
+print(new_text)
+```
+**Output:**
+```
+I love dogs. dogs are great!
+```
 <div align="right">
   <strong>
     <a href="#table-of-contents" style="text-decoration: none;">↥ Back to top</a>
