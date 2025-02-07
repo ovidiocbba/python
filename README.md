@@ -67,6 +67,9 @@
   - [What is for Loop ?](#what-is-for-loop-)
   - [Challenge : Factorial of Given Number](#challenge--factorial-of-given-number)
   - [Challenge : Fibonacci Series](#challenge--fibonacci-series)
+  - [Challenges](#challenges-1)
+    - [1. Find the Factors of a Number](#1-find-the-factors-of-a-number)
+    - [2. Find the Factors of a Number](#2-find-the-factors-of-a-number)
 
 ## Section 1: Introduction to Python
 ### How a Python Program Runs?
@@ -2200,6 +2203,58 @@ Enter Number of Terms: 6
 2
 3
 5
+```
+<div align="right">
+  <strong>
+    <a href="#table-of-contents" style="text-decoration: none;">↥ Back to top</a>
+  </strong>
+</div>
+
+### Challenges
+#### 1. Find the Factors of a Number
+
+**Code**
+```python
+n = int(input('Enter a Number: '))
+for i in range(1, n+1):
+    if n % i == 0:
+        print(i)
+```
+**Output**
+```python
+Enter a Number: 8
+1
+2
+4
+8
+```
+<div align="right">
+  <strong>
+    <a href="#table-of-contents" style="text-decoration: none;">↥ Back to top</a>
+  </strong>
+</div>
+
+#### 2. Find the Factors of a Number
+
+**Code**
+```python
+n = int(input('Enter a Number: '))
+
+count = 0
+
+for i in range(1, n+1):
+    if n % i == 0:
+        count += 1
+
+if count == 2:
+    print('Its a Prime')
+else:
+    print('Its Not a Prime')
+```
+**Output**
+```python
+Enter a Number: 5
+Its a Prime
 ```
 <div align="right">
   <strong>
