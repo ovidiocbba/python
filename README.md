@@ -83,6 +83,7 @@
   - [Challenge : Displaying Data](#challenge--displaying-data)
   - [Challenge : Confirming Password](#challenge--confirming-password)
   - [Challenge : Credit Card Details](#challenge--credit-card-details)
+  - [Challenge : Domain Name from Email](#challenge--domain-name-from-email)
 
 ## Section 1: Introduction to Python
 ### How a Python Program Runs?
@@ -2876,6 +2877,43 @@ print(display)
 Enter your credit card numer: 4554 3663 2595 1142
 **** **** **** 1142
 ```
+
+<div align="right">
+  <strong>
+    <a href="#table-of-contents" style="text-decoration: none;">↥ Back to top</a>
+  </strong>
+</div>
+
+### Challenge : Domain Name from Email
+Find user id and domain name from email address
+**Option 1**
+```python 
+email = input('Enter your email: ')
+info = email.split('@')
+domain = info[0]
+emailAddress = info[1]
+print('User id:', domain)
+print('Domain name:', emailAddress)
+```
+**Output 1**
+```python 
+Enter your email: ovidiocbba@hotmail.com
+ovidiocbba
+hotmail.com
+```
+**Option 2**
+```python 
+```
+**Output 2**
+```python 
+Enter your email: ovidiocbba@hotmail.com
+ovidiocbba
+hotmail.com
+```
+**Option 2**  
+✅ More efficient – It doesn't **create unnecessary lists** like split('@') does.  
+✅ **Less memory usage** – Since it only **finds** the **@ index** and uses slicing, it avoids extra list storage.  
+✅ Better error handling – It allows checking **if @ exists** before processing, preventing potential errors.
 
 <div align="right">
   <strong>
