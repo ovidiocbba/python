@@ -66,6 +66,7 @@
   - [else suite : else with while loop](#else-suite--else-with-while-loop)
   - [What is for Loop ?](#what-is-for-loop-)
   - [Challenge : Factorial of Given Number](#challenge--factorial-of-given-number)
+  - [Challenge : Fibonacci Series](#challenge--fibonacci-series)
 
 ## Section 1: Introduction to Python
 ### How a Python Program Runs?
@@ -2169,6 +2170,36 @@ print('Factorial of', number, 'is', fact)
 ```python
 Enter a Number: 4
 Factorial of 4 is 24
+```
+<div align="right">
+  <strong>
+    <a href="#table-of-contents" style="text-decoration: none;">↥ Back to top</a>
+  </strong>
+</div>
+
+### Challenge : Fibonacci Series
+**Code**
+```python
+n = int(input('Enter Number of Terms: '))
+a = 0
+b = 1
+
+for i in range(n):
+    print(a)
+    c = a + b
+    a = b
+    b = c
+```
+
+**Output**
+```python
+Enter Number of Terms: 6
+0
+1
+1
+2
+3
+5
 ```
 <div align="right">
   <strong>
