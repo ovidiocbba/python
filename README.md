@@ -90,6 +90,11 @@
   - [Challenge : Removing Punctuations](#challenge--removing-punctuations)
 - [Section 8: Formatted Printing](#section-8-formatted-printing)
 - [Section 9: Regular Expression](#section-9-regular-expression)
+- [Section 10: List](#section-10-list)
+- [Section 11: Tuple](#section-11-tuple)
+- [Section 12: Sets](#section-12-sets)
+- [Section 13: Dictionary](#section-13-dictionary)
+- [Section 14: Functions](#section-14-functions)
 
 ## Section 1: Introduction to Python
 ### How a Python Program Runs?
@@ -3191,6 +3196,249 @@ print(new_text)
 ```
 I love dogs. dogs are great!
 ```
+<div align="right">
+  <strong>
+    <a href="#table-of-contents" style="text-decoration: none;">↥ Back to top</a>
+  </strong>
+</div>
+
+## Section 10: List
+
+A `list` is an ordered, **`mutable` collection** that allows duplicate elements.
+
+```python
+# Creating a list
+fruits = ["apple", "banana", "cherry"]
+
+# Accessing elements
+print(fruits[0])  # apple
+
+# Modifying elements
+fruits[1] = "blueberry"
+print(fruits)  # ['apple', 'blueberry', 'cherry']
+
+# Adding elements
+fruits.append("orange")
+print(fruits)  # ['apple', 'blueberry', 'cherry', 'orange']
+
+# Removing elements
+fruits.remove("cherry")
+print(fruits)  # ['apple', 'blueberry', 'orange']
+```
+
+<div align="right">
+  <strong>
+    <a href="#table-of-contents" style="text-decoration: none;">↥ Back to top</a>
+  </strong>
+</div>
+
+## Section 11: Tuple
+A `tuple` is an ordered, **`immutable` collection** that allows duplicate elements.
+
+```python
+# Creating a tuple
+coordinates = (10, 20, 30)
+
+# Accessing elements
+print(coordinates[1])  # 20
+
+# Unpacking a tuple
+x, y, z = coordinates
+print(x, y, z)  # 10 20 30
+```
+
+<div align="right">
+  <strong>
+    <a href="#table-of-contents" style="text-decoration: none;">↥ Back to top</a>
+  </strong>
+</div>
+
+## Section 12: Sets
+
+A `set` is an **`unordered` collection** of unique elements.
+
+```python
+# Creating a set
+unique_numbers = {1, 2, 3, 4, 4, 5}
+print(unique_numbers)  # {1, 2, 3, 4, 5}
+
+# Adding elements
+unique_numbers.add(6)
+print(unique_numbers)  # {1, 2, 3, 4, 5, 6}
+
+# Removing elements
+unique_numbers.discard(2)
+print(unique_numbers)  # {1, 3, 4, 5, 6}
+
+# Set operations
+set_a = {1, 2, 3}
+set_b = {3, 4, 5}
+print(set_a | set_b)  # Union: {1, 2, 3, 4, 5}
+print(set_a & set_b)  # Intersection: {3}
+print(set_a - set_b)  # Difference: {1, 2}
+```
+
+<div align="right">
+  <strong>
+    <a href="#table-of-contents" style="text-decoration: none;">↥ Back to top</a>
+  </strong>
+</div>
+
+## Section 13: Dictionary
+person = {"name": "Alice", "age": 25, "city": "New York"}
+
+**Accessing values**
+print(person["name"])  # Alice
+
+**Modifying values**
+person["age"] = 26
+print(person)  # {'name': 'Alice', 'age': 26, 'city': 'New York'}
+
+**Adding new key-value pairs**
+person["job"] = "Engineer"
+print(person)  # {'name': 'Alice', 'age': 26, 'city': 'New York', 'job': 'Engineer'}
+
+**Removing key-value pairs**
+person.pop("city")
+print(person)  # {'name': 'Alice', 'age': 26, 'job': 'Engineer'}
+
+<div align="right">
+  <strong>
+    <a href="#table-of-contents" style="text-decoration: none;">↥ Back to top</a>
+  </strong>
+</div>
+
+## Section 14: Functions
+
+Functions in Python allow code reuse, **improve modularity**, and make programs more organized and maintainable.
+
+**Function Definition**
+
+In Python, functions are defined using the **`def`** keyword followed by the function name and parentheses `()` that may contain parameters.
+
+```python
+# Defining a simple function
+def greet():
+    return "Hello, world!"
+
+# Calling the function
+print(greet())
+```
+**Output:**
+```
+Hello, world!
+```
+
+**Functions with Parameters**
+
+Functions can receive arguments to make them more dynamic.
+
+```python
+# Function with one parameter
+def personalized_greeting(name):
+    return f"Hello, {name}!"
+
+print(personalized_greeting("Carlos"))
+```
+**Output:**
+```
+Hello, Carlos!
+```
+
+**Default Parameter Values**
+
+You can define default values for parameters.
+
+```python
+def greet(name="World"):
+    return f"Hello, {name}!"
+
+print(greet())      # Uses the default value
+print(greet("Ana")) # Uses the provided value
+```
+**Output:**
+```
+Hello, World!
+Hello, Ana!
+```
+
+**Returning Multiple Values**
+
+A function can return multiple values using tuples.
+
+```python
+def operations(a, b):
+    sum_result = a + b
+    difference = a - b
+    return sum_result, difference
+
+result = operations(10, 5)
+print(result) # (15, 5)
+```
+**Output:**
+```
+(15, 5)
+```
+
+**Functions with a Variable Number of Arguments**
+
+You can use `*args` to receive an indefinite number of positional arguments and `**kwargs` for named arguments.
+
+```python
+# *args for positional arguments
+
+def add(*numbers):
+    return sum(numbers)
+
+print(add(1, 2, 3, 4))
+```
+**Output:**
+```
+10
+```
+
+```python
+# **kwargs for named arguments
+
+def person_info(**data):
+    return f"Name: {data.get('name', 'Unknown')}, Age: {data.get('age', 'Not specified')}"
+
+print(person_info(name="Laura", age=30))
+```
+**Output:**
+```
+Name: Laura, Age: 30
+```
+
+**Lambda (Anonymous) Functions**
+
+Lambda functions allow defining functions in a single line.
+
+```python
+square = lambda x: x ** 2
+print(square(5))
+```
+**Output:**
+```
+25
+```
+
+**Functions as Arguments**
+
+In Python, functions can be passed as arguments to other functions.
+
+```python
+def operate(func, x, y):
+    return func(x, y)
+
+add = lambda a, b: a + b
+print(operate(add, 3, 4))
+```
+**Output:**
+```
+7
+```
+
 <div align="right">
   <strong>
     <a href="#table-of-contents" style="text-decoration: none;">↥ Back to top</a>
