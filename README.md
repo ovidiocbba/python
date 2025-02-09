@@ -3255,7 +3255,7 @@ print(x, y, z)  # 10 20 30
 
 ## Section 12: Sets
 
-A `set` is an **`unordered` collection** of unique elements.
+A `set` is an **`unordered` collection** of **unique** elements.
 
 ```python
 # Creating a set
@@ -3285,7 +3285,7 @@ print(set_a - set_b)  # Difference: {1, 2}
 </div>
 
 ## Section 13: Dictionary
-A `dictionary` is an unordered collection of key-value pairs.
+A `dictionary` is an **`unordered` collection** of key-value pairs.
 
 ```python
 # Creating a dictionary
