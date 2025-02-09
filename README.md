@@ -3285,22 +3285,27 @@ print(set_a - set_b)  # Difference: {1, 2}
 </div>
 
 ## Section 13: Dictionary
+A `dictionary` is an unordered collection of key-value pairs.
+
+```python
+# Creating a dictionary
 person = {"name": "Alice", "age": 25, "city": "New York"}
 
-**Accessing values**
+# Accessing values
 print(person["name"])  # Alice
 
-**Modifying values**
+# Modifying values
 person["age"] = 26
 print(person)  # {'name': 'Alice', 'age': 26, 'city': 'New York'}
 
-**Adding new key-value pairs**
+# Adding new key-value pairs
 person["job"] = "Engineer"
 print(person)  # {'name': 'Alice', 'age': 26, 'city': 'New York', 'job': 'Engineer'}
 
-**Removing key-value pairs**
+# Removing key-value pairs
 person.pop("city")
 print(person)  # {'name': 'Alice', 'age': 26, 'job': 'Engineer'}
+```
 
 <div align="right">
   <strong>
