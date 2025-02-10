@@ -98,21 +98,6 @@
 - [Section 16: Exception Handling](#section-16-exception-handling)
 - [Section 17: File Handling](#section-17-file-handling)
 - [Section 18: Object Oriented Programing](#section-18-object-oriented-programing)
-- [1. Classes vs Objects](#1-classes-vs-objects)
-- [2. How to Write a Class](#2-how-to-write-a-class)
-- [3. Self and Constructor](#3-self-and-constructor)
-- [4. Instance Variable and Method](#4-instance-variable-and-method)
-- [5. Class Variable and Method](#5-class-variable-and-method)
-- [6. Static Methods](#6-static-methods)
-- [7. Accessors and Mutators (Getters and Setters)](#7-accessors-and-mutators-getters-and-setters)
-- [8. Introduction to Inheritance](#8-introduction-to-inheritance)
-- [9. Constructors in Inheritance](#9-constructors-in-inheritance)
-- [10. Inner Classes](#10-inner-classes)
-- [11. Polymorphism (Duck Typing)](#11-polymorphism-duck-typing)
-- [12. Method Overloading](#12-method-overloading)
-- [13. Method Overriding](#13-method-overriding)
-- [14. Operator Overloading](#14-operator-overloading)
-- [15. Abstract Class and Interface](#15-abstract-class-and-interface)
 
 ## Section 1: Introduction to Python
 ### How a Python Program Runs?
@@ -3472,7 +3457,7 @@ print(operate(add, 3, 4))
 ## Section 17: File Handling 
 ## Section 18: Object Oriented Programing
 
-## 1. Classes vs Objects
+**1. Classes vs Objects**
 
 A **class** is a blueprint for creating objects, while an **object** is an instance of a class.
 
@@ -3486,7 +3471,7 @@ car1 = Car("Toyota", "Corolla")
 print(car1.brand)  # Output: Toyota
 ```
 
-## 2. How to Write a Class
+**2. How to Write a Class**
 
 ```python
 class Person:
@@ -3495,7 +3480,7 @@ class Person:
         self.age = age
 ```
 
-## 3. Self and Constructor
+**3. Self and Constructor**
 
 `self` refers to the instance of the class, and the `__init__` method is the constructor.
 
@@ -3508,7 +3493,7 @@ class Dog:
         print(f"{self.name} is barking!")
 ```
 
-## 4. Instance Variable and Method
+**4. Instance Variable and Method**
 
 Instance variables and methods belong to a specific object.
 
@@ -3521,7 +3506,7 @@ class Animal:
         return self.species
 ```
 
-## 5. Class Variable and Method
+**5. Class Variable and Method**
 
 Class variables and methods are shared among all instances.
 
@@ -3537,7 +3522,7 @@ class Employee:
         return cls.company
 ```
 
-## 6. Static Methods
+**6. Static Methods**
 
 Static methods do not depend on class or instance variables.
 
@@ -3548,7 +3533,7 @@ class Math:
         return x + y
 ```
 
-## 7. Accessors and Mutators (Getters and Setters)
+**7. Accessors and Mutators (Getters and Setters)**
 
 ```python
 class Account:
@@ -3562,7 +3547,7 @@ class Account:
         self._balance = amount
 ```
 
-## 8. Introduction to Inheritance
+**8. Introduction to Inheritance**
 
 ```python
 class Parent:
@@ -3573,7 +3558,7 @@ class Child(Parent):
     pass
 ```
 
-## 9. Constructors in Inheritance
+**9. Constructors in Inheritance**
 
 ```python
 class Animal:
@@ -3586,7 +3571,7 @@ class Dog(Animal):
         self.breed = breed
 ```
 
-## 10. Inner Classes
+**10. Inner Classes**
 
 ```python
 class Outer:
@@ -3595,7 +3580,7 @@ class Outer:
             print("Inner class method")
 ```
 
-## 11. Polymorphism (Duck Typing)
+**11. Polymorphism (Duck Typing)**
 
 ```python
 class Bird:
@@ -3606,7 +3591,7 @@ def sound(animal):
     animal.make_sound()
 ```
 
-## 12. Method Overloading
+**12. Method Overloading**
 
 Python does not support method overloading explicitly, but we can achieve it using default arguments.
 
@@ -3616,7 +3601,7 @@ class Math:
         return x + y + z
 ```
 
-## 13. Method Overriding
+**13. Method Overriding**
 
 ```python
 class Parent:
@@ -3628,7 +3613,7 @@ class Child(Parent):
         print("Child method")
 ```
 
-## 14. Operator Overloading
+**14. Operator Overloading**
 
 ```python
 class Point:
@@ -3640,7 +3625,7 @@ class Point:
         return Point(self.x + other.x, self.y + other.y)
 ```
 
-## 15. Abstract Class and Interface
+**15. Abstract Class and Interface**
 
 ```python
 from abc import ABC, abstractmethod
