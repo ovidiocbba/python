@@ -95,6 +95,24 @@
 - [Section 12: Sets](#section-12-sets)
 - [Section 13: Dictionary](#section-13-dictionary)
 - [Section 14: Functions](#section-14-functions)
+- [Section 16: Exception Handling](#section-16-exception-handling)
+- [Section 17: File Handling](#section-17-file-handling)
+- [Section 18: Object Oriented Programing](#section-18-object-oriented-programing)
+- [1. Classes vs Objects](#1-classes-vs-objects)
+- [2. How to Write a Class](#2-how-to-write-a-class)
+- [3. Self and Constructor](#3-self-and-constructor)
+- [4. Instance Variable and Method](#4-instance-variable-and-method)
+- [5. Class Variable and Method](#5-class-variable-and-method)
+- [6. Static Methods](#6-static-methods)
+- [7. Accessors and Mutators (Getters and Setters)](#7-accessors-and-mutators-getters-and-setters)
+- [8. Introduction to Inheritance](#8-introduction-to-inheritance)
+- [9. Constructors in Inheritance](#9-constructors-in-inheritance)
+- [10. Inner Classes](#10-inner-classes)
+- [11. Polymorphism (Duck Typing)](#11-polymorphism-duck-typing)
+- [12. Method Overloading](#12-method-overloading)
+- [13. Method Overriding](#13-method-overriding)
+- [14. Operator Overloading](#14-operator-overloading)
+- [15. Abstract Class and Interface](#15-abstract-class-and-interface)
 
 ## Section 1: Introduction to Python
 ### How a Python Program Runs?
@@ -3442,6 +3460,202 @@ print(operate(add, 3, 4))
 **Output:**
 ```
 7
+```
+
+<div align="right">
+  <strong>
+    <a href="#table-of-contents" style="text-decoration: none;">↥ Back to top</a>
+  </strong>
+</div>
+
+## Section 16: Exception Handling
+## Section 17: File Handling 
+## Section 18: Object Oriented Programing
+
+## 1. Classes vs Objects
+
+A **class** is a blueprint for creating objects, while an **object** is an instance of a class.
+
+```python
+class Car:
+    def __init__(self, brand, model):
+        self.brand = brand
+        self.model = model
+
+car1 = Car("Toyota", "Corolla")
+print(car1.brand)  # Output: Toyota
+```
+
+## 2. How to Write a Class
+
+```python
+class Person:
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
+```
+
+## 3. Self and Constructor
+
+`self` refers to the instance of the class, and the `__init__` method is the constructor.
+
+```python
+class Dog:
+    def __init__(self, name):
+        self.name = name
+    
+    def bark(self):
+        print(f"{self.name} is barking!")
+```
+
+## 4. Instance Variable and Method
+
+Instance variables and methods belong to a specific object.
+
+```python
+class Animal:
+    def __init__(self, species):
+        self.species = species
+    
+    def get_species(self):
+        return self.species
+```
+
+## 5. Class Variable and Method
+
+Class variables and methods are shared among all instances.
+
+```python
+class Employee:
+    company = "TechCorp"
+    
+    def __init__(self, name):
+        self.name = name
+    
+    @classmethod
+    def get_company(cls):
+        return cls.company
+```
+
+## 6. Static Methods
+
+Static methods do not depend on class or instance variables.
+
+```python
+class Math:
+    @staticmethod
+    def add(x, y):
+        return x + y
+```
+
+## 7. Accessors and Mutators (Getters and Setters)
+
+```python
+class Account:
+    def __init__(self, balance):
+        self._balance = balance
+    
+    def get_balance(self):
+        return self._balance
+    
+    def set_balance(self, amount):
+        self._balance = amount
+```
+
+## 8. Introduction to Inheritance
+
+```python
+class Parent:
+    def greet(self):
+        print("Hello from Parent!")
+        
+class Child(Parent):
+    pass
+```
+
+## 9. Constructors in Inheritance
+
+```python
+class Animal:
+    def __init__(self, name):
+        self.name = name
+        
+class Dog(Animal):
+    def __init__(self, name, breed):
+        super().__init__(name)
+        self.breed = breed
+```
+
+## 10. Inner Classes
+
+```python
+class Outer:
+    class Inner:
+        def display(self):
+            print("Inner class method")
+```
+
+## 11. Polymorphism (Duck Typing)
+
+```python
+class Bird:
+    def make_sound(self):
+        print("Chirp Chirp")
+        
+def sound(animal):
+    animal.make_sound()
+```
+
+## 12. Method Overloading
+
+Python does not support method overloading explicitly, but we can achieve it using default arguments.
+
+```python
+class Math:
+    def add(self, x, y, z=0):
+        return x + y + z
+```
+
+## 13. Method Overriding
+
+```python
+class Parent:
+    def show(self):
+        print("Parent method")
+
+class Child(Parent):
+    def show(self):
+        print("Child method")
+```
+
+## 14. Operator Overloading
+
+```python
+class Point:
+    def __init__(self, x, y):
+        self.x = x
+        self.y = y
+        
+    def __add__(self, other):
+        return Point(self.x + other.x, self.y + other.y)
+```
+
+## 15. Abstract Class and Interface
+
+```python
+from abc import ABC, abstractmethod
+
+class Shape(ABC):
+    @abstractmethod
+    def area(self):
+        pass
+
+class Circle(Shape):
+    def __init__(self, radius):
+        self.radius = radius
+        
+    def area(self):
+        return 3.14 * self.radius * self.radius
 ```
 
 <div align="right">
