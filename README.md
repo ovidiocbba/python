@@ -101,6 +101,7 @@
   - [Challenge : Dice in Games](#challenge--dice-in-games)
   - [Challenge : Class for Circle](#challenge--class-for-circle)
   - [Challenge : Book Details](#challenge--book-details)
+  - [Challenge : Details of an Employee](#challenge--details-of-an-employee)
 
 ## Section 1: Introduction to Python
 ### How a Python Program Runs?
@@ -3743,6 +3744,56 @@ print(book2.show_details())
 ```python
 Title: Python Crash Course - Author: Eric Matthews - Price: 1000.00
 Title: Harry Potter - Author: J. K. Rowling - Price: 52.50
+```
+
+<div align="right">
+  <strong>
+    <a href="#table-of-contents" style="text-decoration: none;">↥ Back to top</a>
+  </strong>
+</div>
+
+### Challenge : Details of an Employee
+
+`Employee.py`
+```python
+class Employee:
+    # Class attribute
+    employee_count = 1
+
+    def __init__(self, name, designation, salary):
+        # Instance attributes
+        self.name = name
+        self.designation = designation
+        self.salary = salary
+        self.emp_id = 'e' + str(Employee.employee_count)
+        # Increment the employee count for the next employee.
+        Employee.employee_count += 1
+
+    def show_details(self):
+        return f'Name: {self.name} - Salary: {self.salary} - Emp Id: {self.emp_id} - Designation: {self.designation}'
+
+    # 'classmethod' indicates that this method belongs to the 'class', not an instance.
+    @classmethod
+    def total_emp(cls):
+        # cls refers to the Employee class.
+        return cls.employee_count
+```
+`main.py`
+```python
+from Challenges.Challenge4.Employee import Employee
+
+e1 = Employee('John', 'Manager', 10000)
+e2 = Employee('Mark', 'Team Leader', 8000)
+
+print(e1.show_details())
+print(e2.show_details())
+print('Total Employees:', e1.total_emp())
+```
+**Output**
+```python
+Name: John - Salary: 10000 - Emp Id: e1 - Designation: Manager
+Name: Mark - Salary: 8000 - Emp Id: e2 - Designation: Team Leader
+Total Employees: 3
 ```
 
 <div align="right">
