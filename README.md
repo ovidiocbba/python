@@ -98,6 +98,9 @@
 - [Section 16: Exception Handling](#section-16-exception-handling)
 - [Section 17: File Handling](#section-17-file-handling)
 - [Section 18: Object Oriented Programing](#section-18-object-oriented-programing)
+  - [Challenge : Dice in Games](#challenge--dice-in-games)
+  - [Challenge : Class for Circle](#challenge--class-for-circle)
+  - [Challenge : Book Details](#challenge--book-details)
 
 ## Section 1: Introduction to Python
 ### How a Python Program Runs?
@@ -3641,6 +3644,105 @@ class Circle(Shape):
         
     def area(self):
         return 3.14 * self.radius * self.radius
+```
+### Challenge : Dice in Games
+
+`Dice.py`
+```python
+import random
+
+class Dice:
+    def __init__(self, sides):
+        self.__sides = sides
+
+    def get_sides(self):
+        return self.__sides
+
+    def roll_dice(self):
+        return random.randint(1, self.__sides)
+```
+`main.py`
+```python
+from Challenges.Challenge1.Dice import Dice
+
+dice = Dice(6)
+print(dice.roll_dice())
+print(dice.roll_dice())
+```
+**Output**
+```python
+6
+3
+```
+<div align="right">
+  <strong>
+    <a href="#table-of-contents" style="text-decoration: none;">↥ Back to top</a>
+  </strong>
+</div>
+
+### Challenge : Class for Circle
+
+`Circle.py`
+```python
+import math
+
+class Circle:
+    def __init__(self, radius):
+        self.radius = radius
+
+    def area(self):
+        return math.pi * self.radius * self.radius
+
+    def perimeter(self):
+        return 2 * math.pi * self.radius
+```
+`main.py`
+```python
+from Challenges.Challenge2.Circle import Circle
+
+circle = Circle(7)
+print('Area: ', f'{circle.area():.2f}')
+print('Perimeter:', f'{circle.perimeter():.2f}')
+```
+**Output**
+```python
+Area:  153.94
+Perimeter: 43.98
+```
+
+<div align="right">
+  <strong>
+    <a href="#table-of-contents" style="text-decoration: none;">↥ Back to top</a>
+  </strong>
+</div>
+
+### Challenge : Book Details
+
+`Book.py`
+```python
+class Book:
+    def __init__(self, title, author, price):
+        self.title = title
+        self.author = author
+        self.price = price
+
+    def show_details(self):
+        return f'Title: {self.title} - Author: {self.author} - Price: {self.price:.2f}'
+```
+`main.py`
+```python
+from Challenges.Challenge3.Book import Book
+
+book1 = Book('Python Crash Course', 'Eric Matthews', 1000)
+book2 = Book('Harry Potter', 'J. K. Rowling', 52.5)
+
+print(book1.show_details())
+print(book2.show_details())
+```
+**Output**
+```python
+Title: Python Crash Course - Author: Eric Matthews - Price: 1000.00
+Title: Harry Potter - Author: J. K. Rowling - Price: 52.50
 ```
 
 <div align="right">
