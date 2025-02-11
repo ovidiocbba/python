@@ -104,6 +104,7 @@
   - [Challenge : Details of an Employee](#challenge--details-of-an-employee)
   - [Challenge : Simple Class for Calculator (Static Method)](#challenge--simple-class-for-calculator-static-method)
   - [Challenge : Customer Phone Number](#challenge--customer-phone-number)
+  - [Challenge : Bank Account](#challenge--bank-account)
 
 ## Section 1: Introduction to Python
 ### How a Python Program Runs?
@@ -3893,6 +3894,62 @@ Phone No: 7650984321
 
 Name: John
 Phone No: 6789012345
+```
+
+<div align="right">
+  <strong>
+    <a href="#table-of-contents" style="text-decoration: none;">↥ Back to top</a>
+  </strong>
+</div>
+
+### Challenge : Bank Account
+
+`Account.py`
+```python
+class MinimumBalanceError(Exception):
+    pass
+
+
+class Account:
+    # Class attribute
+    AccNumber = 1001
+
+    def __init__(self, name, balance):
+        if balance < 1000:
+            raise MinimumBalanceError('Account Cannot be Created')
+        self.name = name
+        self.balance = balance
+        self.account_number = Account.AccNumber
+        Account.AccNumber += 1
+
+    def deposit(self, amt):
+        self.balance += amt
+
+    def withdraw(self, amt):
+        if self.balance - amt < 1000:
+            raise MinimumBalanceError('Amount cannot be withdrawn')
+        self.balance -= amt
+
+    def show_details(self):
+        print('Account Number', self.account_number)
+        print('Name', self.name)
+        print('Balance', self.balance)
+
+```
+`main.py`
+```python
+from Challenges.Challenge8.Account import Account
+
+a1 = Account('John', 2000)
+a1.withdraw(500)
+a1.show_details()
+
+```
+**Output**
+```python
+Account Number 1001
+Name John
+Balance 1500
 ```
 
 <div align="right">
