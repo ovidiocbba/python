@@ -102,6 +102,8 @@
   - [Challenge : Class for Circle](#challenge--class-for-circle)
   - [Challenge : Book Details](#challenge--book-details)
   - [Challenge : Details of an Employee](#challenge--details-of-an-employee)
+  - [Challenge : Simple Class for Calculator (Static Method)](#challenge--simple-class-for-calculator-static-method)
+  - [Challenge : Customer Phone Number](#challenge--customer-phone-number)
 
 ## Section 1: Introduction to Python
 ### How a Python Program Runs?
@@ -3794,6 +3796,103 @@ print('Total Employees:', e1.total_emp())
 Name: John - Salary: 10000 - Emp Id: e1 - Designation: Manager
 Name: Mark - Salary: 8000 - Emp Id: e2 - Designation: Team Leader
 Total Employees: 3
+```
+
+<div align="right">
+  <strong>
+    <a href="#table-of-contents" style="text-decoration: none;">↥ Back to top</a>
+  </strong>
+</div>
+
+### Challenge : Simple Class for Calculator (Static Method)
+
+`Calculator.py`
+```python
+class Calculator:
+    
+    @staticmethod
+    def add(a, b):
+        return a + b
+
+    @staticmethod
+    def sub(a, b):
+        return a - b
+
+    @staticmethod
+    def mul(a, b):
+        return a * b
+
+    @staticmethod
+    def div(a, b):
+        return a / b
+```
+`main.py`
+```python
+from Challenges.Challenge5.Calculator import Calculator
+
+x = 10
+y = 5
+
+# Calling the static method directly from the class
+print(Calculator.add(x, y))
+print(Calculator.sub(x, y))
+print(Calculator.mul(x, y))
+print(Calculator.div(x, y))
+```
+**Output**
+```python
+15
+5
+50
+2.0
+```
+
+<div align="right">
+  <strong>
+    <a href="#table-of-contents" style="text-decoration: none;">↥ Back to top</a>
+  </strong>
+</div>
+
+### Challenge : Customer Phone Number
+
+`Customer.py`
+```python
+class Customer:
+    def __init__(self, name, phone_no):
+        # Private attributes
+        self.__name = name
+        self.__phone_no = phone_no
+
+    def get_name(self):
+        return self.__name
+
+    def get_phone_no(self):
+        return self.__phone_no
+
+    def set_phone_no(self, phone_no):
+        self.__phone_no = phone_no
+```
+`main.py`
+```python
+from Challenges.Challenge6.Customer import Customer
+
+customer = Customer('John', 7650984321)
+
+print('Name:', customer.get_name())
+print('Phone No:', customer.get_phone_no())
+customer.set_phone_no(6789012345)
+
+print('')
+print('Name:', customer.get_name())
+print('Phone No:', customer.get_phone_no())
+```
+**Output**
+```python
+Name: John
+Phone No: 7650984321
+
+Name: John
+Phone No: 6789012345
 ```
 
 <div align="right">
