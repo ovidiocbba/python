@@ -111,6 +111,7 @@
   - [11. Challenge : Details of a Computer (Inner Class)](#11-challenge--details-of-a-computer-inner-class)
   - [12. Challenge : Pet Details (Polymorphism)](#12-challenge--pet-details-polymorphism)
   - [13. Challenge : Greeting in Different Languages (Polymorphism)](#13-challenge--greeting-in-different-languages-polymorphism)
+  - [14. Challenge : Measuring the Angles (Operator Overloading)](#14-challenge--measuring-the-angles-operator-overloading)
 
 ## Section 1: Introduction to Python
 ### How a Python Program Runs?
@@ -4268,6 +4269,48 @@ Hello
 
 Bonjour
 
+```
+
+<div align="right">
+  <strong>
+    <a href="#table-of-contents" style="text-decoration: none;">↥ Back to top</a>
+  </strong>
+</div>
+
+### 14. Challenge : Measuring the Angles (Operator Overloading)
+
+`Angle.py`
+```python
+class Angle:
+
+    def __init__(self, deg):
+        self.degree = deg
+
+    def __add__(self, ang):
+        """Overload the addition operator to add two Angle objects."""
+        sum = Angle(self.degree + ang.degree) # Create a new Angle object with the sum of degrees
+        return sum
+
+    def __str__(self):
+        """Return a string representation of the Angle object."""
+        return 'Degree ' + str(self.degree)
+```
+`main.py`
+```python
+from Challenges.Challenge14.Angle import Angle
+
+a1 = Angle(30)
+a2 = Angle(45)
+
+# Adding two Angle objects using overloaded '+' operator
+a3 = a1 + a2
+
+print(a3)
+
+```
+**Output**
+```python
+Degree 75
 ```
 
 <div align="right">
