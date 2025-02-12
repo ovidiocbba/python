@@ -110,6 +110,7 @@
   - [10. Challenge : Academic Courses (Outer and Inner Class)](#10-challenge--academic-courses-outer-and-inner-class)
   - [11. Challenge : Details of a Computer (Inner Class)](#11-challenge--details-of-a-computer-inner-class)
   - [12. Challenge : Pet Details (Polymorphism)](#12-challenge--pet-details-polymorphism)
+  - [13. Challenge : Greeting in Different Languages (Polymorphism)](#13-challenge--greeting-in-different-languages-polymorphism)
 
 ## Section 1: Introduction to Python
 ### How a Python Program Runs?
@@ -4218,6 +4219,55 @@ My name is Kitty. My age is 2
 mew mew
 My name is Tommy. My age is 3
 bow wow
+```
+
+<div align="right">
+  <strong>
+    <a href="#table-of-contents" style="text-decoration: none;">↥ Back to top</a>
+  </strong>
+</div>
+
+### 13. Challenge : Greeting in Different Languages (Polymorphism)
+
+`English.py`
+```python
+class English:
+
+    def greeting(self):
+        print('Hello')
+```
+`French.py`
+```python
+class French:
+
+    def greeting(self):
+        print('Bonjour')
+```
+`main.py`
+```python
+from Challenges.Challenge13.English import English
+from Challenges.Challenge13.French import French
+
+
+def greet(language):
+    language.greeting()
+
+
+e = English()
+greet(e)
+
+print('')
+
+f = French()
+greet(f)
+
+```
+**Output**
+```python
+Hello
+
+Bonjour
+
 ```
 
 <div align="right">
