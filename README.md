@@ -98,16 +98,17 @@
 - [Section 16: Exception Handling](#section-16-exception-handling)
 - [Section 17: File Handling](#section-17-file-handling)
 - [Section 18: Object Oriented Programing](#section-18-object-oriented-programing)
-  - [Challenge : Dice in Games](#challenge--dice-in-games)
-  - [Challenge : Class for Circle](#challenge--class-for-circle)
-  - [Challenge : Book Details](#challenge--book-details)
-  - [Challenge : Details of an Employee](#challenge--details-of-an-employee)
-  - [Challenge : Simple Class for Calculator (Static Method)](#challenge--simple-class-for-calculator-static-method)
-  - [Challenge : Customer Phone Number](#challenge--customer-phone-number)
-  - [Challenge : Bank Account](#challenge--bank-account)
-  - [Challenge : Inheriting Shapes in Classes](#challenge--inheriting-shapes-in-classes)
-  - [Challenge : Academic Courses](#challenge--academic-courses)
-  - [Challenge : Details of a Computer](#challenge--details-of-a-computer)
+  - [1. Challenge : Dice in Games](#1-challenge--dice-in-games)
+  - [2. Challenge : Class for Circle](#2-challenge--class-for-circle)
+  - [3. Challenge : Book Details](#3-challenge--book-details)
+  - [4. Challenge : Details of an Employee (Instance and Class Variable)](#4-challenge--details-of-an-employee-instance-and-class-variable)
+  - [5. Challenge : Simple Class for Calculator (Static Method)](#5-challenge--simple-class-for-calculator-static-method)
+  - [6. Challenge : Customer Phone Number (Accessors (Getters) and Mutators (Setters))](#6-challenge--customer-phone-number-accessors-getters-and-mutators-setters)
+  - [7. Challenge : Currency Converter (Accessors (Getters) and Mutators (Setters))](#7-challenge--currency-converter-accessors-getters-and-mutators-setters)
+  - [8. Challenge : Bank Account (Class attribute)](#8-challenge--bank-account-class-attribute)
+  - [9. Challenge : Inheriting Shapes in Classes (Inheritance)](#9-challenge--inheriting-shapes-in-classes-inheritance)
+  - [10. Challenge : Academic Courses (Outer and Inner Class)](#10-challenge--academic-courses-outer-and-inner-class)
+  - [11. Challenge : Details of a Computer (Inner Class)](#11-challenge--details-of-a-computer-inner-class)
 
 ## Section 1: Introduction to Python
 ### How a Python Program Runs?
@@ -3652,7 +3653,7 @@ class Circle(Shape):
     def area(self):
         return 3.14 * self.radius * self.radius
 ```
-### Challenge : Dice in Games
+### 1. Challenge : Dice in Games
 
 `Dice.py`
 ```python
@@ -3687,7 +3688,7 @@ print(dice.roll_dice())
   </strong>
 </div>
 
-### Challenge : Class for Circle
+### 2. Challenge : Class for Circle
 
 `Circle.py`
 ```python
@@ -3723,7 +3724,7 @@ Perimeter: 43.98
   </strong>
 </div>
 
-### Challenge : Book Details
+### 3. Challenge : Book Details
 
 `Book.py`
 ```python
@@ -3758,7 +3759,7 @@ Title: Harry Potter - Author: J. K. Rowling - Price: 52.50
   </strong>
 </div>
 
-### Challenge : Details of an Employee
+### 4. Challenge : Details of an Employee (Instance and Class Variable)
 
 `Employee.py`
 ```python
@@ -3808,7 +3809,7 @@ Total Employees: 3
   </strong>
 </div>
 
-### Challenge : Simple Class for Calculator (Static Method)
+### 5. Challenge : Simple Class for Calculator (Static Method)
 
 `Calculator.py`
 ```python
@@ -3857,7 +3858,7 @@ print(Calculator.div(x, y))
   </strong>
 </div>
 
-### Challenge : Customer Phone Number
+### 6. Challenge : Customer Phone Number (Accessors (Getters) and Mutators (Setters))
 
 `Customer.py`
 ```python
@@ -3905,7 +3906,54 @@ Phone No: 6789012345
   </strong>
 </div>
 
-### Challenge : Bank Account
+###  7. Challenge : Currency Converter (Accessors (Getters) and Mutators (Setters))
+
+`CurrencyConverter.py`
+```python
+class CurrencyConverter:
+    def __init__(self, currency, rate):
+        self.__currency = currency
+        self.__rate = rate
+
+    def set_currency(self, currency):
+        self.__currency = currency
+
+    def get_currency(self):
+        return self.__currency
+
+    def set_rate(self, rate):
+        self.__rate = rate
+
+    def get_rate(self):
+        return self.__rate
+
+    def convert(self, amount):
+        return self.__currency + ' conversion is ' + str(self.__rate * amount)
+```
+`main.py`
+```python
+from Challenges.Challenge7.CurrencyConverter import CurrencyConverter
+
+convert = CurrencyConverter('USD', 70)
+print(convert.convert(100))
+
+convert.set_currency('AUD')
+convert.set_rate(50)
+print(convert.convert(100))
+```
+**Output**
+```python
+USD conversion is 7000
+AUD conversion is 5000
+```
+
+<div align="right">
+  <strong>
+    <a href="#table-of-contents" style="text-decoration: none;">↥ Back to top</a>
+  </strong>
+</div>
+
+### 8. Challenge : Bank Account (Class attribute)
 
 `Account.py`
 ```python
@@ -3961,7 +4009,7 @@ Balance 1500
   </strong>
 </div>
 
-### Challenge : Inheriting Shapes in Classes
+### 9. Challenge : Inheriting Shapes in Classes (Inheritance)
 
 `Polygon.py`
 ```python
@@ -4007,8 +4055,8 @@ print(t1.area())
   </strong>
 </div>
 
-### Challenge : Academic Courses
-**Outer and Inner Class**  
+### 10. Challenge : Academic Courses (Outer and Inner Class)
+
 `Course.py`
 ```python
 class Course:
@@ -4059,8 +4107,8 @@ Python Crash Course
   </strong>
 </div>
 
-### Challenge : Details of a Computer
-**Inner Class**  
+### 11. Challenge : Details of a Computer (Inner Class)
+
 `Computer.py`
 ```python
 class Computer:
