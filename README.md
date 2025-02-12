@@ -105,6 +105,7 @@
   - [Challenge : Simple Class for Calculator (Static Method)](#challenge--simple-class-for-calculator-static-method)
   - [Challenge : Customer Phone Number](#challenge--customer-phone-number)
   - [Challenge : Bank Account](#challenge--bank-account)
+  - [Challenge : Inheriting Shapes in Classes](#challenge--inheriting-shapes-in-classes)
 
 ## Section 1: Introduction to Python
 ### How a Python Program Runs?
@@ -3950,6 +3951,52 @@ a1.show_details()
 Account Number 1001
 Name John
 Balance 1500
+```
+
+<div align="right">
+  <strong>
+    <a href="#table-of-contents" style="text-decoration: none;">↥ Back to top</a>
+  </strong>
+</div>
+
+### Challenge : Inheriting Shapes in Classes
+
+`Polygon.py`
+```python
+class Polygon:
+    def __init__(self, no_of_sides, *sides):
+        self.no_of_sides = no_of_sides
+        self.sides = sides[:no_of_sides]
+
+```
+`Triangle.py`
+```python
+import math
+
+from Challenges.Challenge9.Polygon import Polygon
+
+
+class Triangle(Polygon):
+    def __init__(self, no_of_sides, *sides):
+        Polygon.__init__(self, no_of_sides, *sides)
+
+    def area(self):
+        a, b, c = self.sides
+        s = (a + b + c) / 2
+        area = math.sqrt(s * (s - a) * (s - b) * (s - c))
+        return area
+
+```
+`main.py`
+```python
+from Challenges.Challenge9.Triangle import Triangle
+
+t1 = Triangle(3, 10, 15, 9)
+print(t1.area())
+```
+**Output**
+```python
+43.634848458542855
 ```
 
 <div align="right">
