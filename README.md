@@ -106,6 +106,8 @@
   - [Challenge : Customer Phone Number](#challenge--customer-phone-number)
   - [Challenge : Bank Account](#challenge--bank-account)
   - [Challenge : Inheriting Shapes in Classes](#challenge--inheriting-shapes-in-classes)
+  - [Challenge : Academic Courses](#challenge--academic-courses)
+  - [Challenge : Details of a Computer](#challenge--details-of-a-computer)
 
 ## Section 1: Introduction to Python
 ### How a Python Program Runs?
@@ -3997,6 +3999,113 @@ print(t1.area())
 **Output**
 ```python
 43.634848458542855
+```
+
+<div align="right">
+  <strong>
+    <a href="#table-of-contents" style="text-decoration: none;">↥ Back to top</a>
+  </strong>
+</div>
+
+### Challenge : Academic Courses
+**Outer and Inner Class**  
+`Course.py`
+```python
+class Course:
+    def __init__(self, name, duration, *books):
+        self.name = name
+        self.duration = duration
+        # Create a list of Book objects
+        self.books = [self.Book(book) for book in books]
+
+    def show_details(self):
+        print('Name:', self.name)
+        print('Duration:', self.duration)
+        print('Suggested Books:')
+        for book in self.books:
+            print(book)  # This calls book.__str__() automatically
+
+    # The Book class is inside the Course class, meaning it is only used within Course
+    class Book:
+        # Nested class representing a Book.
+        def __init__(self, title):
+            self.title = title
+
+        # Override the default string representation
+        def __str__(self):
+            return self.title
+
+```
+`main.py`
+```python
+from Challenges.Challenge10.Course import Course
+
+c1 = Course('Python', 10, 'Learn Python', 'Python Crash Course')
+c1.show_details()
+
+```
+**Output**
+```python
+Name: Python
+Duration: 10
+Suggested Books:
+Learn Python
+Python Crash Course
+```
+
+<div align="right">
+  <strong>
+    <a href="#table-of-contents" style="text-decoration: none;">↥ Back to top</a>
+  </strong>
+</div>
+
+### Challenge : Details of a Computer
+**Inner Class**  
+`Computer.py`
+```python
+class Computer:
+    def __init__(self, name, make, os):
+        self.name = name
+        self.cpu = self.CPU(make)  # Creates an instance of the nested CPU class
+        self.os = self.OS(os)  # Creates an instance of the nested OS class
+
+    def __str__(self):
+        return 'Name: ' + self.name + '\nMake: ' + self.cpu.get_make() + '\nOS Name: ' + self.os.get_name()
+
+    class CPU:
+        """
+        Nested class representing a CPU.
+        """
+
+        def __init__(self, make):
+            self.make = make
+
+        def get_make(self):
+            return self.make
+
+    class OS:
+        """
+        Nested class representing an Operating System (OS).
+        """
+
+        def __init__(self, name):
+            self.name = name
+
+        def get_name(self):
+            return self.name
+
+```
+`main.py`
+```python
+
+```
+**Output**
+```python
+from Challenges.Challenge11.Computer import Computer
+
+c1 = Computer('PC101', 'Intel', 'Windows')
+print(c1)
+
 ```
 
 <div align="right">
