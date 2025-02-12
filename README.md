@@ -109,6 +109,7 @@
   - [9. Challenge : Inheriting Shapes in Classes (Inheritance)](#9-challenge--inheriting-shapes-in-classes-inheritance)
   - [10. Challenge : Academic Courses (Outer and Inner Class)](#10-challenge--academic-courses-outer-and-inner-class)
   - [11. Challenge : Details of a Computer (Inner Class)](#11-challenge--details-of-a-computer-inner-class)
+  - [12. Challenge : Pet Details (Polymorphism)](#12-challenge--pet-details-polymorphism)
 
 ## Section 1: Introduction to Python
 ### How a Python Program Runs?
@@ -4154,6 +4155,67 @@ from Challenges.Challenge11.Computer import Computer
 c1 = Computer('PC101', 'Intel', 'Windows')
 print(c1)
 
+```
+
+<div align="right">
+  <strong>
+    <a href="#table-of-contents" style="text-decoration: none;">↥ Back to top</a>
+  </strong>
+</div>
+
+###  12. Challenge : Pet Details (Polymorphism)
+
+`Cat.py`
+```python
+class Cat:
+
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
+
+    def info(self):
+        print('My name is ' + self.name + '. My age is ' + str(self.age))
+
+    def make_sound(self):
+        print('mew mew')
+
+```
+`Dog.py`
+```python
+class Dog:
+
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
+
+    def info(self):
+        print('My name is ' + self.name + '. My age is ' + str(self.age))
+
+    def make_sound(self):
+        print('bow wow')
+```
+`main.py`
+```python
+from Challenges.Challenge12.Cat import Cat
+from Challenges.Challenge12.Dog import Dog
+
+
+def my_pet(pet):
+    pet.info()
+    pet.make_sound()
+
+
+c = Cat('Kitty', 2)
+d = Dog('Tommy', 3)
+
+my_pet(c)
+my_pet(d)
+
+```
+**Output**
+```python
+my_pet(c)
+my_pet(d)
 ```
 
 <div align="right">
