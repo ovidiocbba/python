@@ -4214,8 +4214,10 @@ my_pet(d)
 ```
 **Output**
 ```python
-my_pet(c)
-my_pet(d)
+My name is Kitty. My age is 2
+mew mew
+My name is Tommy. My age is 3
+bow wow
 ```
 
 <div align="right">
