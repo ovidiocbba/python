@@ -3472,6 +3472,69 @@ print(operate(add, 3, 4))
 </div>
 
 ## Section 16: Exception Handling
+
+Exception handling in Python allows managing runtime errors without interrupting the program execution. This is achieved using `try`, `except`, `else`, and `finally` blocks.
+
+**Basic Syntax**
+
+```python
+try:
+    # Code that may raise an exception
+    result = 10 / 0
+except ZeroDivisionError as e:
+    print(f"Error: {e}")
+else:
+    print("The operation was successful.")
+finally:
+    print("This block always executes.")
+```
+
+**Explanation:**
+- `try`: Contains the code that may raise an exception.
+- `except`: Catches and handles the exception.
+- `else`: Executes only if no exception occurs.
+- `finally`: Always executes, regardless of exceptions.
+
+**Handling Multiple Exceptions**
+
+```python
+try:
+    number = int(input("Enter a number: "))
+    result = 10 / number
+except ValueError:
+    print("Error: You must enter a valid number.")
+except ZeroDivisionError:
+    print("Error: Division by zero is not allowed.")
+except Exception as e:
+    print(f"Unexpected error: {e}")
+else:
+    print(f"Result: {result}")
+finally:
+    print("Execution completed.")
+```
+
+**Defining Custom Exceptions**
+
+```python
+class NegativeNumberError(Exception):
+    pass
+
+try:
+    number = int(input("Enter a positive number: "))
+    if number < 0:
+        raise NegativeNumberError("Negative numbers are not allowed.")
+    print(f"Entered number: {number}")
+except NegativeNumberError as e:
+    print(f"Error: {e}")
+except ValueError:
+    print("Error: You must enter a valid number.")
+```
+<div align="right">
+  <strong>
+    <a href="#table-of-contents" style="text-decoration: none;">↥ Back to top</a>
+  </strong>
+</div>
+
 ## Section 17: File Handling 
 ## Section 18: Object Oriented Programing
 
