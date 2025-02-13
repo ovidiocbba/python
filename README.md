@@ -114,6 +114,7 @@
   - [14. Challenge : Measuring the Angles (Operator Overloading)](#14-challenge--measuring-the-angles-operator-overloading)
   - [15. Challenge : Police Robot (Inheritance and Method Overriding)](#15-challenge--police-robot-inheritance-and-method-overriding)
   - [16. Challenge : Different Shape Class (Inheritance and Method Overriding)](#16-challenge--different-shape-class-inheritance-and-method-overriding)
+  - [17. Challenge : Rational Number (Operator Overloading(`__sub__`))](#17-challenge--rational-number-operator-overloading__sub__)
 
 ## Section 1: Introduction to Python
 ### How a Python Program Runs?
@@ -4428,6 +4429,60 @@ print('Circle Area:', c.area())
 ```python
 Area: 70
 Circle Area: 78.53981633974483
+```
+
+<div align="right">
+  <strong>
+    <a href="#table-of-contents" style="text-decoration: none;">↥ Back to top</a>
+  </strong>
+</div>
+
+### 17. Challenge : Rational Number (Operator Overloading(`__sub__`))
+
+`Rational.py`
+```python
+
+class Rational:
+
+    def __init__(self, p, q):
+        self.p = p
+        self.q = q
+
+    def __add__(self, other):
+        # Overloading the + operator
+        p = self.p * other.q + self.q * other.p
+        q = self.q * other.q
+        sum = Rational(p,q)
+        return sum
+
+    def __sub__(self, other):
+        # Overloading the - operator to subtract
+        p = self.p * other.q - self.q * other.p
+        q = self.q * other.q
+        sum = Rational(p, q)
+        return sum
+
+    def __str__(self):
+        # Overloading the str() function
+        return str(self.p) + '/' + str(self.q)
+
+```
+`main.py`
+```python
+from Challenges.Challenges17.Rational import Rational
+
+r1 = Rational(2, 3)  # Represents 2/3
+r2 = Rational(1, 2)  # Represents 1/2
+
+# Adding two Rational numbers using the overloaded + operator
+r3 = r1 + r2  # Equivalent to r1.__add__(r2)
+
+# Printing the result
+print(r1, '+', r2, '=', r3)
+```
+**Output**
+```python
+2/3 + 1/2 = 7/6
 ```
 
 <div align="right">
