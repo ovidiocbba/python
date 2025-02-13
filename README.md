@@ -5023,57 +5023,73 @@ Below is a complete example demonstrating various database operations:
 ```python
 import mysql.connector
 
-# Establishing connection
-conn = mysql.connector.connect(
-    host="localhost",
-    user="your_username",
-    password="your_password",
-    database="your_database"
-)
+class DatabaseManager:
+    def __init__(self, host, user, password, database):
+        self.conn = mysql.connector.connect(
+            host=host,
+            user=user,
+            password=password,
+            database=database
+        )
+        self.cursor = self.conn.cursor()
 
-cursor = conn.cursor()
+    def create_table(self):
+        query = """
+        CREATE TABLE IF NOT EXISTS employees (
+            id INT AUTO_INCREMENT PRIMARY KEY,
+            name VARCHAR(255),
+            department VARCHAR(255),
+            salary FLOAT
+        )
+        """
+        self.cursor.execute(query)
+        self.conn.commit()
+        print("Table created successfully")
 
-# Creating a table
-cursor.execute("""
-CREATE TABLE IF NOT EXISTS employees (
-    id INT AUTO_INCREMENT PRIMARY KEY,
-    name VARCHAR(255),
-    department VARCHAR(255),
-    salary FLOAT
-)
-""")
-print("Table created successfully")
+    def insert_employee(self, name, department, salary):
+        query = "INSERT INTO employees (name, department, salary) VALUES (%s, %s, %s)"
+        values = (name, department, salary)
+        self.cursor.execute(query, values)
+        self.conn.commit()
+        print("Record inserted successfully")
 
-# Inserting data
-query = "INSERT INTO employees (name, department, salary) VALUES (%s, %s, %s)"
-values = ("John Doe", "IT", 75000)
-cursor.execute(query, values)
-conn.commit()
-print("Record inserted successfully")
+    def fetch_employees(self):
+        self.cursor.execute("SELECT * FROM employees")
+        results = self.cursor.fetchall()
+        print("Employees:")
+        for row in results:
+            print(row)
+        return results
 
-# Fetching data
-cursor.execute("SELECT * FROM employees")
-results = cursor.fetchall()
-print("Employees:")
-for row in results:
-    print(row)
+    def update_salary(self, name, salary):
+        query = "UPDATE employees SET salary = %s WHERE name = %s"
+        values = (salary, name)
+        self.cursor.execute(query, values)
+        self.conn.commit()
+        print("Record updated successfully")
 
-# Updating data
-query = "UPDATE employees SET salary = %s WHERE name = %s"
-values = (80000, "John Doe")
-cursor.execute(query, values)
-conn.commit()
-print("Record updated successfully")
+    def delete_employee(self, name):
+        query = "DELETE FROM employees WHERE name = %s"
+        values = (name,)
+        self.cursor.execute(query, values)
+        self.conn.commit()
+        print("Record deleted successfully")
 
-# Deleting data
-query = "DELETE FROM employees WHERE name = %s"
-values = ("John Doe",)
-cursor.execute(query, values)
-conn.commit()
-print("Record deleted successfully")
+    def close_connection(self):
+        self.cursor.close()
+        self.conn.close()
+        print("Connection closed")
 
-# Closing connection
-conn.close()
+# Usage example:
+db = DatabaseManager(host="localhost", user="admin", password="admin", database="mydatabase")
+db.create_table()
+db.insert_employee("John Doe", "IT", 75000)
+db.fetch_employees()
+db.update_salary("John Doe", 80000)
+db.fetch_employees()
+db.delete_employee("John Doe")
+db.fetch_employees()
+db.close_connection()
 ```
 
 <div align="right">
