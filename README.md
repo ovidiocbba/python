@@ -112,6 +112,7 @@
   - [12. Challenge : Pet Details (Polymorphism)](#12-challenge--pet-details-polymorphism)
   - [13. Challenge : Greeting in Different Languages (Polymorphism)](#13-challenge--greeting-in-different-languages-polymorphism)
   - [14. Challenge : Measuring the Angles (Operator Overloading)](#14-challenge--measuring-the-angles-operator-overloading)
+  - [15. Challenge : Police Robot (Inheritance and Method Overriding)](#15-challenge--police-robot-inheritance-and-method-overriding)
 
 ## Section 1: Introduction to Python
 ### How a Python Program Runs?
@@ -4311,6 +4312,51 @@ print(a3)
 **Output**
 ```python
 Degree 75
+```
+
+<div align="right">
+  <strong>
+    <a href="#table-of-contents" style="text-decoration: none;">↥ Back to top</a>
+  </strong>
+</div>
+
+### 15. Challenge : Police Robot (Inheritance and Method Overriding)
+
+`Robot.py`
+```python
+class Robot:
+
+    def __init__(self, name):
+        self.name = name
+
+    def say_hi(self):
+        print('Hi, I am ' + self.name)
+```
+`PoliceRobot.py`
+```python
+from Challenges.Challenge15.Robot import Robot
+
+
+# PoliceRobot (inherits from Robot)
+class PoliceRobot(Robot):
+
+    def say_hi(self):
+        # Overriding the say_hi method to provide a different greeting
+        print('Hi, this is ' + self.name)
+        print('I am here to help you')
+
+```
+`main.py`
+```python
+from Challenges.Challenge15.PoliceRobot import PoliceRobot
+
+r1 = PoliceRobot('RoboCop')
+r1.say_hi()
+```
+**Output**
+```python
+Hi, this is RoboCop
+I am here to help you
 ```
 
 <div align="right">
