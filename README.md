@@ -117,6 +117,8 @@
   - [17. Challenge : Rational Number (Operator Overloading(`__sub__`))](#17-challenge--rational-number-operator-overloading__sub__)
   - [18. Challenge : Shopping Cart (Overriding)](#18-challenge--shopping-cart-overriding)
 - [Section 19: Multithreading](#section-19-multithreading)
+- [Section 20: Date and Time](#section-20-date-and-time)
+- [Section 21: Database Connectivity](#section-21-database-connectivity)
 
 ## Section 1: Introduction to Python
 ### How a Python Program Runs?
@@ -4769,6 +4771,311 @@ for i in range(5):
 for t in threads:
     t.join()
 ```
+<div align="right">
+  <strong>
+    <a href="#table-of-contents" style="text-decoration: none;">↥ Back to top</a>
+  </strong>
+</div>
+
+## Section 20: Date and Time
+
+**Introduction to Date**
+
+In Python, the `datetime` module **provides functions to handle dates and times** efficiently. It allows for date creation, manipulation, and formatting.
+
+**Example:**
+```python
+from datetime import datetime
+
+today = datetime.today()
+print("Today's date:", today)
+```
+
+**Creating Date and Time**
+
+Python allows the creation of specific dates and times using the `datetime` class.
+
+**Example:**
+```python
+from datetime import datetime
+
+custom_date = datetime(2025, 2, 13, 14, 30, 0)
+print("Custom date and time:", custom_date)
+```
+
+**Formatting Date and Time**
+
+Formatting dates and times can be done using the `strftime` method, which converts a datetime object into a formatted string.
+
+**Example:**
+```python
+from datetime import datetime
+
+today = datetime.today()
+formatted_date = today.strftime("%Y-%m-%d %H:%M:%S")
+print("Formatted date and time:", formatted_date)
+```
+
+**What is timedelta?**
+
+A `timedelta` object represents **the difference between two dates** or times and is useful for date arithmetic.
+
+**Example:**
+```python
+from datetime import datetime, timedelta
+
+today = datetime.today()
+future_date = today + timedelta(days=10)
+print("Date after 10 days:", future_date)
+```
+
+**Calendar Module**
+
+The `calendar` module provides functions for displaying and manipulating calendar-related data, such as retrieving the days of a month.
+
+**Example:**
+```python
+import calendar
+
+year = 2025
+month = 2
+print(calendar.month(year, month))
+```
+
+<div align="right">
+  <strong>
+    <a href="#table-of-contents" style="text-decoration: none;">↥ Back to top</a>
+  </strong>
+</div>
+
+## Section 21: Database Connectivity
+
+Python provides support for connecting to MySQL databases using the `mysql-connector-python` package. This module allows you to interact with MySQL databases to perform various operations such as querying, inserting, updating, and deleting data.
+
+**Installing MySQL Connector**
+
+Before connecting to MySQL, you need to install the **MySQL Connector package:**
+```bash
+pip install mysql-connector-python
+```
+
+**Connecting to MySQL Database**
+
+To establish a connection with a MySQL database, use the following example:
+
+```python
+import mysql.connector
+
+# Establish connection
+conn = mysql.connector.connect(
+    host="localhost",
+    user="your_username",
+    password="your_password",
+    database="your_database"
+)
+
+if conn.is_connected():
+    print("Connected to MySQL database")
+
+conn.close()
+```
+
+**Creating a Table**
+
+You can create a table using the `cursor.execute()` method:
+
+```python
+import mysql.connector
+
+conn = mysql.connector.connect(
+    host="localhost",
+    user="your_username",
+    password="your_password",
+    database="your_database"
+)
+
+cursor = conn.cursor()
+
+cursor.execute("""
+CREATE TABLE IF NOT EXISTS employees (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(255),
+    department VARCHAR(255),
+    salary FLOAT
+)
+""")
+
+print("Table created successfully")
+
+conn.close()
+```
+
+**Inserting Data**
+
+To insert data into a table, use **parameterized queries** to prevent SQL injection:
+
+```python
+import mysql.connector
+
+conn = mysql.connector.connect(
+    host="localhost",
+    user="your_username",
+    password="your_password",
+    database="your_database"
+)
+
+cursor = conn.cursor()
+
+query = "INSERT INTO employees (name, department, salary) VALUES (%s, %s, %s)"
+values = ("John Doe", "IT", 75000)
+
+cursor.execute(query, values)
+conn.commit()
+
+print("Record inserted successfully")
+
+conn.close()
+```
+
+**Fetching Data**
+
+You can retrieve data using the `SELECT` query:
+
+```python
+import mysql.connector
+
+conn = mysql.connector.connect(
+    host="localhost",
+    user="your_username",
+    password="your_password",
+    database="your_database"
+)
+
+cursor = conn.cursor()
+
+cursor.execute("SELECT * FROM employees")
+results = cursor.fetchall()
+
+for row in results:
+    print(row)
+
+conn.close()
+```
+
+**Updating Data**
+
+To update records in a table:
+
+```python
+import mysql.connector
+
+conn = mysql.connector.connect(
+    host="localhost",
+    user="your_username",
+    password="your_password",
+    database="your_database"
+)
+
+cursor = conn.cursor()
+
+query = "UPDATE employees SET salary = %s WHERE name = %s"
+values = (80000, "John Doe")
+
+cursor.execute(query, values)
+conn.commit()
+
+print("Record updated successfully")
+
+conn.close()
+```
+
+**Deleting Data**
+
+To delete records:
+
+```python
+import mysql.connector
+
+conn = mysql.connector.connect(
+    host="localhost",
+    user="your_username",
+    password="your_password",
+    database="your_database"
+)
+
+cursor = conn.cursor()
+
+query = "DELETE FROM employees WHERE name = %s"
+values = ("John Doe",)
+
+cursor.execute(query, values)
+conn.commit()
+
+print("Record deleted successfully")
+
+conn.close()
+```
+
+**Complete Example:**
+
+Below is a complete example demonstrating various database operations:
+
+```python
+import mysql.connector
+
+# Establishing connection
+conn = mysql.connector.connect(
+    host="localhost",
+    user="your_username",
+    password="your_password",
+    database="your_database"
+)
+
+cursor = conn.cursor()
+
+# Creating a table
+cursor.execute("""
+CREATE TABLE IF NOT EXISTS employees (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(255),
+    department VARCHAR(255),
+    salary FLOAT
+)
+""")
+print("Table created successfully")
+
+# Inserting data
+query = "INSERT INTO employees (name, department, salary) VALUES (%s, %s, %s)"
+values = ("John Doe", "IT", 75000)
+cursor.execute(query, values)
+conn.commit()
+print("Record inserted successfully")
+
+# Fetching data
+cursor.execute("SELECT * FROM employees")
+results = cursor.fetchall()
+print("Employees:")
+for row in results:
+    print(row)
+
+# Updating data
+query = "UPDATE employees SET salary = %s WHERE name = %s"
+values = (80000, "John Doe")
+cursor.execute(query, values)
+conn.commit()
+print("Record updated successfully")
+
+# Deleting data
+query = "DELETE FROM employees WHERE name = %s"
+values = ("John Doe",)
+cursor.execute(query, values)
+conn.commit()
+print("Record deleted successfully")
+
+# Closing connection
+conn.close()
+```
+
 <div align="right">
   <strong>
     <a href="#table-of-contents" style="text-decoration: none;">↥ Back to top</a>
