@@ -3490,9 +3490,9 @@ finally:
 ```
 
 **Explanation:**
-- `try`: Contains the code that may raise an exception.
-- `except`: Catches and handles the exception.
-- `else`: Executes only if no exception occurs.
+- `try`: Contains **the code** that **may raise an exception**.
+- `except`: **Catches** and handles the exception.
+- `else`: Executes **only if no exception occurs**.
 - `finally`: Always executes, regardless of exceptions.
 
 **Handling Multiple Exceptions**
@@ -3536,6 +3536,83 @@ except ValueError:
 </div>
 
 ## Section 17: File Handling 
+
+File handling in Python allows you to read, write, and manipulate files easily using built-in functions.
+
+**Opening a File**
+
+Python provides the `open()` function to open files.
+
+```python
+# Open a file in read mode
+file = open("example.txt", "r")
+print(file.read())
+file.close()
+```
+
+**Modes:**
+- `"r"`: **Read** (**`default mode`**, raises an error if the file does not exist).
+- `"w"`: **Write** (creates the file if it does not exist, overwrites if it does).
+- `"a"`: **Append** (adds content to the **end of the file**, creates it if it does not exist).
+- `"x"`: **Create** (creates a file but fails if it already exists).
+
+**Writing to a File**
+
+```python
+# Open a file in write mode
+file = open("example.txt", "w")
+file.write("Hello, World!\n")
+file.close()
+```
+
+**Reading a File**
+
+```python
+# Open a file and read line by line
+with open("example.txt", "r") as file:
+    for line in file:
+        print(line.strip())
+```
+
+Using `with` ensures the file is closed automatically after use.
+
+**Appending to a File**
+
+```python
+# Open a file in append mode
+with open("example.txt", "a") as file:
+    file.write("Appending this line.\n")
+```
+
+**Checking if a File Exists**
+
+```python
+import os
+
+if os.path.exists("example.txt"):
+    print("File exists")
+else:
+    print("File does not exist")
+```
+
+**Deleting a File**
+
+```python
+import os
+
+if os.path.exists("example.txt"):
+    os.remove("example.txt")
+    print("File deleted")
+else:
+    print("File does not exist")
+```
+
+<div align="right">
+  <strong>
+    <a href="#table-of-contents" style="text-decoration: none;">↥ Back to top</a>
+  </strong>
+</div>
+
 ## Section 18: Object Oriented Programing
 
 **1. Classes vs Objects**
