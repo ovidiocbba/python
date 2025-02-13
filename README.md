@@ -115,6 +115,7 @@
   - [15. Challenge : Police Robot (Inheritance and Method Overriding)](#15-challenge--police-robot-inheritance-and-method-overriding)
   - [16. Challenge : Different Shape Class (Inheritance and Method Overriding)](#16-challenge--different-shape-class-inheritance-and-method-overriding)
   - [17. Challenge : Rational Number (Operator Overloading(`__sub__`))](#17-challenge--rational-number-operator-overloading__sub__)
+  - [18. Challenge : Shopping Cart (Overriding)](#18-challenge--shopping-cart-overriding)
 
 ## Section 1: Introduction to Python
 ### How a Python Program Runs?
@@ -4469,7 +4470,7 @@ class Rational:
 ```
 `main.py`
 ```python
-from Challenges.Challenges17.Rational import Rational
+from Challenges.Challenge17.Rational import Rational
 
 r1 = Rational(2, 3)  # Represents 2/3
 r2 = Rational(1, 2)  # Represents 1/2
@@ -4483,6 +4484,60 @@ print(r1, '+', r2, '=', r3)
 **Output**
 ```python
 2/3 + 1/2 = 7/6
+```
+
+<div align="right">
+  <strong>
+    <a href="#table-of-contents" style="text-decoration: none;">↥ Back to top</a>
+  </strong>
+</div>
+
+### 18. Challenge : Shopping Cart (Overriding)
+
+`Orders.py`
+```python
+class Orders:
+
+    def __init__(self):
+        self.cart = []
+
+    def add_to_cart(self, item):
+        self.cart.append(item)
+
+    def remove(self, item):
+        self.cart.remove(item)
+
+    def __len__(self):
+        return len(self.cart)
+
+    def __str__(self):
+        items = 'Cart Contents: '
+        for i in self.cart:
+            items += i + ', '
+        return items
+
+```
+`main.py`
+```python
+from Challenges.Challenge18.Orders import Orders
+
+o = Orders()
+o.add_to_cart('Soap')
+o.add_to_cart('Paste')
+o.add_to_cart('Brush')
+
+print('Cart Size:', len(o))
+print(o)
+
+o.remove('Paste')
+print(o)
+
+```
+**Output**
+```python
+Cart Size: 3
+Cart Contents: Soap, Paste, Brush, 
+Cart Contents: Soap, Brush, 
 ```
 
 <div align="right">
