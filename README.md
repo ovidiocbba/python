@@ -113,6 +113,7 @@
   - [13. Challenge : Greeting in Different Languages (Polymorphism)](#13-challenge--greeting-in-different-languages-polymorphism)
   - [14. Challenge : Measuring the Angles (Operator Overloading)](#14-challenge--measuring-the-angles-operator-overloading)
   - [15. Challenge : Police Robot (Inheritance and Method Overriding)](#15-challenge--police-robot-inheritance-and-method-overriding)
+  - [16. Challenge : Different Shape Class (Inheritance and Method Overriding)](#16-challenge--different-shape-class-inheritance-and-method-overriding)
 
 ## Section 1: Introduction to Python
 ### How a Python Program Runs?
@@ -4357,6 +4358,76 @@ r1.say_hi()
 ```python
 Hi, this is RoboCop
 I am here to help you
+```
+
+<div align="right">
+  <strong>
+    <a href="#table-of-contents" style="text-decoration: none;">↥ Back to top</a>
+  </strong>
+</div>
+
+### 16. Challenge : Different Shape Class (Inheritance and Method Overriding)
+
+`Shape.py`
+```python
+class Shape:
+
+    def __init__(self, name):
+        self.name = name
+
+    def area(self):
+        print('Shape area')
+
+```
+`Rectangle.py`
+```python
+from Challenges.Challenge16.Shape import Shape
+
+
+class Rectangle(Shape):
+
+    def __init__(self, len, bre):
+        self.length = len
+        self.breadth = bre
+
+    def area(self):
+        return self.length * self.breadth
+
+
+```
+`Circle.py`
+```python
+import math
+
+from Challenges.Challenge16.Shape import Shape
+
+
+class Circle(Shape):
+
+    def __init__(self, rad):
+        self.radius = rad
+
+
+    def area(self):
+        return math.pi * (self.radius ** 2)
+
+```
+`main.py`
+```python
+from Challenges.Challenge16.Circle import Circle
+from Challenges.Challenge16.Rectangle import Rectangle
+
+r = Rectangle(10, 7)
+print('Area:', r.area())
+
+c = Circle(5)
+print('Circle Area:', c.area())
+
+```
+**Output**
+```python
+Area: 70
+Circle Area: 78.53981633974483
 ```
 
 <div align="right">
