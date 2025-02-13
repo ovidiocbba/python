@@ -116,6 +116,7 @@
   - [16. Challenge : Different Shape Class (Inheritance and Method Overriding)](#16-challenge--different-shape-class-inheritance-and-method-overriding)
   - [17. Challenge : Rational Number (Operator Overloading(`__sub__`))](#17-challenge--rational-number-operator-overloading__sub__)
   - [18. Challenge : Shopping Cart (Overriding)](#18-challenge--shopping-cart-overriding)
+- [Section 19: Multithreading](#section-19-multithreading)
 
 ## Section 1: Introduction to Python
 ### How a Python Program Runs?
@@ -4680,6 +4681,94 @@ Cart Contents: Soap, Paste, Brush,
 Cart Contents: Soap, Brush, 
 ```
 
+<div align="right">
+  <strong>
+    <a href="#table-of-contents" style="text-decoration: none;">↥ Back to top</a>
+  </strong>
+</div>
+
+## Section 19: Multithreading
+
+**Ways of Thread Creation**
+
+In Python, there are multiple ways to create threads. The most common methods include:
+
+- **Using the `threading` module**: The `threading.Thread` class allows creating and managing threads easily.
+- **Using the `concurrent.futures` module**: Provides a high-level interface for asynchronously executing tasks.
+- **Using the `multiprocessing` module**: Although designed for parallel processing, it can be used for thread-like behavior.
+
+**Example:**
+```python
+import threading
+
+def print_message(message):
+    print(message)
+
+thread1 = threading.Thread(target=print_message, args=("Hello from Thread 1",))
+thread2 = threading.Thread(target=print_message, args=("Hello from Thread 2",))
+
+thread1.start()
+thread2.start()
+
+thread1.join()
+thread2.join()
+```
+
+**Mutex**
+
+A **Mutex (Mutual Exclusion)** is a synchronization mechanism used to **prevent multiple threads** from **accessing a shared resource at the same time.** It ensures that **only one thread can access** a critical section of the code at any given moment, avoiding race conditions.
+
+**Example:**
+```python
+import threading
+import time
+
+mutex = threading.Lock()
+
+def critical_section(thread_id):
+    mutex.acquire()
+    print(f"Thread {thread_id} is in the critical section")
+    time.sleep(2)
+    print(f"Thread {thread_id} is leaving the critical section")
+    mutex.release()
+
+threads = []
+for i in range(3):
+    t = threading.Thread(target=critical_section, args=(i,))
+    threads.append(t)
+    t.start()
+
+for t in threads:
+    t.join()
+```
+
+**Semaphore**
+
+A **Semaphore** is a synchronization mechanism that **controls access** to a resource pool by allowing a fixed number of threads to use it concurrently. Unlike a mutex, which allows only one thread at a time, a semaphore **allows multiple threads** up to a predefined **limit**.
+
+**Example:**
+```python
+import threading
+import time
+
+semaphore = threading.Semaphore(2)  # Allows up to 2 threads at a time
+
+def access_resource(thread_id):
+    semaphore.acquire()
+    print(f"Thread {thread_id} is accessing the resource")
+    time.sleep(2)
+    print(f"Thread {thread_id} is releasing the resource")
+    semaphore.release()
+
+threads = []
+for i in range(5):
+    t = threading.Thread(target=access_resource, args=(i,))
+    threads.append(t)
+    t.start()
+
+for t in threads:
+    t.join()
+```
 <div align="right">
   <strong>
     <a href="#table-of-contents" style="text-decoration: none;">↥ Back to top</a>
