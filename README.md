@@ -120,6 +120,7 @@
 - [Section 20: Date and Time](#section-20-date-and-time)
 - [Section 21: Database Connectivity](#section-21-database-connectivity)
 - [Section 22: Data Structure Modules](#section-22-data-structure-modules)
+- [Section 23: Math Modules](#section-23-math-modules)
 
 ## Section 1: Introduction to Python
 ### How a Python Program Runs?
@@ -5188,6 +5189,72 @@ print(shallow_copy)  # Output: [[99, 2, 3], [4, 5, 6]]
 print(deep_copy)     # Output: [[1, 2, 3], [4, 5, 6]]
 ```
  
+<div align="right">
+  <strong>
+    <a href="#table-of-contents" style="text-decoration: none;">↥ Back to top</a>
+  </strong>
+</div>
+
+## Section 23: Math Modules
+
+Python provides various built-in modules for **performing mathematical operations efficiently**. 
+
+**1. Fractions**
+
+The `fractions` module provides support for **rational number arithmetic**.
+
+**Example:**
+```python
+from fractions import Fraction
+
+frac1 = Fraction(1, 3)
+frac2 = Fraction(2, 3)
+result = frac1 + frac2
+print(result)  # Output: 1
+```
+
+**2. Random**
+
+The `random` module is used to generate random numbers and perform random selections.
+
+**Example:**
+```python
+import random
+
+rand_num = random.randint(1, 10)  # Random integer between 1 and 10
+print(rand_num)
+
+rand_choice = random.choice(['apple', 'banana', 'cherry'])
+print(rand_choice)
+```
+
+**3. Math**
+
+The `math` module provides mathematical functions like **trigonometry, logarithms**, and more.
+
+**Example:**
+```python
+import math
+
+print(math.sqrt(25))  # Output: 5.0
+print(math.pi)        # Output: 3.141592653589793
+print(math.sin(math.radians(30)))  # Output: 0.5
+```
+
+**4. Statistics**
+
+The `statistics` module provides functions for **calculating statistical properties** of numerical data.
+
+**Example:**
+```python
+import statistics
+
+data = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+print(statistics.mean(data))  # Output: 5.0
+print(statistics.median(data))  # Output: 5
+print(statistics.stdev(data))  # Output: Standard deviation of the dataset
+```
+
 <div align="right">
   <strong>
     <a href="#table-of-contents" style="text-decoration: none;">↥ Back to top</a>
