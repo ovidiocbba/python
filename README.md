@@ -121,6 +121,7 @@
 - [Section 21: Database Connectivity](#section-21-database-connectivity)
 - [Section 22: Data Structure Modules](#section-22-data-structure-modules)
 - [Section 23: Math Modules](#section-23-math-modules)
+- [Section 24: OS Module](#section-24-os-module)
 
 ## Section 1: Introduction to Python
 ### How a Python Program Runs?
@@ -5253,6 +5254,105 @@ data = [1, 2, 3, 4, 5, 6, 7, 8, 9]
 print(statistics.mean(data))  # Output: 5.0
 print(statistics.median(data))  # Output: 5
 print(statistics.stdev(data))  # Output: Standard deviation of the dataset
+```
+
+<div align="right">
+  <strong>
+    <a href="#table-of-contents" style="text-decoration: none;">↥ Back to top</a>
+  </strong>
+</div>
+
+## Section 24: OS Module
+
+Python's `os` module provides functionalities for **interacting with the operating system**, and the `csv` module helps in handling CSV files efficiently.
+
+**1. OS Path and Its Functions**
+
+The `os.path` module provides utilities for working with file and directory paths.
+
+**Example:**
+```python
+import os
+
+file_path = "/path/to/file.txt"
+print(os.path.exists(file_path))  # Checks if the file exists
+print(os.path.basename(file_path))  # Gets the file name
+print(os.path.dirname(file_path))  # Gets the directory name
+print(os.path.splitext(file_path))  # Splits file name and extension
+```
+
+**2. OS Module and Its Functions**
+
+The `os` module provides functions to interact with the operating system.
+
+**Example:**
+```python
+import os
+
+print(os.getcwd())  # Get the current working directory
+os.mkdir("new_directory")  # Create a new directory
+os.remove("file.txt")  # Remove a file (use with caution!)
+os.rmdir("new_directory")  # Remove a directory
+```
+
+**3. Reading a CSV File**
+
+The `csv.reader` method allows reading CSV files line by line.
+
+**Example:**
+```python
+import csv
+
+with open("data.csv", mode="r") as file:
+    reader = csv.reader(file)
+    for row in reader:
+        print(row)  # Print each row as a list
+```
+
+**4. Reading a CSV File in Dictionary Format**
+
+Using `csv.DictReader`, we can read CSV files **into dictionaries.**
+
+**Example:**
+```python
+import csv
+
+with open("data.csv", mode="r") as file:
+    reader = csv.DictReader(file)
+    for row in reader:
+        print(row)  # Print each row as a dictionary
+```
+
+**5. Creating a CSV File Using Writer**
+
+The `csv.writer` method helps in writing data to a CSV file.
+
+**Example:**
+```python
+import csv
+
+data = [["Name", "Age"], ["Alice", 25], ["Bob", 30]]
+
+with open("output.csv", mode="w", newline="") as file:
+    writer = csv.writer(file)
+    writer.writerows(data)
+```
+
+**6. Creating a CSV File Using CSV Dictionary Writer**
+
+The `csv.DictWriter` method allows writing dictionaries to a CSV file.
+
+**Example:**
+```python
+import csv
+
+data = [{"Name": "Alice", "Age": 25}, {"Name": "Bob", "Age": 30}]
+
+with open("output.csv", mode="w", newline="") as file:
+    fieldnames = ["Name", "Age"]
+    writer = csv.DictWriter(file, fieldnames=fieldnames)
+    writer.writeheader()
+    writer.writerows(data)
 ```
 
 <div align="right">
