@@ -119,6 +119,7 @@
 - [Section 19: Multithreading](#section-19-multithreading)
 - [Section 20: Date and Time](#section-20-date-and-time)
 - [Section 21: Database Connectivity](#section-21-database-connectivity)
+- [Section 22: Data Structure Modules](#section-22-data-structure-modules)
 
 ## Section 1: Introduction to Python
 ### How a Python Program Runs?
@@ -5092,6 +5093,101 @@ db.fetch_employees()
 db.close_connection()
 ```
 
+<div align="right">
+  <strong>
+    <a href="#table-of-contents" style="text-decoration: none;">↥ Back to top</a>
+  </strong>
+</div>
+
+## Section 22: Data Structure Modules
+
+Python provides several built-in modules for **handling different types of data structures** efficiently.
+
+**1. Counter**
+
+`Counter` is a dictionary subclass designed for **counting hashable objects**.
+
+**Example:**
+```python
+from collections import Counter
+
+words = ['apple', 'banana', 'apple', 'orange', 'banana', 'apple']
+counter = Counter(words)
+print(counter)  # Output: Counter({'apple': 3, 'banana': 2, 'orange': 1})
+```
+
+**2. Deque**
+
+`deque` (double-ended queue) is optimized for fast **append and pop operations** from both ends.
+
+**Example:**
+```python
+from collections import deque
+
+dq = deque([1, 2, 3])
+dq.append(4)
+dq.appendleft(0)
+print(dq)  # Output: deque([0, 1, 2, 3, 4])
+```
+
+**3. Array**
+
+The `array` module provides an **array data structure** with type constraints.
+
+**Example:**
+```python
+import array
+
+arr = array.array('i', [1, 2, 3, 4, 5])
+arr.append(6)
+print(arr)  # Output: array('i', [1, 2, 3, 4, 5, 6])
+```
+
+**4. Heapq**
+
+The `heapq` module implements a priority queue using a min-heap.
+
+**Example:**
+```python
+import heapq
+
+nums = [3, 1, 4, 1, 5, 9]
+heapq.heapify(nums)
+print(nums)  # Output: [1, 1, 3, 4, 5, 9]
+heapq.heappush(nums, 2)
+print(nums)  # Output: [1, 1, 2, 4, 5, 9, 3]
+```
+
+**5. Bisect**
+
+The `bisect` module helps to **insert elements** in **a sorted list** while maintaining order.
+
+**Example:**
+```python
+import bisect
+
+nums = [1, 3, 4, 7]
+bisect.insort(nums, 5)
+print(nums)  # Output: [1, 3, 4, 5, 7]
+```
+
+**6. Copy**
+
+The `copy` module provides functions for shallow and deep copying objects.
+
+**Example:**
+```python
+import copy
+
+original = [[1, 2, 3], [4, 5, 6]]
+shallow_copy = copy.copy(original)
+deep_copy = copy.deepcopy(original)
+
+original[0][0] = 99
+print(shallow_copy)  # Output: [[99, 2, 3], [4, 5, 6]]
+print(deep_copy)     # Output: [[1, 2, 3], [4, 5, 6]]
+```
+ 
 <div align="right">
   <strong>
     <a href="#table-of-contents" style="text-decoration: none;">↥ Back to top</a>
