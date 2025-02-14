@@ -122,6 +122,8 @@
 - [Section 22: Data Structure Modules](#section-22-data-structure-modules)
 - [Section 23: Math Modules](#section-23-math-modules)
 - [Section 24: OS Module](#section-24-os-module)
+- [Section 25: Tkinter](#section-25-tkinter)
+- [Section 26: NumPy Arrays](#section-26-numpy-arrays)
 
 ## Section 1: Introduction to Python
 ### How a Python Program Runs?
@@ -5355,6 +5357,95 @@ with open("output.csv", mode="w", newline="") as file:
     writer.writerows(data)
 ```
 
+<div align="right">
+  <strong>
+    <a href="#table-of-contents" style="text-decoration: none;">↥ Back to top</a>
+  </strong>
+</div>
+
+## Section 25: Tkinter 
+
+## Section 26: NumPy Arrays
+
+**NumPy** is a powerful library for numerical computing in Python. It provides efficient array operations, mathematical functions, and tools for handling large datasets. 
+
+**1. Array Creation in NumPy**
+
+NumPy arrays can be created using the `numpy.array()` function.
+
+**Example:**
+```python
+import numpy as np
+
+arr = np.array([1, 2, 3, 4, 5])
+print(arr)  # Output: [1 2 3 4 5]
+print(type(arr))  # Output: <class 'numpy.ndarray'>
+```
+
+**2. Creating Different Types of Arrays**
+
+NumPy provides **multiple functions** to **create different types of arrays**.
+
+**Examples:**
+```python
+import numpy as np
+
+zeros_array = np.zeros((3, 3))  # 3x3 array filled with 'zeros'
+ones_array = np.ones((2, 2))  # 2x2 array filled with 'ones'
+identity_matrix = np.eye(3)  # 3x3 identity matrix
+random_array = np.random.rand(2, 3)  # 2x3 array with random values
+
+print(zeros_array)
+print(ones_array)
+print(identity_matrix)
+print(random_array)
+```
+
+**3. Indexing Arrays**
+
+NumPy supports indexing **similar** to Python **lists** but **with more powerful capabilities.**
+
+**Example:**
+```python
+import numpy as np
+
+arr = np.array([[10, 20, 30], [40, 50, 60], [70, 80, 90]])
+print(arr[1, 2])  # Output: 60
+print(arr[:, 1])  # Output: [20 50 80] (Extracting second column)
+print(arr[0:2, 1:3])  # Output: Sub-array from first two rows and last two columns
+```
+
+**4. Reshaping Arrays**
+
+Arrays can be **reshaped** into **different shapes** without changing their data.
+
+**Example:**
+```python
+import numpy as np
+
+arr = np.array([1, 2, 3, 4, 5, 6])
+reshaped_arr = arr.reshape(2, 3)
+print(reshaped_arr)
+# Output:
+# [[1 2 3]
+#  [4 5 6]]
+```
+
+**5. Data Types in NumPy**
+
+NumPy arrays have **a specific data type** that **can be explicitly defined.**
+
+**Example:**
+```python
+import numpy as np
+
+int_array = np.array([1, 2, 3], dtype=np.int32)
+float_array = np.array([1.5, 2.3, 3.7], dtype=np.float64)
+
+print(int_array.dtype)  # Output: int32
+print(float_array.dtype)  # Output: float64
+```
+ 
 <div align="right">
   <strong>
     <a href="#table-of-contents" style="text-decoration: none;">↥ Back to top</a>
